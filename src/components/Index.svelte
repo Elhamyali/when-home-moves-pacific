@@ -1,11 +1,475 @@
 <script>
-	import { getContext } from "svelte";
-	import Footer from "$components/Footer.svelte";
+	import NumberTicker from "$components/NumberTicker.svelte";
+	import RemainingChapters from "$components/RemainingChapters.svelte";
+	import { onMount } from "svelte";
+	let introduction;
+	let player;
+	let showVideoChoices = $state(false);
+	let isMuted = $state(true);
+	let activeSection = $state("introduction");
 
-	// const copy = getContext("copy");
-	// const data = getContext("data");
+	onMount(() => {
+		const sections = ["introduction", "chapter-one", "chapter-two", "chapter-three", "chapter-four", "chapter-five", "methodology-credits"]
+			.map((id) => document.getElementById(id))
+			.filter(Boolean);
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) activeSection = entry.target.id;
+				}
+			},
+			{ rootMargin: "-35% 0px -55% 0px" }
+		);
+		sections.forEach((section) => observer.observe(section));
+		return () => observer.disconnect();
+	});
+
+	function sendPlayerCommand(func) {
+		player?.contentWindow?.postMessage(
+			JSON.stringify({ event: "command", func, args: [] }),
+			"https://www.youtube.com"
+		);
+	}
+
+	function playWithSound() {
+		sendPlayerCommand("unMute");
+		sendPlayerCommand("playVideo");
+		isMuted = false;
+		showVideoChoices = false;
+	}
+
+	function continueMuted() {
+		sendPlayerCommand("mute");
+		sendPlayerCommand("playVideo");
+		isMuted = true;
+		showVideoChoices = false;
+	}
+
+	function skipVideo() {
+		sendPlayerCommand("pauseVideo");
+		showVideoChoices = false;
+		introduction?.scrollIntoView({ behavior: "smooth", block: "start" });
+	}
 </script>
 
-<svelte:boundary onerror={(e) => console.error(e)}>
-	<!-- <Footer recirc={true} /> -->
-</svelte:boundary>
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+</svelte:head>
+
+<section class="film" aria-label="Film about the relocation of Vunidogoloa, Fiji">
+	<div class="video-wrap">
+		<iframe
+			bind:this={player}
+			src="https://www.youtube.com/embed/rU0IuuZR9Jg?start=13&autoplay=1&mute=1&controls=0&cc_load_policy=1&rel=0&playsinline=1&enablejsapi=1&loop=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1"
+			title="The relocation of Vunidogoloa, Fiji"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen
+		></iframe>
+	</div>
+
+	{#if showVideoChoices}
+		<div class="video-choices" aria-label="Video playback options">
+			<p>The film is playing without sound.</p>
+			<div class="choice-actions">
+				<button class="sound" type="button" onclick={playWithSound}>Play with sound</button>
+				<button type="button" onclick={continueMuted}>Continue muted</button>
+				<button type="button" onclick={skipVideo}>Skip video <span aria-hidden="true">↓</span></button>
+			</div>
+		</div>
+	{:else}
+		<button
+			class="playback-toggle"
+			type="button"
+			onclick={() => (showVideoChoices = true)}
+			aria-label={`Open video controls. Video is currently ${isMuted ? "muted" : "playing with sound"}`}
+		>
+			<span class="speaker" aria-hidden="true">{isMuted ? "◖" : "◖))"}</span>
+			<span class="toggle-label">Video controls</span>
+		</button>
+	{/if}
+</section>
+
+<div class="video-caption">
+	<p>
+		The Fijian village of Vunidogoloa relocated to higher ground after rising sea levels made
+		its original coastal location uninhabitable. The move improved housing and access to
+		schools and nearby services. Credit:
+		<a href="https://www.youtube.com/watch?v=rU0IuuZR9Jg" target="_blank" rel="noreferrer">GIZ Pacific</a>.
+	</p>
+</div>
+
+<div class="story-shell">
+	<nav class="story-nav" aria-label="Story sections">
+		<a href="#introduction" class:active={activeSection === "introduction"} aria-current={activeSection === "introduction" ? "location" : undefined}><span>Home</span><strong>Where we are</strong></a>
+		<a href="#chapter-one" class:active={activeSection === "chapter-one"} aria-current={activeSection === "chapter-one" ? "location" : undefined}><span>Chapter 1</span><strong>A Crisis Measured in Millions</strong></a>
+		<a href="#chapter-two" class:active={activeSection === "chapter-two"} aria-current={activeSection === "chapter-two" ? "location" : undefined}><span>Chapter 2</span><strong>What Forces People to Leave?</strong></a>
+		<a href="#chapter-three" class:active={activeSection === "chapter-three"} aria-current={activeSection === "chapter-three" ? "location" : undefined}><span>Chapter 3</span><strong>When Disaster Doesn't End</strong></a>
+		<a href="#chapter-four" class:active={activeSection === "chapter-four"} aria-current={activeSection === "chapter-four" ? "location" : undefined}><span>Chapter 4</span><strong>What Happens After People Leave?</strong></a>
+		<a href="#chapter-five" class:active={activeSection === "chapter-five"} aria-current={activeSection === "chapter-five" ? "location" : undefined}><span>Chapter 5</span><strong>Fighting Back</strong></a>
+		<a href="#methodology-credits" class:active={activeSection === "methodology-credits"} aria-current={activeSection === "methodology-credits" ? "location" : undefined}><span>Endnotes</span><strong>Methodology & Credits</strong></a>
+	</nav>
+
+	<div class="story-sections">
+		<article class="introduction" id="introduction" bind:this={introduction}>
+			<div class="prose">
+			<p class="lead">
+				Home is far more than a physical house. It is the papaya tree planted by a grandparent,
+				the cemetery where generations rest, the shoreline where children learn to fish, and the
+				neighbors who know the histories behind every doorway.
+			</p>
+
+			<p>
+				Today, climate change dictates where people can live. Pacific Island communities flee
+				inland to escape storm surges, wrestle from the wreckage of repeated extreme weather
+				events, and confront the agonizing choice to stay or abandon ancestral soil.
+			</p>
+
+			<p>
+				Some move once. Others move again and again.
+			</p>
+
+			<p>
+				This story traces that journey — from climate disasters to displacement, through the
+				cascading health and economic crises that follow, and finally to the Pacific innovators
+				leading locally-led climate adaptation solutions.
+			</p>
+			</div>
+		</article>
+
+		<section class="title-card" id="chapter-one" aria-labelledby="story-title">
+			<h1 id="story-title"><em>When Home Moves</em></h1>
+			<p class="subtitle">Across the Pacific, climate disasters force people to flee their homes. Some communities rebuild. Others relocate. All redefine what it means to adapt</p>
+			<p class="byline">By Elham Ali</p>
+		</section>
+
+		<section class="chapter-one" aria-labelledby="chapter-one-title">
+			<header class="chapter-heading">
+				<p>Chapter 1</p>
+				<h2 id="chapter-one-title"><em>A crisis measured in millions</em></h2>
+			</header>
+
+			<div class="chapter-copy">
+				<p class="chapter-lead">The Pacific contributes almost nothing to the climate crisis, yet it experiences some of its most severe consequences.</p>
+				<p>Pacific Island Countries and Territories <a href="https://www.amnestyusa.org/reports/navigating-injustice-climate-displacement-from-the-pacific-islands-of-tuvalu-and-kiribati-to-aotearoa-new-zealand/" target="_blank" rel="noreferrer">contribute</a> a minuscule 0.02% of global greenhouse gas emissions. Yet they endure the world’s most severe climate penalties: rising sea levels, warming oceans, extreme flooding, and rapid coastal erosion. The inequity is starkest for low-lying atoll nations like Kiribati and Tuvalu, which account for less than 0.003% and 0.0002% of global emissions, respectively.</p>
+				<p>By comparison, high-income nations like Aotearoa New Zealand emit 43 times Tuvalu’s total output, and a staggering 650 times the emissions of Kiribati.</p>
+				<p>Between 2008 and 2025, climate-driven and geophysical disasters directly affected more than 2.5 million people across 21 Pacific nations, based on data compiled from the <a href="https://pacificdata.org/" target="_blank" rel="noreferrer">Pacific Data Hub</a>.</p>
+			</div>
+
+			<NumberTicker />
+			<div class="chapter-copy">
+				<p>Fiji, for example, has suffered the largest cumulative affected population in the region over this period, totaling 1,240,734 people.</p>
+			</div>
+			<div class="viz-placeholder" role="img" aria-label="Placeholder for a forthcoming visualization about Fiji's cumulative affected population"><span>Visualization forthcoming</span><strong>Fiji’s cumulative affected population</strong></div>
+
+			<div class="chapter-copy">
+				<p>The single largest reported country-year disaster impact in regional history occurred in Fiji in 2016, when a catastrophic cyclone season directly affected 633,584 people — striking roughly 60% to 62% of the nation's entire population.</p>
+				<p>Cyclone Winston, a historic Category 5 storm, drove that destruction and permanently scarred the landscape.</p>
+			</div>
+			<div class="viz-placeholder" role="img" aria-label="Placeholder for a forthcoming visualization about Cyclone Winston"><span>Visualization forthcoming</span><strong>Cyclone Winston’s impact</strong></div>
+
+			<div class="chapter-copy">
+				<p>Between 2008 and 2025, the <a href="https://www.internal-displacement.org/" target="_blank" rel="noreferrer">Internal Displacement Monitoring Centre</a> (IDMC) recorded 247 distinct disaster events in the Pacific, triggering nearly one million internal displacement movements.</p>
+			</div>
+			<div class="viz-placeholder" role="img" aria-label="Placeholder for a forthcoming visualization about internal displacement movements"><span>Visualization forthcoming</span><strong>Nearly one million displacement movements</strong></div>
+
+			<div class="chapter-copy chapter-close">
+				<p>These figures count displacement movements rather than unique individuals. A single person can be forced to flee their home multiple times. The vast majority of these individuals remain within national borders as <a href="https://www.internal-displacement.org/internal-displacement/" target="_blank" rel="noreferrer">internally displaced persons</a> (IDPs). However, the threat is escalating, with extreme weather putting at least 50,000 Pacific Islanders at risk of losing their homes every single year, as tracked by the IDMC <a href="https://www.internal-displacement.org/sites/default/files/brochure_prdd_final_260520_min_v2.pdf" target="_blank" rel="noreferrer">Pacific Response to Disaster Displacement Project</a>.</p>
+			</div>
+		</section>
+
+		<RemainingChapters />
+	</div>
+</div>
+
+<div class="challenge-mark">
+	<a href="https://pacificdatavizchallenge.org/" target="_blank" rel="noreferrer" aria-label="Visit the Pacific Dataviz Challenge 2026 website">
+		<img src="/images/logo.ico" alt="Pacific Dataviz Challenge" />
+	</a>
+</div>
+
+<footer class="site-footer">
+	<p>Written &amp; developed by <a href="https://www.elhamyali.com/" target="_blank" rel="noreferrer">Elham Y. Ali</a></p>
+	<p>Built with love for the <a href="https://pacificdatavizchallenge.org/" target="_blank" rel="noreferrer">Pacific Dataviz Challenge 2026</a></p>
+</footer>
+
+<style>
+	:global(html) { scroll-behavior: smooth; }
+	:global(body) { background: #fff; color: #000; }
+	:global(button), :global(a) { font-family: "Inter", sans-serif; }
+
+	.film {
+		position: relative;
+		display: grid;
+		place-items: center;
+		min-height: 100svh;
+		padding: 0;
+		background: #000;
+	}
+
+	.video-wrap {
+		position: absolute;
+		inset: 0;
+		background: #000;
+		overflow: hidden;
+	}
+
+	.video-wrap iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		transform: scale(1.01);
+		pointer-events: none;
+	}
+
+	.video-choices {
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		bottom: clamp(24px, 5vh, 56px);
+		width: min(calc(100% - 32px), 720px);
+		padding: 18px 20px 20px;
+		transform: translateX(-50%);
+		color: #fff;
+		background: rgba(0, 0, 0, .82);
+		border: 1px solid rgba(255, 255, 255, .55);
+		backdrop-filter: blur(8px);
+	}
+
+	.video-choices p {
+		margin: 0 0 14px;
+		font: 500 13px/1.4 "Inter", sans-serif;
+	}
+
+	.choice-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+	.choice-actions button {
+		min-height: 42px;
+		padding: 0 15px;
+		border: 1px solid rgba(255, 255, 255, .72);
+		border-radius: 0;
+		color: #fff;
+		background: transparent;
+		font: 600 11px/1 "Inter", sans-serif;
+		letter-spacing: .08em;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	.choice-actions .sound { color: #000; background: #fff; border-color: #fff; }
+	.choice-actions button:hover, .choice-actions button:focus-visible { color: #000; background: #fff; outline: none; }
+
+	.playback-toggle {
+		position: absolute;
+		z-index: 3;
+		right: clamp(18px, 3vw, 44px);
+		bottom: clamp(18px, 3vw, 34px);
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		min-height: 42px;
+		padding: 0 13px;
+		border: 1px solid rgba(255, 255, 255, .65);
+		border-radius: 0;
+		color: #fff;
+		background: rgba(0, 0, 0, .72);
+		font: 600 11px/1 "Inter", sans-serif;
+		letter-spacing: .08em;
+		text-transform: uppercase;
+		cursor: pointer;
+		backdrop-filter: blur(8px);
+	}
+
+	.playback-toggle:hover, .playback-toggle:focus-visible { color: #000; background: #fff; outline: none; }
+	.speaker { min-width: 22px; font-size: 15px; letter-spacing: -2px; }
+
+	.video-caption {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 12px clamp(20px, 4vw, 48px) 0;
+	}
+
+	.video-caption p {
+		max-width: 920px;
+		margin: 0;
+		color: #4a4a4a;
+		font: 400 12px/1.45 "Inter", sans-serif;
+	}
+
+	.video-caption a { color: #057dbc; }
+
+	.story-shell {
+		display: grid;
+		grid-template-columns: clamp(130px, 17vw, 230px) minmax(0, 1fr);
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+
+	.story-nav {
+		position: sticky;
+		top: 24px;
+		align-self: start;
+		display: grid;
+		gap: 0;
+		margin-top: clamp(84px, 12vw, 180px);
+		padding-left: clamp(18px, 3vw, 48px);
+		z-index: 5;
+	}
+
+	.story-nav a {
+		position: relative;
+		display: grid;
+		gap: 7px;
+		padding: 12px 16px 22px 20px;
+		border-left: 1px solid #bdbdbd;
+		color: #767676;
+		text-decoration: none;
+	}
+
+	.story-nav a::before {
+		content: "";
+		position: absolute;
+		left: -4px;
+		top: 15px;
+		width: 7px;
+		height: 7px;
+		background: #fff;
+		border: 1px solid #000;
+		border-radius: 50%;
+	}
+
+	.story-nav a:hover, .story-nav a:focus-visible { color: #000; outline: none; }
+	.story-nav a.active { color: #000; }
+	.story-nav a.active::before { background: #000; }
+	.story-nav span { font: 700 10px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+	.story-nav strong { max-width: 150px; font: 500 12px/1.35 "Inter", sans-serif; }
+
+	.story-sections { min-width: 0; }
+
+	.introduction {
+		padding: clamp(84px, 12vw, 180px) clamp(24px, 8vw, 128px) clamp(100px, 14vw, 210px);
+	}
+
+	.prose { width: min(100%, 980px); margin: 0 auto; }
+
+	.prose p {
+		max-width: 760px;
+		margin: 0 0 2.1em;
+		font: 400 clamp(18px, 1.7vw, 23px)/1.62 "Inter", sans-serif;
+		letter-spacing: -.012em;
+	}
+
+	.prose .lead {
+		font: 600 clamp(34px, 4.2vw, 63px)/1.12 "Playfair Display", serif;
+		letter-spacing: -.035em;
+	}
+
+	.title-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: clamp(70px, 9vw, 120px) clamp(24px, 8vw, 128px);
+	}
+
+	.title-card::before {
+		content: "";
+		width: 54px;
+		height: 1px;
+		background: #000;
+	}
+
+	.title-card::before { margin-bottom: clamp(54px, 7vw, 88px); }
+
+	.title-eyebrow, .chapter-heading > p {
+		margin: 0 0 28px;
+		font: 700 11px/1 "Inter", sans-serif;
+		letter-spacing: .18em;
+		text-transform: uppercase;
+	}
+
+	.title-card h1 {
+		max-width: 1050px;
+		margin: 0;
+		font: 500 clamp(64px, 10vw, 150px)/.9 "Playfair Display", serif;
+		letter-spacing: -.055em;
+	}
+
+	.title-card h1 em { font-weight: 500; }
+	.subtitle { max-width: 800px; margin: 42px 0 0; font: 500 clamp(22px, 2.4vw, 34px)/1.3 "Inter", sans-serif; letter-spacing: -.025em; }
+	.byline { margin: 42px 0 0; font: 700 13px/1 "Inter", sans-serif; }
+
+	.chapter-one { padding: clamp(70px, 9vw, 120px) clamp(24px, 8vw, 128px); }
+	.chapter-heading { width: min(100%, 980px); margin: 0 auto clamp(64px, 9vw, 110px); }
+	.chapter-heading h2 { margin: 0; font: 500 clamp(52px, 8vw, 116px)/.95 "Playfair Display", serif; letter-spacing: -.05em; }
+	.chapter-heading h2 em { font-weight: 500; }
+	.chapter-copy { width: min(100%, 980px); margin: 0 auto; }
+	.chapter-copy p { max-width: 760px; margin: 0 0 2em; font: 400 clamp(18px, 1.7vw, 23px)/1.62 "Inter", sans-serif; letter-spacing: -.012em; }
+	.chapter-copy .chapter-lead { font: 600 clamp(32px, 4vw, 58px)/1.15 "Playfair Display", serif; letter-spacing: -.035em; }
+	.chapter-copy a { color: #057dbc; text-underline-offset: 3px; }
+
+	.viz-placeholder {
+		display: grid;
+		place-content: center;
+		gap: 14px;
+		min-height: clamp(340px, 55vw, 680px);
+		margin: clamp(70px, 10vw, 140px) 0;
+		padding: 30px;
+		border: 1px solid #bdbdbd;
+		background: #f5f5f5;
+		text-align: center;
+	}
+
+	.viz-placeholder span { font: 700 10px/1 "Inter", sans-serif; letter-spacing: .17em; text-transform: uppercase; }
+	.viz-placeholder strong { font: 500 clamp(26px, 3vw, 42px)/1.15 "Playfair Display", serif; }
+	.chapter-close { padding-bottom: clamp(50px, 8vw, 110px); border-bottom: 1px solid #000; }
+
+	.site-footer {
+		display: flex;
+		justify-content: space-between;
+		gap: 28px;
+		padding: 30px clamp(20px, 5vw, 72px);
+		color: #fff;
+		background: #000;
+		font: 500 12px/1.5 "Inter", sans-serif;
+		letter-spacing: .01em;
+	}
+
+	.site-footer p { margin: 0; }
+	.site-footer a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+	.site-footer a:hover, .site-footer a:focus-visible { color: #9edfe3; text-decoration-thickness: 2px; outline: none; }
+
+	.challenge-mark {
+		display: grid;
+		place-items: center;
+		padding: clamp(16px, 2.5vw, 28px) 24px;
+		background: #fff;
+	}
+
+	.challenge-mark a { display: block; }
+	.challenge-mark a:focus-visible { outline: 2px solid #000; outline-offset: 8px; }
+	.challenge-mark img { display: block; width: clamp(64px, 7vw, 96px); height: auto; }
+
+	@media (max-width: 700px) {
+		.film { min-height: 100svh; }
+		.video-wrap { inset: 0; }
+		.playback-toggle { right: 12px; bottom: 12px; }
+		.toggle-label { display: none; }
+		.video-choices { bottom: 20px; }
+		.choice-actions { display: grid; }
+		.choice-actions button { width: 100%; }
+		.video-caption { padding-inline: 16px; }
+		.story-shell { display: block; }
+		.story-nav { top: 0; display: flex; margin: 0; padding: 0 12px; background: rgba(255,255,255,.96); border-bottom: 1px solid #000; overflow-x: auto; }
+		.story-nav a { flex: 0 0 auto; padding: 12px 18px; border-left: 0; }
+		.story-nav a::before { display: none; }
+		.story-nav strong { max-width: none; }
+		.introduction, .title-card, .chapter-one { padding-inline: 20px; }
+		.site-footer { display: grid; }
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		:global(html) { scroll-behavior: auto; }
+	}
+</style>
