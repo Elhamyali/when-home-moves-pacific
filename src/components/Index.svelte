@@ -10,7 +10,15 @@
 	let activeSection = $state("introduction");
 
 	onMount(() => {
-		const sections = ["introduction", "chapter-one", "chapter-two", "chapter-three", "chapter-four", "chapter-five", "methodology-credits"]
+		const sections = [
+			"introduction",
+			"chapter-one",
+			"chapter-two",
+			"chapter-three",
+			"chapter-four",
+			"chapter-five",
+			"methodology-credits"
+		]
 			.map((id) => document.getElementById(id))
 			.filter(Boolean);
 		const observer = new IntersectionObserver(
@@ -26,11 +34,13 @@
 		function handlePlayerMessage(event) {
 			if (event.origin !== "https://www.youtube.com") return;
 			try {
-				const message = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+				const message =
+					typeof event.data === "string" ? JSON.parse(event.data) : event.data;
 				const info = message?.info;
 				if (!info) return;
 				if (Number.isFinite(info.currentTime)) currentTime = info.currentTime;
-				if (Number.isFinite(info.playerState)) isPlaying = info.playerState === 1;
+				if (Number.isFinite(info.playerState))
+					isPlaying = info.playerState === 1;
 				if (typeof info.muted === "boolean") isMuted = info.muted;
 			} catch {
 				// Ignore unrelated window messages that are not JSON.
@@ -38,7 +48,10 @@
 		}
 
 		window.addEventListener("message", handlePlayerMessage);
-		player?.contentWindow?.postMessage(JSON.stringify({ event: "listening" }), "https://www.youtube.com");
+		player?.contentWindow?.postMessage(
+			JSON.stringify({ event: "listening" }),
+			"https://www.youtube.com"
+		);
 
 		return () => {
 			observer.disconnect();
@@ -77,11 +90,21 @@
 
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+	<link
+		rel="preconnect"
+		href="https://fonts.gstatic.com"
+		crossorigin="anonymous"
+	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
-<section class="film" aria-label="Film about the relocation of Vunidogoloa, Fiji">
+<section
+	class="film"
+	aria-label="Film about the relocation of Vunidogoloa, Fiji"
+>
 	<div class="video-wrap">
 		<iframe
 			bind:this={player}
@@ -93,19 +116,44 @@
 	</div>
 
 	<div class="video-controls" aria-label="Video playback controls">
-		<button type="button" onclick={togglePlayback} aria-label={isPlaying ? "Pause film" : "Play film"} title={isPlaying ? "Pause" : "Play"}>
+		<button
+			type="button"
+			onclick={togglePlayback}
+			aria-label={isPlaying ? "Pause film" : "Play film"}
+			title={isPlaying ? "Pause" : "Play"}
+		>
 			<span class="play-icon" aria-hidden="true">{isPlaying ? "Ⅱ" : "▶"}</span>
 		</button>
-		<button type="button" onclick={() => seekBy(-10)} aria-label="Rewind film 10 seconds" title="Rewind 10 seconds">
+		<button
+			type="button"
+			onclick={() => seekBy(-10)}
+			aria-label="Rewind film 10 seconds"
+			title="Rewind 10 seconds"
+		>
 			<span aria-hidden="true">↶</span><span class="seconds">10</span>
 		</button>
-		<button type="button" onclick={() => seekBy(10)} aria-label="Forward film 10 seconds" title="Forward 10 seconds">
+		<button
+			type="button"
+			onclick={() => seekBy(10)}
+			aria-label="Forward film 10 seconds"
+			title="Forward 10 seconds"
+		>
 			<span class="seconds">10</span><span aria-hidden="true">↷</span>
 		</button>
-		<button type="button" onclick={toggleMute} aria-label={isMuted ? "Unmute film" : "Mute film"} title={isMuted ? "Unmute" : "Mute"}>
+		<button
+			type="button"
+			onclick={toggleMute}
+			aria-label={isMuted ? "Unmute film" : "Mute film"}
+			title={isMuted ? "Unmute" : "Mute"}
+		>
 			<span aria-hidden="true">{isMuted ? "Muted" : "Sound"}</span>
 		</button>
-		<button class="skip-control" type="button" onclick={skipVideo} aria-label="Skip film and continue to the story">
+		<button
+			class="skip-control"
+			type="button"
+			onclick={skipVideo}
+			aria-label="Skip film and continue to the story"
+		>
 			Skip video <span aria-hidden="true">↓</span>
 		</button>
 	</div>
@@ -113,54 +161,101 @@
 
 <div class="video-caption">
 	<p>
-		The Fijian village of Vunidogoloa relocated to higher ground after rising sea levels made
-		its original coastal location uninhabitable. The move improved housing and access to
-		schools and nearby services. Credit:
-		<a href="https://www.youtube.com/watch?v=rU0IuuZR9Jg" target="_blank" rel="noreferrer">GIZ Pacific</a>.
+		In 2014, Vunidogoloa became the first climate-relocated village in Fiji.
+		They relocated to higher ground after rising sea levels made their original
+		coastal location uninhabitable. The move improved housing and access to
+		schools and nearby services. Credit: <a
+			href="https://www.youtube.com/watch?v=rU0IuuZR9Jg"
+			target="_blank"
+			rel="noreferrer">GIZ Pacific</a
+		>.
 	</p>
 </div>
 
 <div class="story-shell">
 	<nav class="story-nav" aria-label="Story sections">
-		<a href="#introduction" class:active={activeSection === "introduction"} aria-current={activeSection === "introduction" ? "location" : undefined}><span>Home</span><strong>Where we are</strong></a>
-		<a href="#chapter-one" class:active={activeSection === "chapter-one"} aria-current={activeSection === "chapter-one" ? "location" : undefined}><span>Chapter 1</span><strong>A Crisis Measured in Millions</strong></a>
-		<a href="#chapter-two" class:active={activeSection === "chapter-two"} aria-current={activeSection === "chapter-two" ? "location" : undefined}><span>Chapter 2</span><strong>What Forces People to Leave?</strong></a>
-		<a href="#chapter-three" class:active={activeSection === "chapter-three"} aria-current={activeSection === "chapter-three" ? "location" : undefined}><span>Chapter 3</span><strong>When Disaster Doesn't End</strong></a>
-		<a href="#chapter-four" class:active={activeSection === "chapter-four"} aria-current={activeSection === "chapter-four" ? "location" : undefined}><span>Chapter 4</span><strong>What Happens After People Leave?</strong></a>
-		<a href="#chapter-five" class:active={activeSection === "chapter-five"} aria-current={activeSection === "chapter-five" ? "location" : undefined}><span>Chapter 5</span><strong>Fighting Back</strong></a>
-		<a href="#methodology-credits" class:active={activeSection === "methodology-credits"} aria-current={activeSection === "methodology-credits" ? "location" : undefined}><span>Endnotes</span><strong>Methodology & Credits</strong></a>
+		<a
+			href="#introduction"
+			class:active={activeSection === "introduction"}
+			aria-current={activeSection === "introduction" ? "location" : undefined}
+			><span>Home</span><strong>Where we are</strong></a
+		>
+		<a
+			href="#chapter-one"
+			class:active={activeSection === "chapter-one"}
+			aria-current={activeSection === "chapter-one" ? "location" : undefined}
+			><span>Chapter 1</span><strong>A Crisis Measured in Millions</strong></a
+		>
+		<a
+			href="#chapter-two"
+			class:active={activeSection === "chapter-two"}
+			aria-current={activeSection === "chapter-two" ? "location" : undefined}
+			><span>Chapter 2</span><strong>What Forces People to Leave?</strong></a
+		>
+		<a
+			href="#chapter-three"
+			class:active={activeSection === "chapter-three"}
+			aria-current={activeSection === "chapter-three" ? "location" : undefined}
+			><span>Chapter 3</span><strong>When Disaster Doesn't End</strong></a
+		>
+		<a
+			href="#chapter-four"
+			class:active={activeSection === "chapter-four"}
+			aria-current={activeSection === "chapter-four" ? "location" : undefined}
+			><span>Chapter 4</span><strong>What Happens After People Leave?</strong
+			></a
+		>
+		<a
+			href="#chapter-five"
+			class:active={activeSection === "chapter-five"}
+			aria-current={activeSection === "chapter-five" ? "location" : undefined}
+			><span>Chapter 5</span><strong>Fighting Back</strong></a
+		>
+		<a
+			href="#methodology-credits"
+			class:active={activeSection === "methodology-credits"}
+			aria-current={activeSection === "methodology-credits"
+				? "location"
+				: undefined}
+			><span>Endnotes</span><strong>Methodology & Credits</strong></a
+		>
 	</nav>
 
 	<div class="story-sections">
 		<article class="introduction" id="introduction" bind:this={introduction}>
 			<div class="prose">
-			<p class="lead">
-				Home is far more than a physical house. It is the papaya tree planted by a grandparent,
-				the cemetery where generations rest, the shoreline where children learn to fish, and the
-				neighbors who know the histories behind every doorway.
-			</p>
+				<p class="lead">
+					Home is far more than a physical house. It is the papaya tree planted
+					by a grandparent, the cemetery where generations rest, the shoreline
+					where children learn to fish, and the neighbors who know the histories
+					behind every doorway.
+				</p>
 
-			<p>
-				Today, climate change dictates where people can live. Pacific Island communities flee
-				inland to escape storm surges, wrestle from the wreckage of repeated extreme weather
-				events, and confront the agonizing choice to stay or abandon ancestral soil.
-			</p>
+				<p>
+					Today, climate change dictates where people can live. Pacific Island
+					communities flee inland to escape storm surges, wrestle from the
+					wreckage of repeated extreme weather events, and confront the
+					agonizing choice to stay or abandon ancestral soil.
+				</p>
 
-			<p>
-				Some move once. Others move again and again.
-			</p>
+				<p>Some move once. Others move again and again.</p>
 
-			<p>
-				This story traces that journey — from climate disasters to displacement, through the
-				cascading health and economic crises that follow, and finally to the Pacific innovators
-				leading locally-led climate adaptation solutions.
-			</p>
+				<p>
+					This story traces that journey — from climate disasters to
+					displacement, through the cascading health and economic crises that
+					follow, and finally to the Pacific innovators leading locally-led
+					climate adaptation solutions.
+				</p>
 			</div>
 		</article>
 
 		<section class="title-card" aria-labelledby="story-title">
 			<h1 id="story-title"><em>When Home Moves</em></h1>
-			<p class="subtitle">Across the Pacific, climate disasters force people to flee their homes. Some communities rebuild. Others relocate. All redefine what it means to adapt</p>
+			<p class="subtitle">
+				Across the Pacific, climate disasters force people to flee their homes.
+				Some communities rebuild. Others relocate. All redefine what it means to
+				adapt
+			</p>
 			<p class="byline">By Elham Ali</p>
 		</section>
 
@@ -171,31 +266,116 @@
 			</header>
 
 			<div class="chapter-copy">
-				<p class="chapter-lead">The Pacific contributes almost nothing to the climate crisis, yet it experiences some of its most severe consequences.</p>
-				<p>Pacific Island Countries and Territories <a href="https://www.amnestyusa.org/reports/navigating-injustice-climate-displacement-from-the-pacific-islands-of-tuvalu-and-kiribati-to-aotearoa-new-zealand/" target="_blank" rel="noreferrer">contribute</a> a minuscule 0.02% of global greenhouse gas emissions. Yet they endure the world’s most severe climate penalties: rising sea levels, warming oceans, extreme flooding, and rapid coastal erosion. The inequity is starkest for low-lying atoll nations like Kiribati and Tuvalu, which account for less than 0.003% and 0.0002% of global emissions, respectively.</p>
-				<p>By comparison, high-income nations like Aotearoa New Zealand emit 43 times Tuvalu’s total output, and a staggering 650 times the emissions of Kiribati.</p>
-				<p>Between 2008 and 2025, climate-driven and geophysical disasters directly affected more than 2.5 million people across 21 Pacific nations, based on data compiled from the <a href="https://pacificdata.org/" target="_blank" rel="noreferrer">Pacific Data Hub</a>.</p>
+				<p class="chapter-lead">
+					The Pacific contributes almost nothing to the climate crisis, yet it
+					experiences some of its most severe consequences.
+				</p>
+				<p>
+					Pacific Island Countries and Territories <a
+						href="https://www.amnestyusa.org/reports/navigating-injustice-climate-displacement-from-the-pacific-islands-of-tuvalu-and-kiribati-to-aotearoa-new-zealand/"
+						target="_blank"
+						rel="noreferrer">contribute</a
+					> a minuscule 0.02% of global greenhouse gas emissions. Yet they endure
+					the world’s most severe climate penalties: rising sea levels, warming oceans,
+					extreme flooding, and rapid coastal erosion. The inequity is starkest for
+					low-lying atoll nations like Kiribati and Tuvalu, which account for less
+					than 0.003% and 0.0002% of global emissions, respectively.
+				</p>
+				<p>
+					By comparison, high-income nations like Aotearoa New Zealand emit 43
+					times Tuvalu’s total output, and a staggering 650 times the emissions
+					of Kiribati.
+				</p>
+				<p>
+					Between 2008 and 2025, climate-driven and geophysical disasters
+					directly affected more than 2.5 million people across 21 Pacific
+					nations, based on data compiled from the <a
+						href="https://pacificdata.org/"
+						target="_blank"
+						rel="noreferrer">Pacific Data Hub</a
+					>.
+				</p>
 			</div>
 
 			<NumberTicker />
 			<div class="chapter-copy">
-				<p>Fiji, for example, has suffered the largest cumulative affected population in the region over this period, totaling 1,240,734 people.</p>
+				<p>
+					Fiji, for example, has suffered the largest cumulative affected
+					population in the region over this period, totaling 1,240,734 people.
+				</p>
 			</div>
-			<div class="viz-placeholder" role="img" aria-label="Placeholder for a forthcoming visualization about Fiji's cumulative affected population"><span>Visualization forthcoming</span><strong>Fiji’s cumulative affected population</strong></div>
+			<div
+				class="viz-placeholder"
+				role="img"
+				aria-label="Placeholder for a forthcoming visualization about Fiji's cumulative affected population"
+			>
+				<span>Visualization forthcoming</span><strong
+					>Fiji’s cumulative affected population</strong
+				>
+			</div>
 
 			<div class="chapter-copy">
-				<p>The single largest reported country-year disaster impact in regional history occurred in Fiji in 2016, when a catastrophic cyclone season directly affected 633,584 people — striking roughly 60% to 62% of the nation's entire population.</p>
-				<p>Cyclone Winston, a historic Category 5 storm, drove that destruction and permanently scarred the landscape.</p>
+				<p>
+					The single largest reported country-year disaster impact in regional
+					history occurred in Fiji in 2016, when a catastrophic cyclone season
+					directly affected 633,584 people — striking roughly 60% to 62% of the
+					nation's entire population.
+				</p>
+				<p>
+					Cyclone Winston, a historic Category 5 storm, drove that destruction
+					and permanently scarred the landscape.
+				</p>
 			</div>
-			<div class="viz-placeholder" role="img" aria-label="Placeholder for a forthcoming visualization about Cyclone Winston"><span>Visualization forthcoming</span><strong>Cyclone Winston’s impact</strong></div>
+			<div
+				class="viz-placeholder"
+				role="img"
+				aria-label="Placeholder for a forthcoming visualization about Cyclone Winston"
+			>
+				<span>Visualization forthcoming</span><strong
+					>Cyclone Winston’s impact</strong
+				>
+			</div>
 
 			<div class="chapter-copy">
-				<p>Between 2008 and 2025, the <a href="https://www.internal-displacement.org/" target="_blank" rel="noreferrer">Internal Displacement Monitoring Centre</a> (IDMC) recorded 247 distinct disaster events in the Pacific, triggering nearly one million internal displacement movements.</p>
+				<p>
+					Between 2008 and 2025, the <a
+						href="https://www.internal-displacement.org/"
+						target="_blank"
+						rel="noreferrer">Internal Displacement Monitoring Centre</a
+					> (IDMC) recorded 247 distinct disaster events in the Pacific, triggering
+					nearly one million internal displacement movements.
+				</p>
 			</div>
-			<div class="viz-placeholder" role="img" aria-label="Placeholder for a forthcoming visualization about internal displacement movements"><span>Visualization forthcoming</span><strong>Nearly one million displacement movements</strong></div>
+			<div
+				class="viz-placeholder"
+				role="img"
+				aria-label="Placeholder for a forthcoming visualization about internal displacement movements"
+			>
+				<span>Visualization forthcoming</span><strong
+					>Nearly one million displacement movements</strong
+				>
+			</div>
 
 			<div class="chapter-copy chapter-close">
-				<p>These figures count displacement movements rather than unique individuals. A single person can be forced to flee their home multiple times. The vast majority of these individuals remain within national borders as <a href="https://www.internal-displacement.org/internal-displacement/" target="_blank" rel="noreferrer">internally displaced persons</a> (IDPs). However, the threat is escalating, with extreme weather putting at least 50,000 Pacific Islanders at risk of losing their homes every single year, as tracked by the IDMC <a href="https://www.internal-displacement.org/sites/default/files/brochure_prdd_final_260520_min_v2.pdf" target="_blank" rel="noreferrer">Pacific Response to Disaster Displacement Project</a>.</p>
+				<p>
+					These figures count displacement movements rather than unique
+					individuals. A single person can be forced to flee their home multiple
+					times. The vast majority of these individuals remain within national
+					borders as <a
+						href="https://www.internal-displacement.org/internal-displacement/"
+						target="_blank"
+						rel="noreferrer">internally displaced persons</a
+					>
+					(IDPs). However, the threat is escalating, with extreme weather
+					putting at least 50,000 Pacific Islanders at risk of losing their
+					homes every single year, as tracked by the IDMC
+					<a
+						href="https://www.internal-displacement.org/sites/default/files/brochure_prdd_final_260520_min_v2.pdf"
+						target="_blank"
+						rel="noreferrer"
+						>Pacific Response to Disaster Displacement Project</a
+					>.
+				</p>
 			</div>
 		</section>
 
@@ -204,20 +384,45 @@
 </div>
 
 <div class="challenge-mark">
-	<a href="https://pacificdatavizchallenge.org/" target="_blank" rel="noreferrer" aria-label="Visit the Pacific Dataviz Challenge 2026 website">
+	<a
+		href="https://pacificdatavizchallenge.org/"
+		target="_blank"
+		rel="noreferrer"
+		aria-label="Visit the Pacific Dataviz Challenge 2026 website"
+	>
 		<img src="/images/logo.ico" alt="Pacific Dataviz Challenge" />
 	</a>
 </div>
 
 <footer class="site-footer">
-	<p>Written &amp; developed by <a href="https://www.elhamyali.com/" target="_blank" rel="noreferrer">Elham Y. Ali</a></p>
-	<p>Built with love for the <a href="https://pacificdatavizchallenge.org/" target="_blank" rel="noreferrer">Pacific Dataviz Challenge 2026</a></p>
+	<p>
+		Written &amp; developed by <a
+			href="https://www.elhamyali.com/"
+			target="_blank"
+			rel="noreferrer">Elham Y. Ali</a
+		>
+	</p>
+	<p>
+		Built with love for the <a
+			href="https://pacificdatavizchallenge.org/"
+			target="_blank"
+			rel="noreferrer">Pacific Dataviz Challenge 2026</a
+		>
+	</p>
 </footer>
 
 <style>
-	:global(html) { scroll-behavior: smooth; }
-	:global(body) { background: #fff; color: #000; }
-	:global(button), :global(a) { font-family: "Inter", sans-serif; }
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+	:global(body) {
+		background: #fff;
+		color: #000;
+	}
+	:global(button),
+	:global(a) {
+		font-family: "Inter", sans-serif;
+	}
 
 	.film {
 		position: relative;
@@ -253,8 +458,8 @@
 		align-items: stretch;
 		padding: 4px;
 		color: #fff;
-		background: rgba(0, 0, 0, .76);
-		border: 1px solid rgba(255, 255, 255, .55);
+		background: rgba(0, 0, 0, 0.76);
+		border: 1px solid rgba(255, 255, 255, 0.55);
 		backdrop-filter: blur(8px);
 	}
 
@@ -267,37 +472,57 @@
 		min-height: 42px;
 		padding: 0 10px;
 		border: 0;
-		border-right: 1px solid rgba(255, 255, 255, .28);
+		border-right: 1px solid rgba(255, 255, 255, 0.28);
 		border-radius: 0;
 		color: #fff;
 		background: transparent;
-		font: 600 11px/1 "Inter", sans-serif;
-		letter-spacing: .08em;
+		font:
+			600 11px/1 "Inter",
+			sans-serif;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		cursor: pointer;
 	}
 
-	.video-controls button:last-child { border-right: 0; }
-	.video-controls button:hover, .video-controls button:focus-visible { color: #000; background: #fff; outline: none; }
-	.video-controls button:focus-visible { box-shadow: inset 0 0 0 2px #135ae1; }
-	.video-controls .play-icon { font-size: 15px; line-height: 1; }
-	.video-controls .seconds { font-size: 10px; }
-	.video-controls .skip-control { padding-inline: 13px; }
+	.video-controls button:last-child {
+		border-right: 0;
+	}
+	.video-controls button:hover,
+	.video-controls button:focus-visible {
+		color: #000;
+		background: #fff;
+		outline: none;
+	}
+	.video-controls button:focus-visible {
+		box-shadow: inset 0 0 0 2px #135ae1;
+	}
+	.video-controls .play-icon {
+		font-size: 15px;
+		line-height: 1;
+	}
+	.video-controls .seconds {
+		font-size: 10px;
+	}
+	.video-controls .skip-control {
+		padding-inline: 13px;
+	}
 
 	.video-caption {
-		max-width: 1180px;
 		margin: 0 auto;
 		padding: 12px clamp(20px, 4vw, 48px) 0;
 	}
 
 	.video-caption p {
-		max-width: 920px;
 		margin: 0;
 		color: #4a4a4a;
-		font: 400 12px/1.45 "Inter", sans-serif;
+		font:
+			400 12px/1.45 "Inter",
+			sans-serif;
 	}
 
-	.video-caption a { color: #057dbc; }
+	.video-caption a {
+		color: #057dbc;
+	}
 
 	.story-shell {
 		display: grid;
@@ -339,30 +564,59 @@
 		border-radius: 50%;
 	}
 
-	.story-nav a:hover, .story-nav a:focus-visible { color: #000; outline: none; }
-	.story-nav a.active { color: #000; }
-	.story-nav a.active::before { background: #000; }
-	.story-nav span { font: 700 10px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
-	.story-nav strong { max-width: 150px; font: 500 12px/1.35 "Inter", sans-serif; }
-
-	.story-sections { min-width: 0; }
-
-	.introduction {
-		padding: clamp(84px, 12vw, 180px) clamp(24px, 8vw, 128px) clamp(100px, 14vw, 210px);
+	.story-nav a:hover,
+	.story-nav a:focus-visible {
+		color: #000;
+		outline: none;
+	}
+	.story-nav a.active {
+		color: #000;
+	}
+	.story-nav a.active::before {
+		background: #000;
+	}
+	.story-nav span {
+		font:
+			700 10px/1 "Inter",
+			sans-serif;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+	.story-nav strong {
+		max-width: 150px;
+		font:
+			500 12px/1.35 "Inter",
+			sans-serif;
 	}
 
-	.prose { width: min(100%, 980px); margin: 0 auto; }
+	.story-sections {
+		min-width: 0;
+	}
+
+	.introduction {
+		padding: clamp(84px, 12vw, 180px) clamp(24px, 8vw, 128px)
+			clamp(100px, 14vw, 210px);
+	}
+
+	.prose {
+		width: min(100%, 980px);
+		margin: 0 auto;
+	}
 
 	.prose p {
 		max-width: 760px;
 		margin: 0 0 2.1em;
-		font: 400 clamp(18px, 1.7vw, 23px)/1.62 "Inter", sans-serif;
-		letter-spacing: -.012em;
+		font:
+			400 clamp(18px, 1.7vw, 23px)/1.62 "Inter",
+			sans-serif;
+		letter-spacing: -0.012em;
 	}
 
 	.prose .lead {
-		font: 600 clamp(34px, 4.2vw, 63px)/1.12 "Playfair Display", serif;
-		letter-spacing: -.035em;
+		font:
+			600 clamp(34px, 4.2vw, 63px)/1.12 "Playfair Display",
+			serif;
+		letter-spacing: -0.035em;
 	}
 
 	.title-card {
@@ -379,35 +633,89 @@
 		background: #000;
 	}
 
-	.title-card::before { margin-bottom: clamp(54px, 7vw, 88px); }
+	.title-card::before {
+		margin-bottom: clamp(54px, 7vw, 88px);
+	}
 
-	.title-eyebrow, .chapter-heading > p {
+	.title-eyebrow,
+	.chapter-heading > p {
 		margin: 0 0 28px;
-		font: 700 11px/1 "Inter", sans-serif;
-		letter-spacing: .18em;
+		font:
+			700 11px/1 "Inter",
+			sans-serif;
+		letter-spacing: 0.18em;
 		text-transform: uppercase;
 	}
 
 	.title-card h1 {
 		max-width: 1050px;
 		margin: 0;
-		font: 500 clamp(64px, 10vw, 150px)/.9 "Playfair Display", serif;
-		letter-spacing: -.055em;
+		font:
+			500 clamp(64px, 10vw, 150px)/0.9 "Playfair Display",
+			serif;
+		letter-spacing: -0.055em;
 	}
 
-	.title-card h1 em { font-weight: 500; }
-	.subtitle { max-width: 800px; margin: 42px 0 0; font: 500 clamp(22px, 2.4vw, 34px)/1.3 "Inter", sans-serif; letter-spacing: -.025em; }
-	.byline { margin: 42px 0 0; font: 700 13px/1 "Inter", sans-serif; }
+	.title-card h1 em {
+		font-weight: 500;
+	}
+	.subtitle {
+		max-width: 800px;
+		margin: 42px 0 0;
+		font:
+			500 clamp(22px, 2.4vw, 34px)/1.3 "Inter",
+			sans-serif;
+		letter-spacing: -0.025em;
+	}
+	.byline {
+		margin: 42px 0 0;
+		font:
+			700 13px/1 "Inter",
+			sans-serif;
+	}
 
-	.chapter-one { padding: clamp(70px, 9vw, 120px) clamp(24px, 8vw, 128px); }
-	.chapter-heading { width: min(100%, 980px); margin: 0 auto clamp(64px, 9vw, 110px); }
-	.chapter-heading { scroll-margin-top: 24px; }
-	.chapter-heading h2 { margin: 0; font: 500 clamp(52px, 8vw, 116px)/.95 "Playfair Display", serif; letter-spacing: -.05em; }
-	.chapter-heading h2 em { font-weight: 500; }
-	.chapter-copy { width: min(100%, 980px); margin: 0 auto; }
-	.chapter-copy p { max-width: 760px; margin: 0 0 2em; font: 400 clamp(18px, 1.7vw, 23px)/1.62 "Inter", sans-serif; letter-spacing: -.012em; }
-	.chapter-copy .chapter-lead { font: 600 clamp(32px, 4vw, 58px)/1.15 "Playfair Display", serif; letter-spacing: -.035em; }
-	.chapter-copy a { color: #057dbc; text-underline-offset: 3px; }
+	.chapter-one {
+		padding: clamp(70px, 9vw, 120px) clamp(24px, 8vw, 128px);
+	}
+	.chapter-heading {
+		width: min(100%, 980px);
+		margin: 0 auto clamp(64px, 9vw, 110px);
+	}
+	.chapter-heading {
+		scroll-margin-top: 24px;
+	}
+	.chapter-heading h2 {
+		margin: 0;
+		font:
+			500 clamp(52px, 8vw, 116px)/0.95 "Playfair Display",
+			serif;
+		letter-spacing: -0.05em;
+	}
+	.chapter-heading h2 em {
+		font-weight: 500;
+	}
+	.chapter-copy {
+		width: min(100%, 980px);
+		margin: 0 auto;
+	}
+	.chapter-copy p {
+		max-width: 760px;
+		margin: 0 0 2em;
+		font:
+			400 clamp(18px, 1.7vw, 23px)/1.62 "Inter",
+			sans-serif;
+		letter-spacing: -0.012em;
+	}
+	.chapter-copy .chapter-lead {
+		font:
+			600 clamp(32px, 4vw, 58px)/1.15 "Playfair Display",
+			serif;
+		letter-spacing: -0.035em;
+	}
+	.chapter-copy a {
+		color: #057dbc;
+		text-underline-offset: 3px;
+	}
 
 	.viz-placeholder {
 		display: grid;
@@ -421,9 +729,21 @@
 		text-align: center;
 	}
 
-	.viz-placeholder span { font: 700 10px/1 "Inter", sans-serif; letter-spacing: .17em; text-transform: uppercase; }
-	.viz-placeholder strong { font: 500 clamp(26px, 3vw, 42px)/1.15 "Playfair Display", serif; }
-	.chapter-close { padding-bottom: clamp(50px, 8vw, 110px); border-bottom: 1px solid #000; }
+	.viz-placeholder span {
+		font:
+			700 10px/1 "Inter",
+			sans-serif;
+		letter-spacing: 0.17em;
+		text-transform: uppercase;
+	}
+	.viz-placeholder strong {
+		font:
+			500 clamp(26px, 3vw, 42px)/1.15 "Playfair Display",
+			serif;
+	}
+	.chapter-close {
+		padding-bottom: clamp(50px, 8vw, 110px);
+	}
 
 	.site-footer {
 		display: flex;
@@ -432,13 +752,27 @@
 		padding: 30px clamp(20px, 5vw, 72px);
 		color: #fff;
 		background: #000;
-		font: 500 12px/1.5 "Inter", sans-serif;
-		letter-spacing: .01em;
+		font:
+			500 12px/1.5 "Inter",
+			sans-serif;
+		letter-spacing: 0.01em;
 	}
 
-	.site-footer p { margin: 0; }
-	.site-footer a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-	.site-footer a:hover, .site-footer a:focus-visible { color: #9edfe3; text-decoration-thickness: 2px; outline: none; }
+	.site-footer p {
+		margin: 0;
+	}
+	.site-footer a {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 4px;
+	}
+	.site-footer a:hover,
+	.site-footer a:focus-visible {
+		color: #9edfe3;
+		text-decoration-thickness: 2px;
+		outline: none;
+	}
 
 	.challenge-mark {
 		display: grid;
@@ -447,28 +781,83 @@
 		background: #fff;
 	}
 
-	.challenge-mark a { display: block; }
-	.challenge-mark a:focus-visible { outline: 2px solid #000; outline-offset: 8px; }
-	.challenge-mark img { display: block; width: clamp(64px, 7vw, 96px); height: auto; }
+	.challenge-mark a {
+		display: block;
+	}
+	.challenge-mark a:focus-visible {
+		outline: 2px solid #000;
+		outline-offset: 8px;
+	}
+	.challenge-mark img {
+		display: block;
+		width: clamp(64px, 7vw, 96px);
+		height: auto;
+	}
 
 	@media (max-width: 700px) {
-		.film { min-height: 100svh; }
-		.video-wrap { inset: 0; }
-		.video-controls { right: 12px; bottom: 12px; left: 12px; justify-content: center; }
-		.video-controls button { flex: 1 1 auto; min-width: 0; padding-inline: 7px; }
-		.video-controls .skip-control { flex-grow: 1.35; padding-inline: 8px; }
-		.video-caption { padding-inline: 16px; }
-		.story-shell { display: block; }
-		.story-nav { top: 0; display: flex; margin: 0; padding: 0 12px; background: rgba(255,255,255,.96); border-bottom: 1px solid #000; overflow-x: auto; }
-		.story-nav a { flex: 0 0 auto; padding: 12px 18px; border-left: 0; }
-		.story-nav a::before { display: none; }
-		.story-nav strong { max-width: none; }
-		.introduction, .title-card, .chapter-one { padding-inline: 20px; }
-		.chapter-heading { scroll-margin-top: 88px; }
-		.site-footer { display: grid; }
+		.film {
+			min-height: 100svh;
+		}
+		.video-wrap {
+			inset: 0;
+		}
+		.video-controls {
+			right: 12px;
+			bottom: 12px;
+			left: 12px;
+			justify-content: center;
+		}
+		.video-controls button {
+			flex: 1 1 auto;
+			min-width: 0;
+			padding-inline: 7px;
+		}
+		.video-controls .skip-control {
+			flex-grow: 1.35;
+			padding-inline: 8px;
+		}
+		.video-caption {
+			padding-inline: 16px;
+		}
+		.story-shell {
+			display: block;
+		}
+		.story-nav {
+			top: 0;
+			display: flex;
+			margin: 0;
+			padding: 0 12px;
+			background: rgba(255, 255, 255, 0.96);
+			border-bottom: 1px solid #000;
+			overflow-x: auto;
+		}
+		.story-nav a {
+			flex: 0 0 auto;
+			padding: 12px 18px;
+			border-left: 0;
+		}
+		.story-nav a::before {
+			display: none;
+		}
+		.story-nav strong {
+			max-width: none;
+		}
+		.introduction,
+		.title-card,
+		.chapter-one {
+			padding-inline: 20px;
+		}
+		.chapter-heading {
+			scroll-margin-top: 88px;
+		}
+		.site-footer {
+			display: grid;
+		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		:global(html) { scroll-behavior: auto; }
+		:global(html) {
+			scroll-behavior: auto;
+		}
 	}
 </style>
