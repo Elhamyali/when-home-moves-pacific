@@ -25,6 +25,7 @@ Use these conventions for every data visualization in this project unless a spec
   - `#808080`
 - Reuse a palette color when a visualization needs more categories than the palette provides; do not introduce an unapproved color without a deliberate design reason.
 - Render bubbles and other proportional symbols as flat, solid-color marks. Do not use gradients, highlights, drop shadows, or other simulated 3D effects unless depth encodes a meaningful data dimension.
+- Keep Pacific-focused maps visually consistent with the Chapter 3 map: use `#2197ff` at 12% opacity for the ocean, `#2197ff` at 13% opacity for the graticule, `#a7abaf` at 24% opacity for background land, `#a7abaf` at 58% opacity for Pacific land, `#808080` for boundaries, and `#135ae1` for bubbles or primary map marks.
 
 ## Sources and notes
 
@@ -45,6 +46,7 @@ Use these conventions for every data visualization in this project unless a spec
 - Use a smaller bottom margin after a visualization than its top margin so the visualization remains visually connected to the prose that follows.
 - Avoid stacking large visualization margins with large chapter padding; chapter transitions should remain distinct without creating nearly empty screens.
 - Keep layouts responsive and preserve readable labels on narrow screens.
+- Frame Pacific-focused maps with the same Pacific-centered equirectangular projection used in Chapter 3. At a `1000 × 590` reference viewBox, use `rotate([-180, 0])`, `center([0, -12])`, and `scale(405)`, then scale the SVG responsively rather than zooming out to the full world.
 
 ## Interaction and accessibility
 

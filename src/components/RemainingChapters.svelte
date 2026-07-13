@@ -14,7 +14,7 @@
 		<h2 id="chapter-two-title"><em>What Forces People to Leave?</em></h2>
 	</header>
 	<div class="copy">
-		<p class="lead">
+		<p>
 			The overwhelming driver of Pacific displacement is weather-related
 			disasters rather than geophysical ones.
 		</p>
@@ -113,7 +113,7 @@
 		<h2 id="chapter-three-title"><em>When Disaster Doesn't End</em></h2>
 	</header>
 	<div class="copy">
-		<p class="lead">
+		<p>
 			Displacement from climate disasters in the Pacific is not a single,
 			isolated event; it is a chronic, recurring cycle that continually resets
 			national development.
@@ -167,7 +167,7 @@
 		<h2 id="chapter-four-title"><em>What Happens After People Leave?</em></h2>
 	</header>
 	<div class="copy">
-		<p class="lead">
+		<p>
 			Displacement and forced migration from climate disasters compound a
 			cascade of socio-economic and health vulnerabilities.
 		</p>
@@ -331,7 +331,7 @@
 		<h2 id="chapter-five-title"><em>Fighting Back</em></h2>
 	</header>
 	<div class="copy">
-		<p class="lead">
+		<p>
 			Amidst relentless environmental shocks, Pacific Island communities are
 			fighting for their land.
 		</p>
@@ -494,14 +494,14 @@
 		display: block;
 		width: 54px;
 		height: 1px;
-		margin: 0 auto clamp(42px, 5vw, 68px) max(0px, calc((100% - 980px) / 2));
+		margin: 0 0 clamp(42px, 5vw, 68px);
 		background: #000;
 	}
 	header,
 	.copy,
 	.notes {
 		width: min(100%, 980px);
-		margin-inline: auto;
+		margin-inline: 0;
 	}
 	header {
 		margin-bottom: clamp(48px, 6vw, 78px);
@@ -532,12 +532,6 @@
 			400 clamp(18px, 1.7vw, 23px)/1.62 "Inter",
 			sans-serif;
 		letter-spacing: -0.012em;
-	}
-	.copy .lead {
-		font:
-			600 clamp(32px, 4vw, 58px)/1.15 "Playfair Display",
-			serif;
-		letter-spacing: -0.035em;
 	}
 	.copy h3,
 	.notes h3 {

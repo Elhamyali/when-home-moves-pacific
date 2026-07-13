@@ -1,0 +1,113 @@
+country,year,disaster_internal_displacements,reported_displacement_events,event_names,hazard_types,hazard_subtypes
+American Samoa,2018,4600,1,"American Samoa, New Zealand, Samoa, Tonga: Tropical Cyclone GITA - 9/2/2018",Storm,Typhoon/Hurricane/Cyclone
+American Samoa,2020,390,1,"Samoa; American Samoa: Tropical Depression (Invest 96P, Invest 97P, Invest 98P), Tropical Cyclone 18P (Wasi / Vicky) -  16/2/2020",Storm,Storm
+American Samoa,2022,59,1,"American Samoa, Cook Islands, French Polynesia: Storm surge - 12/07/2022",Storm,Storm surge
+Cook Islands,2010,650,2,Pat; Rene,Storm,Storm
+Cook Islands,2016,6,1,Cook Islands: Tropical Cyclone Victor - 15/01/2016,Storm,Typhoon/Hurricane/Cyclone
+Cook Islands,2021,12,1,Cook Islands: Floods - Rarotonga (Tupapa) - 11/05/2021,Flood,Flood
+Cook Islands,2022,7,1,"American Samoa, Cook Islands, French Polynesia: Storm surge - 12/07/2022",Storm,Storm surge
+Fiji,2009,13200,2,Cyclone mick; Fiji: Flood - 01/01/2009,Flood; Storm,Flood; Storm
+Fiji,2010,18000,1,Cyclone 'tomas',Storm,Storm
+Fiji,2012,27000,3,Fiji: Flood - 01/01/2012; Fiji: Flood - 01/01/2012; Fiji: Storm - 01/01/2012,Flood; Storm,Flood; Storm
+Fiji,2014,800,1,Tropical depression,Storm,Storm
+Fiji,2016,76100,3,Tropical cyclone Winston; Fiji: Tropical Cyclone Zena - 05/04/2016; Fiji: Tropical depression - Countrywide - 16/12/2016,Storm,Storm; Typhoon/Hurricane/Cyclone
+Fiji,2017,470,2,Fiji : Viti Levu Flood - 08/02/2017; Fiji : Tropical Cyclone Ella - Country wide - 09/05/2017,Flood; Storm,Flood; Typhoon/Hurricane/Cyclone
+Fiji,2018,10000,1,Fiji: Tropical Cyclone Keni - 09/04/2018,Storm,Typhoon/Hurricane/Cyclone
+Fiji,2019,5582,7,Fiji: Tropical Cyclone Mona - 2/1/2019; Fiji: Landslide - Navosa - February 2019; Fiji: Cylone Pola - 23/2/2019; Fiji: Flooding - Central Division- 22/04/2019; Fiji: Landslide - Cakaudrove (Northern Division)- 24/04/2019; Fiji: Storm - Viti Levu (Veriaisi) - 7/10/2019; Fiji: Tropical Cyclone Sarai - 12/12/2019,Mass Movement; Storm,Landslide/Wet mass movement; Storm; Typhoon/Hurricane/Cyclone
+Fiji,2020,36135,4,"Fiji, Tuvalu: TC Tino - 17/01/2020; Vanuatu, Solomon Islands, Fiji, Tonga: Tropical Cyclone Harold - 01/04/2020; Fiji: Sea Level Rise - Kadavu (Narikoso) - 20/11/2020; Fiji, Vanuatu: Cyclone Yasa - countrywide - 16/12/2020",Storm; Wave action,Rogue Wave; Storm; Typhoon/Hurricane/Cyclone
+Fiji,2021,14019,4,"Fiji: Cyclones Ana & Bina - countrywide - 28/01/2021; Fiji: Floods - countrywide - 02/03/2021; Fiji: Floods - Central Division - 02/05/21; Fiji: Landslide - Naitasiri Province (Sawani, Navatuvula Village) - 11/12/2021",Flood; Mass Movement; Storm,Flood; Landslide/Wet mass movement; Typhoon/Hurricane/Cyclone
+Fiji,2022,4744,3,"Fiji: Tropical Cyclone Cody - Countrywide - 08/01/2022; Fiji: Flood - Nadi - 05/02/2022; Fiji: Rogue Wave (Kadavu, Tabuya) - 15/06/2022",Flood; Storm; Wave action,Flood; Rogue Wave; Typhoon/Hurricane/Cyclone
+Fiji,2023,6750,2,Fiji: Flood - Northern Division (Savusavu and Labasa) - 03/02/2023; Fiji: Cyclone Mal - Viti Levu - 14/11/2023,Flood; Storm,Flood; Typhoon/Hurricane/Cyclone
+Fiji,2024,763,5,Fiji: Landslide/ Wet mass movement - Suva (Samabula) - 20/01/2024; Fiji: Flood - Labasa (Naodamu) - 12/02/2024; Fiji: Flood - Western and Central Division (Ba and Rewa) - 16/03/2024; Fiji: Flood - Vatuwaqa and Wailoku - 26/10/2024; Fiji: Flood - Western Division - 25/12/2024,Flood; Mass Movement,Flood; Landslide/Wet mass movement
+Fiji,2025,1500,1,"Fiji: Cyclone Rae - Northern, Central, and Eastern Divisions - 21/02/2025",Storm,Typhoon/Hurricane/Cyclone
+French Polynesia,2010,3500,1,Cyclone 'oli',Storm,Storm
+French Polynesia,2017,1100,1,Tahiti and Moorea Floods,Flood,Flood
+French Polynesia,2019,30,1,French Polynesia: Storm - Pirae (Tahiti) - 16/2/2019,Storm,Storm
+French Polynesia,2020,27,1,"French Polynesia: Flood - Iles de la Société (Moorea, Tahiti) - 01/02/2020",Flood,Flood
+French Polynesia,2022,17,2,"American Samoa, Cook Islands, French Polynesia: Storm surge - 12/07/2022; French Polynesia: Landslide - Hitiaa O Te Ra (Mahaena) - 06/11/2022",Mass Movement; Storm,Landslide/Wet mass movement; Storm surge
+French Polynesia,2024,21,1,French Polynesia: Flood - Windward Islands (Pira'e) - 12/02/2024,Flood,Flood
+French Polynesia,2025,42,1,French Polynesia: Landslide/Wet mass movement - Afaahiti-Taravao - 26/11/2025,Mass Movement,Landslide/Wet mass movement
+Guam,2018,2390,2,"China, Guam, Northern Mariana Islands, Philippines, Thailand: Typhoon Mangkhut - 7/9/2018; Guam, Northern Mariana Islands, Philippines: Super Typhoon Yutu - 24/10/2018",Storm,Typhoon/Hurricane/Cyclone
+Guam,2019,449,2,Guam; Northern Mariana Islands: Typhoon Wutip - 21/2/2019; Guam (USA); Philippines: Typhoon Kammuri (locally named TISOY) - 26/11/2019,Storm,Typhoon/Hurricane/Cyclone
+Guam,2023,1540,2,"Philippines, Japan, Guam, Northern Mariana Islands: Tropical Cyclone Mawar (Betty) - 20/05/2023; Guam, Northern Mariana Islands: Super Typhoon Bolaven - Tinian, Saipan, and Rota - 10/10/2023",Storm,Typhoon/Hurricane/Cyclone
+Kiribati,2008,85,1,Kiribati: Flood - 12/09/2008,Flood,Flood
+Kiribati,2015,2500,1,Cyclone pam,Storm,Typhoon/Hurricane/Cyclone
+Marshall Islands,2008,600,1,Marshall Islands: Flood - 12/10/2008,Flood,Flood
+Marshall Islands,2014,1200,1,King tides in the atolls,Flood,Flood
+Marshall Islands,2019,200,1,Marshall Islands: Flood (swell) - Majuro - 27/11/2019,Flood,Flood
+Marshall Islands,2022,28,1,Marshall Islands: Flood - (4 regions) - 10/12/2022,Flood,Flood
+Marshall Islands,2024,315,4,Marshall Islands: Storm surge - Roi-Namur (Kwajalein) - 22/01/2024; Marshall Islands: Drought - (Namo and Likiep) - 27/02/2024; Marshall Islands: Storm - Jaluit Island - 07/09/2024; Marshall Islands: Storm - Small Island - 09/09/2024,Drought; Storm,Drought; Storm; Storm surge
+Micronesia (Federated States of),2015,6800,1,Typhoon maysak,Storm,Typhoon/Hurricane/Cyclone
+Micronesia (Federated States of),2023,5,1,"Micronesia: Typhoon/Hurricane/Cyclone - Pohnpei, Sapwuafik and Pakin - 20/04/2023",Storm,Typhoon/Hurricane/Cyclone
+New Caledonia,2017,570,2,"New Caledonia, Vanuatu: Tropical Cyclone Cook - 05/04/2017; New Caledonia, Vanuatu: Tropical Cyclone Donna - 08/05/2017",Storm,Typhoon/Hurricane/Cyclone
+New Caledonia,2018,48,1,New Caledonia: Wildfire - Ouvea - 3/11/2018,Wildfire,Wildfire
+New Caledonia,2020,31,1,"New Caledonie: Tropical Cyclone UESI - Province Nord (Belep, Koné) - 09/02/2020",Storm,Typhoon/Hurricane/Cyclone
+New Caledonia,2021,5498,4,"New Caledonia, Papua New Guinea, Vanuatu: Tropical Depression Lucas - Countrywide - 02/02/2021; New Caledonia: Niran Cyclone - countrywide - 05/03/2021; New Caledonia: Floods - South Province (Yaté) - 04/05/2021; New Caledonia: Tropical Depression Ruby - Countrywide - 13/12/2021",Flood; Storm,Flood; Storm; Typhoon/Hurricane/Cyclone
+New Caledonia,2022,167,3,"Vanuatu, New Caledonia, New Zealand: Tropical Cyclone Dovi - Countrywide - 06/02/2022; New Caledonia: Tropical Depression Fili - Countrywide - 03/04/2022; New Caledonia: Flood - North Province (Koné, Canala) - 17/08/2022",Flood; Storm,Flood; Storm; Typhoon/Hurricane/Cyclone
+New Caledonia,2023,2,1,New Caledonia: Earthquake - Multiple Regions - 19/05/2023,Earthquake,Earthquake
+Northern Mariana Islands,2018,14122,3,"Japan, Northern Mariana Islands: Typhoon Cimaron - 21/8/2018; China, Guam, Northern Mariana Islands, Philippines, Thailand: Typhoon Mangkhut - 7/9/2018; Guam, Northern Mariana Islands, Philippines: Super Typhoon Yutu - 24/10/2018",Storm,Typhoon/Hurricane/Cyclone
+Northern Mariana Islands,2019,873,3,Guam; Northern Mariana Islands: Typhoon Wutip - 21/2/2019; Japan; Northern Mariana Islands: Super Typhoon Hagibis - 6/10/2019; North Mariana Islands: Typhoon Bualoi - 21/10/2019,Storm,Typhoon/Hurricane/Cyclone
+Northern Mariana Islands,2023,1110,2,"Philippines, Japan, Guam, Northern Mariana Islands: Tropical Cyclone Mawar (Betty) - 20/05/2023; Guam, Northern Mariana Islands: Super Typhoon Bolaven - Tinian, Saipan, and Rota - 10/10/2023",Storm,Typhoon/Hurricane/Cyclone
+Palau,2012,150,1,Palau: Storm - 01/01/2012,Storm,Storm
+Palau,2013,1500,1,Typhoon haiyan,Storm,Storm
+Palau,2021,2460,2,"Philippines; Palau: Typhoon Surigae/Bising - Countrywide - 12/04/2021; Philippines, Palau, Viet Nam: Typhoon Rai (locally known as Odette) - 9 Regions (PHL), Countrywide (PLW), Quang Ngai, Quang Nam nd Phu Yen (VNM) - 11/12/2021",Storm,Typhoon/Hurricane/Cyclone
+Papua New Guinea,2008,75000,1,Papua New Guinea: Flood - 12/08/2008,Flood,Flood
+Papua New Guinea,2009,1000,1,Papua New Guinea: Landslide/Wet mass movement - 01/01/2009,Mass Movement,Landslide/Wet mass movement
+Papua New Guinea,2012,75000,3,Papua New Guinea: Flood - 01/01/2012; Papua New Guinea: Flood - 01/01/2012; Papua New Guinea: Landslide/Wet mass movement - 01/01/2012,Flood; Mass Movement,Flood; Landslide/Wet mass movement
+Papua New Guinea,2013,46,2,Enga landslide; Western highlands flood,Flood; Mass Movement,Flood; Landslide/Wet mass movement
+Papua New Guinea,2014,20780,6,Angabanga river overflowing; Cyclone ita; Bougainville earthquake; Gulf province flood; Mt bagana eruption; Mt. tavurvur eruption,Earthquake; Flood; Storm; Volcanic activity,Earthquake; Flood; Storm; Volcanic activity
+Papua New Guinea,2016,1610,3,"Papua New Guinea: Floods - Jiwaka province - 03/01/2016; Papua New Guinea: Floods - Oro and west New Britain - 01/02/2016; Papua New Guinea: Floods - Jiwake, Lababia, Morobe - 14/10/2016",Flood,Flood
+Papua New Guinea,2017,1390,2,Papua New Guinea: Floods - Eastern Highlands - 05/01/2017; Papua New Guinea : Manam Volcanic activity -16/04/2017,Flood; Volcanic activity,Flood; Volcanic activity
+Papua New Guinea,2018,60740,3,Papua New Guinea: Volcanic Activity - Kadovar Island - 5/1/2018; Papua New Guinea: Earthquake - Southern Highlands - 26/02/2018; Papua New Guinea: Volcanic Eruption (Manam) - Manam Island - 25/8/2018,Earthquake; Volcanic activity,Earthquake; Volcanic activity
+Papua New Guinea,2019,31264,14,Papua New Guinea: Flooding - Central Province - 14/1/2019; Papua New Guinea: Floods - Daulo district (Eastern Highlands) - 6/02/2019; Papua New Guinea: Floods - Chimbu - 7/2/2019; Papua New Guinea: Floods - Raicoast district (Madang) - 7/2/2019; Papua New Guinea: Flood - East New Britain - 18/2/2019; Papua New Guinea; Vanuatu: Tropical Cyclone Oma - 13/2/2019; Australia; Papua New Guinea: Cyclone Trevor - 19/03/2019; Papua New Guinea: Landslide - Wapenamanda (Enga) - 15/4/2019; Papua New Guinea: Flood - Western Highlands - 19/4/2019; Papua New Guinea: Earthquake - Morobe - 7/5/2019; Papua New Guinea: Earthquake - Duke of York Islands - 14/5/2019; Papua New Guinea: Volcanic eruptions (Mount Ulawun) - New Britain - 26/6/2019; Papua New Guinea: Volcanic eruptions (Mount Manam) - Manam Island - 28/6/2019; Papua New Guinea: Volcanic eruptions (Mount Ulawun) - New Britain - 3/8/2019,Earthquake; Flood; Mass Movement; Storm; Volcanic activity,Earthquake; Flood; Landslide/Wet mass movement; Typhoon/Hurricane/Cyclone; Volcanic activity
+Papua New Guinea,2020,3935,8,Papua New Guinea: Land erosion - Lae (Busu Compound) - 1/1/2020; Papua New Guinea: King Tide - Bougainville (Deos-Tinputz) - 03/01/2020; Papua New Guinea: Landslide - Huon-Gulf (Morobe) - 12/1/2020; Papua New Guinea: Flash Flooding - Eastern Highlands - 13/01/2020; Papua New Guinea: Landslide - Western Highlands (Tambul) - 21/03/2020; Papua New Guinea: Flooding - Chimbu province - 25/03/2020; Papua New Guinea: Flood - Goroka (Nupaha) - 1/04/2020; Papua New Guinea: Landslide - Chimbu (Gembogl) - 10/04/2020,Flood; Mass Movement; Wave action,Flood; Landslide/Wet mass movement; Rogue Wave
+Papua New Guinea,2021,1455,6,"Papua New Guinea - Landslides - Western Highlands province - 04/01/2021; Papua New Guinea: Floods - Southern Highland Province (Ialibu Pangia District, Tiri Village) - 15/03/2021; Papua New Guinea: Landslide - Western Highlands Province (Mul Baiyer Lumusa District, Lumusa) - 13/04/2021; Papua New Guinea: King Tide - Bougainville, New Ireland Island, Manus and East Sepik Provinces - 04/12/2021; Papua New Guinea: Landslide - Western Highland Province (Mount Hagen District, Mount Hagen) - 04/12/2021; Papua New Guinea: Landslide - Southern Highland Province (Topa, Mendi) - 27/12/2021",Flood; Mass Movement; Wave action,Flood; Landslide/Wet mass movement; Rogue Wave
+Papua New Guinea,2022,9687,5,"Papua New Guinea: Flooding - West Sepik Province (Aitape-Lumi District, Aitape) - 11/01/2022; Papua New Guinea: Flash Floods - West New Britain Province (Talasea) - 20/01/2022; Papua New Guinea: Landslide - Morobe Province (Bulolo District, Upper Nami) - 19/02/2022; Papua New Guinea: Wildfire - Eastern Highlands - 01/07/2022; Papua New Guinea: Earthquake - Morobe, Madang, Eastern Highlands Province - 11/09/2022",Earthquake; Flood; Mass Movement; Wildfire,Earthquake; Flood; Landslide/Wet mass movement; Wildfire
+Papua New Guinea,2023,13510,4,"Papua New Guinea: Earthquake - Momase (East Sepik, Keram and Karawari) - 03/04/2023; Papua New Guinea: Volcanic activity - Autonomous Region of Bougainville - 07/07/2023; Papua New Guinea: Earthquake - Momase (Madang) - 09/10/2023; Papua New Guinea: Volcanic activity - West New Britain (Mt Ulawun) - 20/11/2023",Earthquake; Volcanic activity,Earthquake; Volcanic activity
+Papua New Guinea,2024,31090,20,"Papua New Guinea: Rogue wave (King Tide) - New Ireland Province (Tabar Group of Islands) - 22/01/2024; Papua New Guinea: Flood - Eastern Highlands (Goroko and Henganofi) - 01/03/2024; Papua New Guinea: Flood - Jiwaka (Waghi and Jimi) - 01/03/2024; Papua New Guinea: Flood - Western Highlands (Hagen Central, Mul, Baiyer, Tambul, Nebilyer) - 01/03/2024; Papua New Guinea: Flood - Madang - 10/03/2024; Papua New Guinea: Landslides - Chimbu  Province (Kundiawa-Gembogl District) - 12/03/2024; Papua New Guinea: Earthquake - East Sepik - 24/03/2024; Papua New Guinea: Flood - Morobe (Bulolo) - 01/04/2024; Papua New Guinea: Flood - Morobe Province (Huon Gulf) - 24/05/2024; Papua New Guinea: Landslide/Wet mass movement - Western Highlands (Mt Hagen) - 17/04/2024; Papua New Guinea: Flood - Enga (Lagaip-Pogera) - 01/05/2024; Papua New Guinea: Landslide/Wet mass movement - Enga (Wabag) - 01/05/2024; Papua New Guinea: Landslide/Wet mass movement - Enga (Wapenamanda) - 01/05/2024; Papua New Guinea: Flood - Western (Multiple Regions) - 06/05/2024; Papua New Guinea: Landslide/Wet mass movement - Enga Province (Lagaip-Porgera District) - 24/05/2024; Papua New Guinea: Flood - Western Province (Middle Fly) - 01/06/2024; Papua New Guinea: Flood - Lae - 27/06/2024; Papua New Guinea: Flood - Southern Highland (Mendi) - 04/09/2024; Papua New Guinea: Flood - Morobe - 09/09/2024; Papua New Guinea: Landslide/Wet mass movement - Southern Highlands (Kagua Erave) - 11/11/2024",Earthquake; Flood; Mass Movement; Wave action,Earthquake; Flood; Landslide/Wet mass movement; Rogue Wave
+Papua New Guinea,2025,25,3,Papua New Guinea: Flood - Momase (Madang Town) - 08/05/2025; Papua New Guinea: Landslide/Wet mass movement - Highlands (Enga) - 31/10/2025; Papua New Guinea: Landslide/Wet mass movement - Highlands (Western Highlands) - 21/11/2025,Flood; Mass Movement,Flood; Landslide/Wet mass movement
+Samoa,2009,5300,1,Samoa: Earthquake - 01/01/2009,Earthquake,Earthquake
+Samoa,2012,7700,1,Samoa: Storm - 01/01/2012,Storm,Storm
+Samoa,2014,86,1,"Flood in gataivai, utalei",Flood,Flood
+Samoa,2015,960,1,Cyclone tuni,Storm,Typhoon/Hurricane/Cyclone
+Samoa,2016,63,1,Samoa: Tropical Cyclone Amos - 23/04/2016,Storm,Typhoon/Hurricane/Cyclone
+Samoa,2018,330,1,"American Samoa, New Zealand, Samoa, Tonga: Tropical Cyclone GITA - 9/2/2018",Storm,Typhoon/Hurricane/Cyclone
+Samoa,2020,55,2,"Samoa; American Samoa: Tropical Depression (Invest 96P, Invest 97P, Invest 98P), Tropical Cyclone 18P (Wasi / Vicky) -  16/2/2020; Samoa: Flash Flooding - Apia - 18/12/2020",Flood; Storm,Flood; Storm
+Samoa,2022,14,1,Samoa: Floods - Apia - 27/10/2022,Flood,Flood
+Samoa,2023,14,1,Samoa: Flood - Savai'i - 08/06/2023,Flood,Flood
+Solomon Islands,2010,7800,2,Cyclone 'ului'; Solomon Islands: Earthquake - 01/01/2010,Earthquake; Storm,Earthquake; Storm
+Solomon Islands,2012,1047,2,Solomon Islands: Flood - 01/01/2012; Solomon Islands: Storm - 01/01/2012,Flood; Storm,Flood; Storm
+Solomon Islands,2013,3500,1,Solomon islands tsunami,Earthquake,Earthquake
+Solomon Islands,2014,9000,1,Honiara floods,Flood,Flood
+Solomon Islands,2015,1000,1,Cyclone pam,Storm,Typhoon/Hurricane/Cyclone
+Solomon Islands,2016,1400,1,"Solomon Islands: Earthquake - Makira, Malaita, Guadalcanal - 09/12/2016",Earthquake,Earthquake
+Solomon Islands,2017,580,1,Solomon Islands: Floods - Guadalcanal - 05/12/2018,Flood,Flood
+Solomon Islands,2018,1055,3,"Solomon Islands: Tropical Depression - 24/1/2018; Solomon Islands: Floods - Honiara - 1/3/2018; Solomon Islands: Floods / Tropical Cyclone Penny - Malaita, Western, Guadalcanal - 27/12/2018",Flood; Storm,Flood; Storm
+Solomon Islands,2019,31,2,Solomon Islands: Storm - Kwai and Ngongosila islands (East Malaita) - 11/2/2019; Solomon Islands: Landslide - Gizo - 10/9/2019,Mass Movement; Storm,Landslide/Wet mass movement; Storm
+Solomon Islands,2020,321,2,"Solomon Islands: Floods - Guadalcanal - 10/03/2020; Vanuatu, Solomon Islands, Fiji, Tonga: Tropical Cyclone Harold - 01/04/2020",Flood; Storm,Flood; Storm
+Solomon Islands,2021,5,1,Solomon Islands: Earthquake - Western Province - 15/10/2021,Earthquake,Earthquake
+Solomon Islands,2022,11,1,Solomon Islands: Earthquake - Guadalcanal Province (Honiara) - 22/11/2022,Earthquake,Earthquake
+Solomon Islands,2023,640,1,"Solomon Island, Vanuatu: Tropical Cyclone Lola - 22/10/2023",Storm,Typhoon/Hurricane/Cyclone
+Tonga,2012,400,1,Tonga: Storm - 01/01/2012,Storm,Storm
+Tonga,2013,17,1,Tonga: Flood - 04/03/2013,Flood,Flood
+Tonga,2014,5300,1,Tropical cyclone ian,Storm,Storm
+Tonga,2016,3000,2,Tonga: Tropical Cyclone Ula - 31/12/2015; Tropical cyclone Winston,Storm,Typhoon/Hurricane/Cyclone
+Tonga,2018,5700,1,"American Samoa, New Zealand, Samoa, Tonga: Tropical Cyclone GITA - 9/2/2018",Storm,Typhoon/Hurricane/Cyclone
+Tonga,2020,2700,1,"Vanuatu, Solomon Islands, Fiji, Tonga: Tropical Cyclone Harold - 01/04/2020",Storm,Storm
+Tonga,2022,2400,1,Tonga: Volcanic Eruption Hunga Tonga Hunga Ha'apai - 15/01/2022,Volcanic activity,Volcanic activity
+Tonga,2024,40,3,"Tonga: Flood - Tongatapau (Pili and Pea, Vahe Kolofo'ou) - 15/03/2024; Tonga: Earthquake - Nuku'alofa - 27/05/2024; Tonga: Flood - Nuku'alofa - 19/10/2024",Earthquake; Flood,Earthquake; Flood
+Tonga,2025,11,1,Tonga: Earthquake - Nuku'alofa - 31/03/2025,Earthquake,Earthquake
+Tuvalu,2015,5400,1,Cyclone pam,Storm,Typhoon/Hurricane/Cyclone
+Tuvalu,2020,200,1,"Fiji, Tuvalu: TC Tino - 17/01/2020",Storm,Typhoon/Hurricane/Cyclone
+Vanuatu,2011,400,1,Tropical cyclone atu,Storm,Storm
+Vanuatu,2012,700,1,Vanuatu: Storm - 01/01/2012,Storm,Storm
+Vanuatu,2013,69,1,Paama landslide,Mass Movement,Landslide/Wet mass movement
+Vanuatu,2014,350,2,Tropical cyclone lusi; Efate flash floods,Flood; Storm,Flood; Storm
+Vanuatu,2015,65000,1,Cyclone pam,Storm,Typhoon/Hurricane/Cyclone
+Vanuatu,2017,14390,3,"New Caledonia, Vanuatu: Tropical Cyclone Cook - 05/04/2017; New Caledonia, Vanuatu: Tropical Cyclone Donna - 08/05/2017; Vanuatu: Volcanic activity - Ambae island - 22/09/2017",Storm; Volcanic activity,Typhoon/Hurricane/Cyclone; Volcanic activity
+Vanuatu,2018,12591,7,"Vanuatu: Tropical Cyclone Hola - 6/3/2018; Vanuatu: Volcanic activity - Ambae island - 18/3/2018; Vanuatu: Mudflow - Waluwebue, Ambae - 31/3/2018; Vanuatu: Volcanic activity (Manaro) - Ambae island - 19/7/2018; Vanuatu: Landslide - Maewo - 12/9/2018; New Caledonia, Vanuatu: Earthquake/Tsunami - 5/12/2018; Vanuatu: Volcanic activity (Ambrym) - Ambrym - 15/12/2018",Earthquake; Mass Movement; Storm; Volcanic activity,Earthquake; Landslide/Wet mass movement; Typhoon/Hurricane/Cyclone; Volcanic activity
+Vanuatu,2019,1000,1,Papua New Guinea; Vanuatu: Tropical Cyclone Oma - 13/2/2019,Storm,Typhoon/Hurricane/Cyclone
+Vanuatu,2020,80008,2,"Vanuatu: Volcanic ashfall - Tafea (Tanna island) - 31/03/2020; Vanuatu, Solomon Islands, Fiji, Tonga: Tropical Cyclone Harold - 01/04/2020",Storm; Volcanic activity,Storm; Volcanic activity
+Vanuatu,2022,382,2,"Vanuatu, New Caledonia, New Zealand: Tropical Cyclone Dovi - Countrywide - 06/02/2022; Vanuatu: Tropical Cyclone Gina (Shefa Province) - 03/04/2022",Storm,Typhoon/Hurricane/Cyclone
+Vanuatu,2023,68762,4,"Vanuatu: Tropical Cyclone Judy and Kevin - 01/03/2023; Vanuatu: Earthquake - Shefa and Tafea - 03/03/2023; Vanuatu: Earthquake - Shefa - 19/05/2023; Solomon Island, Vanuatu: Tropical Cyclone Lola - 22/10/2023",Earthquake; Storm,Earthquake; Typhoon/Hurricane/Cyclone
+Vanuatu,2024,3100,1,Vanuatu: Earthquake - Shefa - 17/12/2024,Earthquake,Earthquake

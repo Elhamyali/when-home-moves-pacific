@@ -1,5 +1,6 @@
 <script>
-	import NumberTicker from "$components/dataviz/NumberTicker.svelte";
+	import AffectedPopulationGrowingMap from "$components/dataviz/AffectedPopulationGrowingMap.svelte";
+	import InternalDisplacementSmallMultiples from "$components/dataviz/InternalDisplacementSmallMultiples.svelte";
 	import RemainingChapters from "$components/RemainingChapters.svelte";
 	import { onMount } from "svelte";
 	let introduction;
@@ -222,9 +223,22 @@
 	</nav>
 
 	<div class="story-sections">
-		<article class="introduction" id="introduction" bind:this={introduction}>
+		<section
+			class="title-card"
+			id="introduction"
+			bind:this={introduction}
+			aria-labelledby="story-title"
+		>
+			<h1 id="story-title"><em>When Home Moves</em></h1>
+			<p class="subtitle">
+				Across the Pacific, climate disasters force people to flee their homes.
+				Some communities rebuild. Others relocate. All redefine what it means to
+				adapt
+			</p>
+			<p class="byline">By Elham Ali</p>
+
 			<div class="prose">
-				<p class="lead">
+				<p>
 					Home is far more than a physical house. It is the papaya tree planted
 					by a grandparent, the cemetery where generations rest, the shoreline
 					where children learn to fish, and the neighbors who know the histories
@@ -247,16 +261,6 @@
 					climate adaptation solutions.
 				</p>
 			</div>
-		</article>
-
-		<section class="title-card" aria-labelledby="story-title">
-			<h1 id="story-title"><em>When Home Moves</em></h1>
-			<p class="subtitle">
-				Across the Pacific, climate disasters force people to flee their homes.
-				Some communities rebuild. Others relocate. All redefine what it means to
-				adapt
-			</p>
-			<p class="byline">By Elham Ali</p>
 		</section>
 
 		<section class="chapter-one" aria-labelledby="chapter-one-title">
@@ -266,7 +270,7 @@
 			</header>
 
 			<div class="chapter-copy">
-				<p class="chapter-lead">
+				<p>
 					The Pacific contributes almost nothing to the climate crisis, yet it
 					experiences some of its most severe consequences.
 				</p>
@@ -297,21 +301,12 @@
 				</p>
 			</div>
 
-			<NumberTicker />
+			<AffectedPopulationGrowingMap />
 			<div class="chapter-copy">
 				<p>
 					Fiji, for example, has suffered the largest cumulative affected
 					population in the region over this period, totaling 1,240,734 people.
 				</p>
-			</div>
-			<div
-				class="viz-placeholder"
-				role="img"
-				aria-label="Placeholder for a forthcoming visualization about Fiji's cumulative affected population"
-			>
-				<span>Visualization forthcoming</span><strong
-					>Fiji’s cumulative affected population</strong
-				>
 			</div>
 
 			<div class="chapter-copy">
@@ -326,15 +321,6 @@
 					and permanently scarred the landscape.
 				</p>
 			</div>
-			<div
-				class="viz-placeholder"
-				role="img"
-				aria-label="Placeholder for a forthcoming visualization about Cyclone Winston"
-			>
-				<span>Visualization forthcoming</span><strong
-					>Cyclone Winston’s impact</strong
-				>
-			</div>
 
 			<div class="chapter-copy">
 				<p>
@@ -346,15 +332,7 @@
 					nearly one million internal displacement movements.
 				</p>
 			</div>
-			<div
-				class="viz-placeholder"
-				role="img"
-				aria-label="Placeholder for a forthcoming visualization about internal displacement movements"
-			>
-				<span>Visualization forthcoming</span><strong
-					>Nearly one million displacement movements</strong
-				>
-			</div>
+			<InternalDisplacementSmallMultiples />
 
 			<div class="chapter-copy chapter-close">
 				<p>
@@ -593,14 +571,9 @@
 		min-width: 0;
 	}
 
-	.introduction {
-		padding: clamp(84px, 12vw, 180px) clamp(24px, 8vw, 128px)
-			clamp(100px, 14vw, 210px);
-	}
-
 	.prose {
 		width: min(100%, 980px);
-		margin: 0 auto;
+		margin: clamp(72px, 9vw, 118px) 0 0;
 	}
 
 	.prose p {
@@ -612,32 +585,14 @@
 		letter-spacing: -0.012em;
 	}
 
-	.prose .lead {
-		font:
-			600 clamp(34px, 4.2vw, 63px)/1.12 "Playfair Display",
-			serif;
-		letter-spacing: -0.035em;
-	}
-
 	.title-card {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding: clamp(70px, 9vw, 120px) clamp(24px, 8vw, 128px);
+		padding: clamp(96px, 12vw, 192px) clamp(24px, 8vw, 128px)
+			clamp(70px, 9vw, 120px);
 	}
 
-	.title-card::before {
-		content: "";
-		width: 54px;
-		height: 1px;
-		background: #000;
-	}
-
-	.title-card::before {
-		margin-bottom: clamp(54px, 7vw, 88px);
-	}
-
-	.title-eyebrow,
 	.chapter-heading > p {
 		margin: 0 0 28px;
 		font:
@@ -679,7 +634,7 @@
 	}
 	.chapter-heading {
 		width: min(100%, 980px);
-		margin: 0 auto clamp(64px, 9vw, 110px);
+		margin: 0 0 clamp(64px, 9vw, 110px);
 	}
 	.chapter-heading {
 		scroll-margin-top: 24px;
@@ -696,7 +651,7 @@
 	}
 	.chapter-copy {
 		width: min(100%, 980px);
-		margin: 0 auto;
+		margin: 0;
 	}
 	.chapter-copy p {
 		max-width: 760px;
@@ -706,41 +661,11 @@
 			sans-serif;
 		letter-spacing: -0.012em;
 	}
-	.chapter-copy .chapter-lead {
-		font:
-			600 clamp(32px, 4vw, 58px)/1.15 "Playfair Display",
-			serif;
-		letter-spacing: -0.035em;
-	}
 	.chapter-copy a {
 		color: #057dbc;
 		text-underline-offset: 3px;
 	}
 
-	.viz-placeholder {
-		display: grid;
-		place-content: center;
-		gap: 14px;
-		min-height: clamp(340px, 55vw, 680px);
-		margin: clamp(70px, 10vw, 140px) 0;
-		padding: 30px;
-		border: 1px solid #bdbdbd;
-		background: #f5f5f5;
-		text-align: center;
-	}
-
-	.viz-placeholder span {
-		font:
-			700 10px/1 "Inter",
-			sans-serif;
-		letter-spacing: 0.17em;
-		text-transform: uppercase;
-	}
-	.viz-placeholder strong {
-		font:
-			500 clamp(26px, 3vw, 42px)/1.15 "Playfair Display",
-			serif;
-	}
 	.chapter-close {
 		padding-bottom: clamp(50px, 8vw, 110px);
 	}
@@ -842,10 +767,12 @@
 		.story-nav strong {
 			max-width: none;
 		}
-		.introduction,
 		.title-card,
 		.chapter-one {
 			padding-inline: 20px;
+		}
+		.title-card {
+			padding-top: 72px;
 		}
 		.chapter-heading {
 			scroll-margin-top: 88px;
