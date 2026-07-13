@@ -13,7 +13,7 @@
 		"Wave action": "#058896",
 		Wildfire: "#09aa64"
 	};
-	const hazardTypes = Object.keys(colors);
+	const hazardTypes = Object.keys(colors).sort((a, b) => a.localeCompare(b));
 	const rows = events.map((d, index) => ({
 		...d,
 		index,

@@ -4,6 +4,7 @@
 	import CycloneHaroldBeforeAfter from "$components/dataviz/CycloneHaroldBeforeAfter.svelte";
 	import RunitDomeFigure from "$components/dataviz/RunitDomeFigure.svelte";
 	import DisplacementEventDotBars from "$components/dataviz/DisplacementEventDotBars.svelte";
+	import PacificDisplacementBubbleMap from "$components/dataviz/PacificDisplacementBubbleMap.svelte";
 	import GoodPracticesCardGrid from "$components/dataviz/GoodPracticesCardGrid.svelte";
 </script>
 
@@ -133,7 +134,7 @@
 			cyclones.
 		</p>
 	</div>
-	<VizPlaceholder title="Papua New Guinea’s recurring displacement events" />
+	<PacificDisplacementBubbleMap />
 	<div class="copy">
 		<p>
 			Papua New Guinea lacks the systemic cushion to withstand these blows, <a

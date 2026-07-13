@@ -366,9 +366,9 @@
 						target="_blank"
 						rel="noreferrer">internally displaced persons</a
 					>
-					(IDPs). However, the threat is escalating, with extreme weather
-					putting at least 50,000 Pacific Islanders at risk of losing their
-					homes every single year, as tracked by the IDMC
+					(IDPs). However, the threat is escalating, with extreme weather putting
+					at least 50,000 Pacific Islanders at risk of losing their homes every single
+					year, as tracked by the IDMC
 					<a
 						href="https://www.internal-displacement.org/sites/default/files/brochure_prdd_final_260520_min_v2.pdf"
 						target="_blank"
