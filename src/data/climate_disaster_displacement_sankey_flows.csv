@@ -1,0 +1,22 @@
+source,target,value,flow_stage,metric,note
+"Climate-driven and geophysical disasters directly affected 2,588,223 people across 21 Pacific nations","907,531 internal displacement movements",907531,affected population to internal displacement,internal displacement movements,"The source affected-population total is 2,588,223; this Sankey link uses 907,531 displacement movements so the diagram narrows from people affected to recorded internal displacement."
+"907,531 internal displacement movements",Geophysical disasters,150391,internal displacement to hazard category,internal displacement movements,NA
+"907,531 internal displacement movements",Climate / weather-related disasters,757140,internal displacement to hazard category,internal displacement movements,NA
+Geophysical disasters,Hazard type: Earthquake,84723,hazard category to hazard type,internal displacement movements,NA
+Geophysical disasters,Hazard type: Volcanic activity,65668,hazard category to hazard type,internal displacement movements,NA
+Climate / weather-related disasters,Hazard type: Drought,200,hazard category to hazard type,internal displacement movements,NA
+Climate / weather-related disasters,Hazard type: Flood,227226,hazard category to hazard type,internal displacement movements,NA
+Climate / weather-related disasters,Hazard type: Mass Movement,25977,hazard category to hazard type,internal displacement movements,NA
+Climate / weather-related disasters,Hazard type: Storm,502138,hazard category to hazard type,internal displacement movements,NA
+Climate / weather-related disasters,Hazard type: Wave action,1494,hazard category to hazard type,internal displacement movements,NA
+Climate / weather-related disasters,Hazard type: Wildfire,105,hazard category to hazard type,internal displacement movements,NA
+Hazard type: Drought,Hazard subtype: Drought,200,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Earthquake,Hazard subtype: Earthquake,84723,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Flood,Hazard subtype: Flood,227226,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Mass Movement,Hazard subtype: Landslide/Wet mass movement,25977,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Storm,Hazard subtype: Storm,164461,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Storm,Hazard subtype: Storm surge,161,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Storm,Hazard subtype: Typhoon/Hurricane/Cyclone,337516,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Volcanic activity,Hazard subtype: Volcanic activity,65668,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Wave action,Hazard subtype: Rogue Wave,1494,hazard type to hazard subtype,internal displacement movements,NA
+Hazard type: Wildfire,Hazard subtype: Wildfire,105,hazard type to hazard subtype,internal displacement movements,NA

@@ -1,10 +1,8 @@
-# Svelte Starter
+# Pacific Climate Displacement
 
-This [starter template](https://github.com/the-pudding/svelte-starter) aims to quickly scaffold a [SvelteKit](https://kit.svelte.dev/) project, designed around data-driven, visual stories at [The Pudding](https://pudding.cool).
+An interactive SvelteKit story about climate-driven displacement across Pacific Island countries and territories.
 
 ### Notes
-* _Do not use or reproduce The Pudding logos or fonts without written permission._
-* _Please remove the [goatcounter analytics line](https://github.com/the-pudding/svelte-starter/blob/main/src/app.html#L9) ._
 * _Prettier Formatting: Disable any text editor Prettier extensions to take advantage of the built-in rules._
 
 ### Features
@@ -17,10 +15,6 @@ This [starter template](https://github.com/the-pudding/svelte-starter) aims to q
 - SSR static-hosted builds by default
 
 ## Quickstart
-#### From Scratch
-* Click the green `Use this template` button above.
-* Alternatively: `npx degit the-pudding/svelte-starter my-project`
-
 #### Pre-existing Project
 * clone the repo
 
@@ -43,11 +37,6 @@ Check out the `Makefile` for specific tasks.
 npm run staging
 ```
 
-### Production (on AWS for pudding.cool)
-```bash
-npm run prodution
-```
-
 ### Manual
 ```bash
 npm run build
@@ -62,7 +51,7 @@ Make sure you have a `.env` file in your root with a value of `PASSWORD=yourpass
 make protect
 ```
 
-Then run either `make github` or `make pudding`.
+Then run `make github`.
 
 ## Style
 
@@ -108,9 +97,6 @@ Located in `src/components`.
 // Usage
 import Example from "$components/Example.svelte";
 ```
-
-* `Footer.svelte`: Pudding recirculation and social links.
-* `Header.svelte`: Pudding masthead.
 
 ### Helper Components
 

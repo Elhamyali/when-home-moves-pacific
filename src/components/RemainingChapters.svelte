@@ -1,42 +1,40 @@
 <script>
 	import VizPlaceholder from "$components/VizPlaceholder.svelte";
+	import ClimateDisplacementSankey from "$components/dataviz/ClimateDisplacementSankey.svelte";
+	import CycloneHaroldBeforeAfter from "$components/dataviz/CycloneHaroldBeforeAfter.svelte";
+	import RunitDomeFigure from "$components/dataviz/RunitDomeFigure.svelte";
+	import DisplacementEventDotBars from "$components/dataviz/DisplacementEventDotBars.svelte";
 </script>
 
-<section class="chapter" id="chapter-two" aria-labelledby="chapter-two-title">
-	<header><p>Chapter 2</p><h2 id="chapter-two-title"><em>What Forces People to Leave?</em></h2></header>
+<section class="chapter" aria-labelledby="chapter-two-title">
+	<header id="chapter-two"><p>Chapter 2</p><h2 id="chapter-two-title"><em>What Forces People to Leave?</em></h2></header>
 	<div class="copy">
 		<p class="lead">The overwhelming driver of Pacific displacement is weather-related disasters rather than geophysical ones.</p>
-		<p>Out of the 907,531 movements recorded in the <a href="https://www.internal-displacement.org/" target="_blank" rel="noreferrer">IDMC Database</a>, storms are the dominant engine of flight, accounting for 502,138 displacement movements across 99 separate events in 17 countries.</p>
-		<p>Within this category, typhoons, hurricanes, and cyclones form the leading hazard subtype, causing 337,516 movements.</p>
-		<p>Floods represent the second largest weather-related driver, causing 227,226 movements across 71 events in 11 countries. They leave a lingering aftermath of contaminated freshwater supplies, destroyed crops, and waterlogged soils.</p>
-		<p>Geophysical events triggered 150,391 movements, divided between earthquakes and violent volcanic eruptions.</p>
 	</div>
-	<VizPlaceholder type="Scrollytelling visualization" title="Tracing 907,531 displacements by major hazard and subtype" />
+	<ClimateDisplacementSankey />
 	<div class="copy">
 		<p>In February 2016, Tropical Cyclone Winston was the most powerful cyclone ever recorded in the Southern Hemisphere, the first-ever Category 5 storm to strike Fiji, and the second strongest storm to make landfall anywhere on Earth, with sustained wind speeds exceeding 280 km/h.</p>
-		<p>In a matter of days, it affected approximately 62% of Fiji's total population and triggered 76,100 internal displacement movements, according to a <a href="https://www.ucl.ac.uk/mathematical-physical-sciences/blogs/2026/feb/how-cyclone-winston-affected-people-and-what-we-learnt-it" target="_blank" rel="noreferrer">study</a> published by the UCL Faculty of Mathematical & Physical Sciences.</p>
+		<p>In a matter of days, it affected approximately 62% of Fiji's total population, according to a <a href="https://www.ucl.ac.uk/mathematical-physical-sciences/blogs/2026/feb/how-cyclone-winston-affected-people-and-what-we-learnt-it" target="_blank" rel="noreferrer">study</a> published by the UCL Faculty of Mathematical & Physical Sciences. It also triggered 62,000 internal displacement movements.</p>
 	</div>
-	<VizPlaceholder title="Tropical Cyclone Winston and internal displacement" />
+	<DisplacementEventDotBars />
 	<div class="copy">
 		<p>The physical damage to infrastructure was severe because traditional homes in rural and maritime areas are typically constructed from wood and corrugated iron. These materials proved incapable of withstanding Category 5 forces. Compounding this vulnerability, the vast majority of rural residents lacked any form of property or crop insurance, leaving them entirely dependent on external aid.</p>
 		<p>Just four years later, Tropical Cyclone Harold (2020) struck Fiji, Vanuatu, and Tonga, displacing over 10,000 people and complicating recovery efforts as communities struggled under the restrictions and economic strains of the COVID-19 pandemic.</p>
 	</div>
-	<VizPlaceholder type="Before-and-after slider" title="A Fijian coastal village before and after Cyclone Winston" />
+	<CycloneHaroldBeforeAfter />
 	<div class="copy">
-		<p class="source-note">Planned sources: <a href="https://matangitonga.to/2020/04/15/satellite-tc-harold" target="_blank" rel="noreferrer">Matangi Tonga</a> and <a href="https://unosat.org/products/2824" target="_blank" rel="noreferrer">UNOSAT</a>.</p>
 		<p>Gradual climate degradation can merge with historical geostrategic exploitation to create existential threats just as terrifying as a Category 5 cyclone. In the Marshall Islands, slow-onset sea-level rise is structurally fused with the toxic legacy of U.S. nuclear weapons testing.</p>
 		<p>Between 1946 and 1958, the United States <a href="https://www.latimes.com/projects/marshall-islands-nuclear-testing-sea-level-rise/" target="_blank" rel="noreferrer">detonated</a> 67 nuclear weapons across Bikini and Enewetak Atolls. This included the infamous 1954 “Castle Bravo” thermonuclear blast—a 15-megaton explosion 1,000 times more powerful than the bomb dropped on Hiroshima and Nagasaki combined. Bravo blanketed <a href="https://nukedivestmentscotland.org/wp-content/uploads/2020/08/nwce-report-final-1.pdf" target="_blank" rel="noreferrer">11,000 square kilometers</a> in lethal radioactive fallout, rendering entire islands uninhabitable and forcing the displacement of indigenous populations.</p>
 	</div>
-	<VizPlaceholder title="The Runit Dome nuclear-climate time bomb" />
+	<RunitDomeFigure />
 	<div class="copy">
-		<p class="source-note">Credit: <a href="https://www.wagingpeace.org/runit-dome-cracks-marshall-islands-nuclear-waste/" target="_blank" rel="noreferrer">Nuclear Age Peace Foundation</a>.</p>
 		<p>To contain the resulting radioactive debris, the U.S. military <a href="https://marshallislands.llnl.gov/ccc/Hamilton_LLNL-TR-648143_final.pdf" target="_blank" rel="noreferrer">bulldozed</a> 90,000 cubic meters of contaminated soil into an atomic blast crater on Runit Island, capping it with an 18-inch-thick concrete dome. To save time and expense, the bottom of the crater was never lined with concrete.</p>
 		<p>Today, as sea levels rise, high tides wash directly through the unlined bottom of the crater, flushing radioactive Plutonium-239 and uranium straight into Enewetak's lagoon and the North Equatorial Current, with Marshall Islands plutonium <a href="https://climate.law.columbia.edu/sites/climate.law.columbia.edu/files/content/docs/Michael%20Gerrard/Gerrard-2015-06-Americas-Forgotten-Nuclear-Waste-Dump-in-the-Pacific.pdf" target="_blank" rel="noreferrer">detected</a> over 2,800 miles away. With severe typhoons threatening to breach the cracked concrete cap entirely, the Runit Dome stands as a ticking nuclear-climate time bomb—and an environmental injustice threatening to trigger a second wave of displacement.</p>
 	</div>
 </section>
 
-<section class="chapter" id="chapter-three" aria-labelledby="chapter-three-title">
-	<header><p>Chapter 3</p><h2 id="chapter-three-title"><em>When Disaster Doesn't End</em></h2></header>
+<section class="chapter" aria-labelledby="chapter-three-title">
+	<header id="chapter-three"><p>Chapter 3</p><h2 id="chapter-three-title"><em>When Disaster Doesn't End</em></h2></header>
 	<div class="copy">
 		<p class="lead">Displacement from climate disasters in the Pacific is not a single, isolated event; it is a chronic, recurring cycle that continually resets national development.</p>
 		<p>Papua New Guinea leads the region with 81 distinct displacement events spanned across 15 separate years. The nation <a href="https://crisisresponse.iom.int/response/papua-new-guinea-crisis-response-plan-2024" target="_blank" rel="noreferrer">ranks</a> 16th out of 191 countries globally for overall disaster risk on the <a href="https://drmkc.jrc.ec.europa.eu/inform-index" target="_blank" rel="noreferrer">INFORM Risk Index</a>, prone to multiple natural hazards, such as floods, droughts, and cyclones.</p>
@@ -48,8 +46,8 @@
 	</div>
 </section>
 
-<section class="chapter" id="chapter-four" aria-labelledby="chapter-four-title">
-	<header><p>Chapter 4</p><h2 id="chapter-four-title"><em>What Happens After People Leave?</em></h2></header>
+<section class="chapter" aria-labelledby="chapter-four-title">
+	<header id="chapter-four"><p>Chapter 4</p><h2 id="chapter-four-title"><em>What Happens After People Leave?</em></h2></header>
 	<div class="copy"><p class="lead">Displacement and forced migration from climate disasters compound a cascade of socio-economic and health vulnerabilities.</p><h3>Economic toll</h3>
 		<p>Climate disasters inflict severe financial damage that cripples regional economies. Fiji reported around $374M in direct disaster economic loss for 2016 — the year Cyclones Winston and Xena and a December tropical depression were the dominant disasters — in the UNISDR/Sendai Framework country-year data analyzed. The Fijian government <a href="https://belonging.berkeley.edu/climatedisplacement/case-studies/fiji#footnote17_bp44d9n" target="_blank" rel="noreferrer">estimated</a> that the impact of Cyclone Winston amounted to $900 million USD, more than 20% of the country's GDP.</p>
 	</div>
@@ -83,8 +81,8 @@
 	<div class="copy"><p>This dietary shift has triggered a metabolic crisis: 82% of Pacific adults are overweight or obese, 33% suffer from hypertension, and up to 40% live with high cholesterol. Crucially, resulting metabolic diseases like diabetes compromise immune systems, completing the tragic biological loop by drastically increasing susceptibility to active Tuberculosis.</p></div>
 </section>
 
-<section class="chapter" id="chapter-five" aria-labelledby="chapter-five-title">
-	<header><p>Chapter 5</p><h2 id="chapter-five-title"><em>Fighting Back</em></h2></header>
+<section class="chapter" aria-labelledby="chapter-five-title">
+	<header id="chapter-five"><p>Chapter 5</p><h2 id="chapter-five-title"><em>Fighting Back</em></h2></header>
 	<div class="copy">
 		<p class="lead">Amidst relentless environmental shocks, Pacific Island communities are fighting for their land.</p>
 		<p>They do so despite an international legal vacuum: the 1951 Refugee Convention <a href="https://www.elr.info/sites/default/files/article/2020/06/50.10540.pdf" target="_blank" rel="noreferrer">does not recognize</a> environmental or climate-induced displacement as valid grounds for refugee status, and strict, unceasing immigration frameworks, notably New Zealand's Acceptable Standard of Health (ASH) rules offer no sanctuary. Under ASH, resident visa applicants are rejected if they are deemed to place a high demand on health services, and immigration instructions dictate that medical waivers will not be granted to anyone who has or has had different forms of tuberculosis under certain conditions.</p>
@@ -105,16 +103,16 @@
 	</div>
 	<footer class="notes" id="methodology-credits">
 		<section><h3><em>Methodology & Data</em></h3><p>I built this story with D3.js and Svelte. The full open-source codebase will be available on GitHub.</p><p>I used R (v4.6.1) to analyze historical datasets on climate disasters, disaster-related internal displacement, population impacts, public health, and economic losses from the Pacific Data Hub and the Internal Displacement Monitoring Centre (IDMC). All datasets, data-processing scripts, and analysis code will be available on GitHub.</p></section>
-		<section><h3><em>Acknowledgement</em></h3><p>Special thanks to The Pudding for making their open-source <a href="https://github.com/the-pudding/svelte-starter" target="_blank" rel="noreferrer">Svelte starter template</a> available. It provided the foundation for building this story.</p><p>I'm also grateful to Jan Holtz for his excellent <a href="https://www.react-graph-gallery.com/react-d3-dataviz-course" target="_blank" rel="noreferrer">React + D3.js course</a>, which inspired me to learn D3 and ultimately participate in the 2026 Pacific Data Viz Challenge.</p></section>
+		<section><h3><em>Acknowledgement</em></h3><p>I'm grateful to Jan Holtz for his excellent <a href="https://www.react-graph-gallery.com/react-d3-dataviz-course" target="_blank" rel="noreferrer">React + D3.js course</a>, which inspired me to learn D3 and ultimately participate in the 2026 Pacific Data Viz Challenge.</p></section>
 	</footer>
 </section>
 
 <style>
-	.chapter { position:relative; padding:clamp(90px,12vw,180px) clamp(24px,8vw,128px); }
+	.chapter { position:relative; padding:clamp(64px,8vw,112px) clamp(24px,8vw,128px); }
 	.chapter:last-of-type { padding-bottom: clamp(28px, 4vw, 54px); }
-	.chapter::before { content:""; display:block; width:54px; height:1px; margin:0 auto clamp(70px,9vw,120px) max(0px, calc((100% - 980px) / 2)); background:#000; }
+	.chapter::before { content:""; display:block; width:54px; height:1px; margin:0 auto clamp(42px,5vw,68px) max(0px, calc((100% - 980px) / 2)); background:#000; }
 	header,.copy,.notes { width:min(100%,980px); margin-inline:auto; }
-	header { margin-bottom:clamp(64px,9vw,110px); }
+	header { margin-bottom:clamp(48px,6vw,78px); scroll-margin-top:24px; }
 	header>p { margin:0 0 28px; font:700 11px/1 "Inter",sans-serif; letter-spacing:.18em; text-transform:uppercase; }
 	h2 { margin:0; font:500 clamp(52px,8vw,116px)/.95 "Playfair Display",serif; letter-spacing:-.05em; }
 	h2 em { font-weight:500; }
@@ -126,5 +124,5 @@
 	.notes { display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,7vw,100px); margin-top:clamp(100px,14vw,190px); padding-top:50px; border-top:1px solid #000; }
 	.notes h3 { margin-top:0; }
 	.notes p { font:400 16px/1.6 "Inter",sans-serif; }
-	@media(max-width:700px){.chapter{padding-inline:20px}.notes{grid-template-columns:1fr}}
+	@media(max-width:700px){.chapter{padding-inline:20px}.chapter>header{scroll-margin-top:88px}.notes{grid-template-columns:1fr}}
 </style>
