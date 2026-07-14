@@ -132,8 +132,9 @@
 		{/each}
 	</div>
 
-	<div class="chart-scroll" bind:this={container} role="group" aria-label="Interactive displacement event dot bars" onpointerleave={() => { if (!selectedEvent) tooltip = null; }}>
-		<svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} role="img" aria-label="Horizontal dot bars showing individual internal displacement events by Pacific country, ordered from the most events to the fewest">
+	<div class:tooltip-open={tooltip} class="chart-frame" bind:this={container} role="group" aria-label="Interactive displacement event dot bars" onpointerleave={() => { if (!selectedEvent) tooltip = null; }}>
+		<div class="chart-scroll">
+			<svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} role="img" aria-label="Horizontal dot bars showing individual internal displacement events by Pacific country, ordered from the most events to the fewest">
 			{#each countries as country, countryIndex}
 				<g transform={`translate(0,${countryIndex * rowHeight + 24})`}>
 					<text class="country" x={labelWidth - 14} y="4" text-anchor="end">{country.country}</text>
@@ -169,7 +170,8 @@
 					<text class="count" x={chartWidth - 10} y="4" text-anchor="end">{country.events.length}</text>
 				</g>
 			{/each}
-		</svg>
+			</svg>
+		</div>
 
 		{#if tooltip}
 			<div class:below={tooltip.below} class="tooltip" style={`left:${tooltip.x}px;top:${tooltip.y}px`}>
@@ -202,7 +204,9 @@
 	.legend button.active { color: #111; border-color: #111; }
 	.legend button:focus-visible { outline: 2px solid #135ae1; outline-offset: 2px; }
 	.legend button span { width: 11px; height: 11px; border-radius: 2px; background: var(--color); }
-	.chart-scroll { position: relative; width: 100%; overflow-x: auto; }
+	.chart-frame { position: relative; width: 100%; }
+	.chart-frame.tooltip-open { min-height: 390px; }
+	.chart-scroll { width: 100%; overflow-x: auto; }
 	svg { display: block; min-width: 760px; width: 100%; height: auto; }
 	line { stroke: #e8e8e8; stroke-width: 1; }
 	.country { fill: #222; font: 600 12px/1 "Inter",sans-serif; }

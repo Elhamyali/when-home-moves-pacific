@@ -580,7 +580,7 @@
 		max-width: 760px;
 		margin: 0 0 2.1em;
 		font:
-			400 clamp(18px, 1.7vw, 23px)/1.62 "Inter",
+			400 clamp(18px, 1.5vw, 21px)/1.62 "Inter",
 			sans-serif;
 		letter-spacing: -0.012em;
 	}
@@ -606,7 +606,7 @@
 		max-width: 1050px;
 		margin: 0;
 		font:
-			500 clamp(64px, 10vw, 150px)/0.9 "Playfair Display",
+			500 clamp(58px, 8vw, 120px)/0.9 "Playfair Display",
 			serif;
 		letter-spacing: -0.055em;
 	}
@@ -618,7 +618,7 @@
 		max-width: 800px;
 		margin: 42px 0 0;
 		font:
-			500 clamp(22px, 2.4vw, 34px)/1.3 "Inter",
+			500 clamp(20px, 2.1vw, 30px)/1.3 "Inter",
 			sans-serif;
 		letter-spacing: -0.025em;
 	}
@@ -642,7 +642,7 @@
 	.chapter-heading h2 {
 		margin: 0;
 		font:
-			500 clamp(52px, 8vw, 116px)/0.95 "Playfair Display",
+			500 clamp(46px, 6.5vw, 92px)/0.95 "Playfair Display",
 			serif;
 		letter-spacing: -0.05em;
 	}
@@ -657,7 +657,7 @@
 		max-width: 760px;
 		margin: 0 0 2em;
 		font:
-			400 clamp(18px, 1.7vw, 23px)/1.62 "Inter",
+			400 clamp(18px, 1.5vw, 21px)/1.62 "Inter",
 			sans-serif;
 		letter-spacing: -0.012em;
 	}

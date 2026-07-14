@@ -518,7 +518,7 @@
 	h2 {
 		margin: 0;
 		font:
-			500 clamp(52px, 8vw, 116px)/0.95 "Playfair Display",
+			500 clamp(46px, 6.5vw, 92px)/0.95 "Playfair Display",
 			serif;
 		letter-spacing: -0.05em;
 	}
@@ -529,7 +529,7 @@
 		max-width: 760px;
 		margin: 0 0 2em;
 		font:
-			400 clamp(18px, 1.7vw, 23px)/1.62 "Inter",
+			400 clamp(18px, 1.5vw, 21px)/1.62 "Inter",
 			sans-serif;
 		letter-spacing: -0.012em;
 	}
