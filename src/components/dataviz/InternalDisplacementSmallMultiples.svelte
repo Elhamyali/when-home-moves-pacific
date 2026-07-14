@@ -109,8 +109,9 @@
 	}
 </script>
 
-<figure class="small-multiples" aria-labelledby="idmc-lines-subtitle">
+<figure class="small-multiples" aria-labelledby="idmc-lines-title idmc-lines-subtitle">
 	<figcaption>
+		<h5 id="idmc-lines-title">Internal displacement movements by country</h5>
 		<p id="idmc-lines-subtitle">
 			Annual disaster-related internal displacement movements varied sharply
 			across 17 Pacific countries and territories from {firstYear} to {lastYear}.
@@ -257,9 +258,14 @@
 	}
 
 	figcaption { max-width: 900px; }
+	h5 {
+		margin: 0;
+		font: 700 clamp(18px, 2vw, 24px)/1.2 "Inter", sans-serif;
+		letter-spacing: -0.02em;
+	}
 	figcaption p {
 		max-width: 820px;
-		margin: 0;
+		margin: 8px 0 0;
 		color: #4a4a4a;
 		font: 400 clamp(15px, 1.6vw, 19px)/1.5 "Inter", sans-serif;
 	}

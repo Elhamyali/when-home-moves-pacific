@@ -262,7 +262,6 @@
 				</p>
 			</div>
 		</section>
-
 		<section class="chapter-one" aria-labelledby="chapter-one-title">
 			<header class="chapter-heading" id="chapter-one">
 				<p>Chapter 1</p>
@@ -356,7 +355,6 @@
 				</p>
 			</div>
 		</section>
-
 		<RemainingChapters />
 	</div>
 </div>

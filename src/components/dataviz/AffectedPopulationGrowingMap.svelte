@@ -321,13 +321,13 @@
 
 	.viz-heading h5 {
 		margin: 0;
-		font: 700 clamp(24px, 3vw, 36px)/1.15 "Inter", sans-serif;
-		letter-spacing: -0.025em;
+		font: 700 clamp(18px, 2vw, 24px)/1.2 "Inter", sans-serif;
+		letter-spacing: -0.02em;
 	}
 
 	.viz-heading p {
 		max-width: 800px;
-		margin: 12px 0 0;
+		margin: 8px 0 0;
 		color: #4a4a4a;
 		font: 400 clamp(15px, 1.6vw, 19px)/1.5 "Inter", sans-serif;
 	}

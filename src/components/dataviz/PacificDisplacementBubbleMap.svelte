@@ -120,6 +120,12 @@
 	}
 </script>
 
+<svelte:window
+	onkeydown={(event) => {
+		if (event.key === "Escape" && selected) resetMap();
+	}}
+/>
+
 <figure class="bubble-map">
 	<figcaption>
 		<h5>How many different years has each Pacific country experienced displacement?</h5>
@@ -199,8 +205,11 @@
 		</svg>
 
 		{#if tooltip}
-			<div class:below={tooltip.below} class="tooltip" style={`left:${tooltip.x}px;top:${tooltip.y}px`} role="status">
-				<strong>{tooltip.datum.country}</strong>
+			<div class:below={tooltip.below} class="tooltip" style={`left:${tooltip.x}px;top:${tooltip.y}px`} role="group" aria-label={`${tooltip.datum.country} displacement details`}>
+				<div class="tooltip-header">
+					<strong>{tooltip.datum.country}</strong>
+					<button type="button" onclick={resetMap} aria-label="Close displacement details">×</button>
+				</div>
 				<dl>
 					<div><dt>Distinct years affected</dt><dd>{number(tooltip.datum.years_with_displacement)}</dd></div>
 					<div><dt>Reported events</dt><dd>{number(tooltip.datum.reported_displacement_events)}</dd></div>
@@ -238,9 +247,13 @@
 	.size-key text { fill: #444; font: 600 13px/1 "Inter",sans-serif; }
 	.size-key circle { fill: none; stroke: #135ae1; stroke-width: 1.2; filter: none; }
 	.size-key .key-value { fill: #555; font-weight: 500; }
-	.tooltip { position: absolute; z-index: 4; width: min(280px,calc(100vw - 32px)); padding: 0 14px 14px; transform: translate(-50%,calc(-100% - 12px)); border: 1px solid rgba(0,0,0,.14); background: rgba(255,255,255,.98); box-shadow: 0 12px 32px rgba(0,0,0,.18); pointer-events: none; font: 400 12px/1.4 "Inter",sans-serif; }
+	.tooltip { position: absolute; z-index: 4; width: min(280px,calc(100vw - 32px)); padding: 0 14px 14px; transform: translate(-50%,calc(-100% - 12px)); border: 1px solid rgba(0,0,0,.14); background: rgba(255,255,255,.98); box-shadow: 0 12px 32px rgba(0,0,0,.18); font: 400 12px/1.4 "Inter",sans-serif; }
 	.tooltip.below { transform: translate(-50%,12px); }
-	.tooltip strong { display: block; margin: 0 -14px 12px; padding: 10px 14px; border-top: 5px solid #135ae1; background: #222; color: #fff; font-size: 14px; }
+	.tooltip-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 -14px 12px; padding: 7px 8px 7px 14px; border-top: 5px solid #135ae1; background: #222; color: #fff; }
+	.tooltip-header strong { font-size: 14px; }
+	.tooltip-header button { display: grid; width: 30px; height: 30px; flex: 0 0 auto; place-items: center; padding: 0; border: 0; border-radius: 2px; color: #fff; background: transparent; font: 400 23px/1 "Inter",sans-serif; cursor: pointer; }
+	.tooltip-header button:hover { background: rgba(255,255,255,.15); }
+	.tooltip-header button:focus-visible { outline: 2px solid #fff; outline-offset: 1px; }
 	dl { display: grid; gap: 7px; margin: 0; }
 	dl div { display: grid; grid-template-columns: 1fr auto; gap: 12px; }
 	dt { font-weight: 600; }

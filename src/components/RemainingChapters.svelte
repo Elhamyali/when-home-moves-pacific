@@ -68,10 +68,9 @@
 				target="_blank"
 				rel="noreferrer">detonated</a
 			>
-			67 nuclear weapons across Bikini and Enewetak Atolls. This included the
-			infamous 1954 “Castle Bravo” thermonuclear blast—a 15-megaton explosion
-			1,000 times more powerful than the bomb dropped on Hiroshima and Nagasaki
-			combined. Bravo blanketed
+			67 nuclear weapons across Bikini and Enewetak Atolls. This included the infamous
+			1954 “Castle Bravo” thermonuclear blast—a 15-megaton explosion 1,000 times more
+			powerful than the bomb dropped on Hiroshima and Nagasaki combined. Bravo blanketed
 			<a
 				href="https://nukedivestmentscotland.org/wp-content/uploads/2020/08/nwce-report-final-1.pdf"
 				target="_blank"
@@ -242,8 +241,8 @@
 				target="_blank"
 				rel="noreferrer">60,000 people</a
 			>
-			are crammed into a tiny 15-square-kilometer strip of land. Households
-			average more than 7 people, and it is
+			are crammed into a tiny 15-square-kilometer strip of land. Households average
+			more than 7 people, and it is
 			<a
 				href="https://www.amnestyusa.org/wp-content/uploads/2025/10/Navigating-Injustice-Climate-Displacement-from-the-Pacific-Islands-of-Tuvalu-and-Kiribati-to-Aotearoa-New-Zealand.pdf"
 				target="_blank"
@@ -561,6 +560,7 @@
 			400 16px/1.6 "Inter",
 			sans-serif;
 	}
+
 	@media (max-width: 700px) {
 		.chapter {
 			padding-inline: 20px;
