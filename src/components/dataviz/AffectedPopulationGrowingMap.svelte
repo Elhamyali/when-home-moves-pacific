@@ -50,7 +50,10 @@
 		return { year, points, total: sum(points, (point) => point.cumulative) };
 	});
 	const finalTotal = frames.at(-1).total;
-	const maxCountryTotal = max(frames.at(-1).points, (point) => point.cumulative);
+	const maxCountryTotal = max(
+		frames.at(-1).points,
+		(point) => point.cumulative
+	);
 	const countries = feature(world, world.objects.countries).features;
 	const pacificFeatureNames = new Set([
 		"American Samoa",
@@ -86,9 +89,7 @@
 		.scale(405)
 		.translate([mapWidth / 2, mapHeight / 2]);
 	const mapPath = geoPath(projection);
-	const radiusScale = scaleSqrt()
-		.domain([0, maxCountryTotal])
-		.range([0, 58]);
+	const radiusScale = scaleSqrt().domain([0, maxCountryTotal]).range([0, 58]);
 	const timelineWidth = 1000;
 	const timelineHeight = 118;
 	const timelineX = scaleLinear()
@@ -109,6 +110,7 @@
 	let reduceMotion = $state(false);
 	let selectedCountry = $state("");
 	let hoveredCountry = $state("");
+	let zoomLevel = $state(1);
 	let intervalId;
 
 	const currentFrame = $derived(frames[yearIndex]);
@@ -117,12 +119,12 @@
 	const activePoint = $derived(
 		currentFrame.points.find((point) => point.country === activeCountry)
 	);
-	const progressPath = $derived(
-		timelineLine(frames.slice(0, yearIndex + 1))
-	);
+	const progressPath = $derived(timelineLine(frames.slice(0, yearIndex + 1)));
 
 	onMount(() => {
-		reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		reduceMotion = window.matchMedia(
+			"(prefers-reduced-motion: reduce)"
+		).matches;
 		return () => {
 			stopAnimation();
 		};
@@ -168,7 +170,13 @@
 	}
 
 	function pointRadius(point) {
-		return point.cumulative > 0 ? Math.max(3, radiusScale(point.cumulative)) : 2;
+		return point.cumulative > 0
+			? Math.max(3, radiusScale(point.cumulative))
+			: 2;
+	}
+
+	function changeZoom(amount) {
+		zoomLevel = Math.max(1, Math.min(4, zoomLevel + amount));
 	}
 </script>
 
@@ -178,7 +186,9 @@
 	aria-labelledby="affected-map-title affected-map-subtitle"
 >
 	<header class="viz-heading">
-		<h5 id="affected-map-title">How disasters affected the Pacific over time</h5>
+		<h5 id="affected-map-title">
+			How disasters affected the Pacific over time
+		</h5>
 		<p id="affected-map-subtitle">
 			Press play to watch the cumulative number of people directly affected by
 			disasters grow across 21 Pacific countries and territories from {firstYear}
@@ -198,12 +208,14 @@
 		</div>
 		<label>
 			<span>Explore a country</span>
-			<select bind:value={selectedCountry}>
-				<option value="">All countries</option>
-				{#each locations as location}
-					<option value={location.country}>{location.country}</option>
-				{/each}
-			</select>
+			<span class="select-wrap">
+				<select bind:value={selectedCountry}>
+					<option value="">All countries</option>
+					{#each locations as location}
+						<option value={location.country}>{location.country}</option>
+					{/each}
+				</select>
+			</span>
 		</label>
 	</div>
 
@@ -217,9 +229,27 @@
 			<div class="country-stat">
 				<strong>{activePoint.country}</strong>
 				<span>{numberFormat(activePoint.cumulative)} cumulative</span>
-				<small>{numberFormat(activePoint.annual)} reported in {currentYear}</small>
+				<small
+					>{numberFormat(activePoint.annual)} reported in {currentYear}</small
+				>
 			</div>
 		{/if}
+		<div class="map-zoom" aria-label="Map zoom controls">
+			<button
+				type="button"
+				onclick={() => changeZoom(0.5)}
+				disabled={zoomLevel >= 4}
+				aria-label="Zoom in map"
+				title="Zoom in">+</button
+			>
+			<button
+				type="button"
+				onclick={() => changeZoom(-0.5)}
+				disabled={zoomLevel <= 1}
+				aria-label="Zoom out map"
+				title="Zoom out">−</button
+			>
+		</div>
 
 		<svg
 			class="map"
@@ -228,34 +258,42 @@
 			aria-label={`Map showing ${numberFormat(currentFrame.total)} people cumulatively affected by disasters through ${currentYear}`}
 		>
 			<rect class="ocean" width={mapWidth} height={mapHeight}></rect>
-			<path class="graticule" d={mapPath(graticule)}></path>
-			<g class="world-land">
-				{#each countries as country}
-					<path d={mapPath(country)}></path>
-				{/each}
-			</g>
-			<g class="pacific-land">
-				{#each pacificLand as country}
-					<path d={mapPath(country)}></path>
-				{/each}
-			</g>
+			<g
+				class="zoom-layer"
+				transform={`translate(${mapWidth / 2} ${mapHeight / 2}) scale(${zoomLevel}) translate(${-mapWidth / 2} ${-mapHeight / 2})`}
+			>
+				<path class="graticule" d={mapPath(graticule)}></path>
+				<g class="world-land">
+					{#each countries as country}
+						<path d={mapPath(country)}></path>
+					{/each}
+				</g>
+				<g class="pacific-land">
+					{#each pacificLand as country}
+						<path d={mapPath(country)}></path>
+					{/each}
+				</g>
 
-			{#each currentFrame.points as point (point.country)}
-				{@const position = projection([point.longitude, point.latitude])}
-				<circle
-					role="img"
-					class:muted={activeCountry && activeCountry !== point.country}
-					class:active={activeCountry === point.country}
-					class="bubble"
-					cx={position[0]}
-					cy={position[1]}
-					r={pointRadius(point)}
-					onpointerenter={() => (hoveredCountry = point.country)}
-					onpointerleave={() => (hoveredCountry = "")}
-				>
-					<title>{point.country}: {numberFormat(point.cumulative)} cumulatively affected through {currentYear}; {numberFormat(point.annual)} reported in {currentYear}</title>
-				</circle>
-			{/each}
+				{#each currentFrame.points as point (point.country)}
+					{@const position = projection([point.longitude, point.latitude])}
+					<circle
+						role="img"
+						class:muted={activeCountry && activeCountry !== point.country}
+						class:active={activeCountry === point.country}
+						class="bubble"
+						cx={position[0]}
+						cy={position[1]}
+						r={pointRadius(point)}
+						onpointerenter={() => (hoveredCountry = point.country)}
+						onpointerleave={() => (hoveredCountry = "")}
+					>
+						<title
+							>{point.country}: {numberFormat(point.cumulative)} cumulatively affected
+							through {currentYear}; {numberFormat(point.annual)} reported in {currentYear}</title
+						>
+					</circle>
+				{/each}
+			</g>
 		</svg>
 	</div>
 
@@ -299,12 +337,15 @@
 		disasters. Hover over a circle or use the country menu to explore.
 	</p>
 	<figcaption class="source">
-		Source: <a href={sourceUrl} target="_blank" rel="noreferrer">Pacific Data Hub</a>,
-		Number of directly affected persons attributed to disasters. Basemap: <a
+		Source: <a href={sourceUrl} target="_blank" rel="noreferrer"
+			>Pacific Data Hub</a
+		>, Number of directly affected persons attributed to disasters. Basemap:
+		<a
 			href="https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/"
 			target="_blank"
 			rel="noreferrer">Natural Earth</a
-		>. Location coordinates: <a
+		>. Location coordinates:
+		<a
 			href="https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_map_units.geojson"
 			target="_blank"
 			rel="noreferrer">Natural Earth map units</a
@@ -321,7 +362,9 @@
 
 	.viz-heading h5 {
 		margin: 0;
-		font: 700 clamp(18px, 2vw, 24px)/1.2 "Inter", sans-serif;
+		font:
+			700 clamp(18px, 2vw, 24px)/1.2 "Inter",
+			sans-serif;
 		letter-spacing: -0.02em;
 	}
 
@@ -329,7 +372,9 @@
 		max-width: 800px;
 		margin: 8px 0 0;
 		color: #4a4a4a;
-		font: 400 clamp(15px, 1.6vw, 19px)/1.5 "Inter", sans-serif;
+		font:
+			400 clamp(15px, 1.6vw, 19px)/1.5 "Inter",
+			sans-serif;
 	}
 
 	.controls {
@@ -350,7 +395,9 @@
 		min-height: 42px;
 		border: 1px solid #000;
 		border-radius: 0;
-		font: 600 13px/1 "Inter", sans-serif;
+		font:
+			600 13px/1 "Inter",
+			sans-serif;
 	}
 
 	button {
@@ -380,7 +427,9 @@
 	.controls label {
 		display: grid;
 		gap: 7px;
-		font: 600 11px/1 "Inter", sans-serif;
+		font:
+			600 11px/1 "Inter",
+			sans-serif;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
@@ -389,9 +438,29 @@
 		max-width: 270px;
 		padding: 0 34px 0 11px;
 		color: #000;
+		width: 100%;
 		background: #fff;
+		appearance: none;
 		text-transform: none;
 		letter-spacing: 0;
+	}
+
+	.select-wrap {
+		position: relative;
+		display: block;
+		width: min(270px, 100%);
+	}
+	.select-wrap::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 13px;
+		width: 8px;
+		height: 8px;
+		border-right: 2px solid #000;
+		border-bottom: 2px solid #000;
+		transform: translateY(-70%) rotate(45deg);
+		pointer-events: none;
 	}
 
 	.map-wrap {
@@ -404,6 +473,31 @@
 		display: block;
 		width: 100%;
 		height: auto;
+	}
+
+	.zoom-layer {
+		transition: transform 180ms ease;
+	}
+	.map-zoom {
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		z-index: 3;
+		display: flex;
+	}
+	.map-zoom button {
+		width: 38px;
+		min-height: 38px;
+		padding: 0;
+		font-size: 22px;
+	}
+	.map-zoom button + button {
+		border-left: 0;
+	}
+	.map-zoom button:disabled {
+		color: #757575;
+		background: #fff;
+		cursor: not-allowed;
 	}
 
 	.ocean {
@@ -438,14 +532,20 @@
 		stroke: #135ae1;
 		stroke-width: 1.5;
 		fill-opacity: 0.82;
-		transition: r 500ms ease, fill-opacity 160ms ease;
+		transition:
+			r 500ms ease,
+			fill-opacity 160ms ease;
 	}
-	.bubble.muted { fill-opacity: 0.3; }
+	.bubble.muted {
+		fill-opacity: 0.3;
+	}
 	.bubble.active {
 		fill-opacity: 1;
 		stroke-width: 4;
 	}
-	.reduce-motion .bubble { transition: none; }
+	.reduce-motion .bubble {
+		transition: none;
+	}
 
 	.map-stat,
 	.country-stat {
@@ -462,12 +562,16 @@
 	}
 
 	.map-stat span {
-		font: 700 12px/1 "Inter", sans-serif;
+		font:
+			700 12px/1 "Inter",
+			sans-serif;
 		letter-spacing: 0.12em;
 	}
 	.map-stat strong {
 		margin-top: 8px;
-		font: 700 clamp(30px, 5vw, 58px)/0.95 "Inter", sans-serif;
+		font:
+			700 clamp(30px, 5vw, 58px)/0.95 "Inter",
+			sans-serif;
 		letter-spacing: -0.04em;
 		font-variant-numeric: tabular-nums;
 	}
@@ -475,7 +579,9 @@
 	.country-stat small,
 	.country-stat span {
 		margin-top: 6px;
-		font: 500 clamp(10px, 1.25vw, 13px)/1.35 "Inter", sans-serif;
+		font:
+			500 clamp(10px, 1.25vw, 13px)/1.35 "Inter",
+			sans-serif;
 	}
 
 	.country-stat {
@@ -486,7 +592,11 @@
 		color: #000;
 		background: #fff;
 	}
-	.country-stat strong { font: 700 14px/1.2 "Inter", sans-serif; }
+	.country-stat strong {
+		font:
+			700 14px/1.2 "Inter",
+			sans-serif;
+	}
 
 	.timeline {
 		position: relative;
@@ -505,16 +615,24 @@
 		stroke-linecap: round;
 		stroke-linejoin: round;
 	}
-	.timeline-base { stroke: #a7abaf; }
-	.timeline-progress { stroke: #135ae1; }
+	.timeline-base {
+		stroke: #a7abaf;
+	}
+	.timeline-progress {
+		stroke: #135ae1;
+	}
 	.year-rule {
 		stroke: #135ae1;
 		stroke-width: 2;
 	}
-	.tick { stroke: #808080; }
+	.tick {
+		stroke: #808080;
+	}
 	.timeline text {
 		fill: #4a4a4a;
-		font: 500 15px/1 "Inter", sans-serif;
+		font:
+			500 15px/1 "Inter",
+			sans-serif;
 		text-anchor: middle;
 	}
 
@@ -536,9 +654,13 @@
 	.source {
 		margin: 12px 0 0;
 		color: #4a4a4a;
-		font: 400 12px/1.45 "Inter", sans-serif;
+		font:
+			400 12px/1.45 "Inter",
+			sans-serif;
 	}
-	.source { margin-top: 4px; }
+	.source {
+		margin-top: 4px;
+	}
 	.source a {
 		color: #057dbc;
 		text-underline-offset: 3px;
@@ -561,17 +683,23 @@
 			align-items: stretch;
 			flex-direction: column;
 		}
-		.playback button { flex: 1; }
+		.playback button {
+			flex: 1;
+		}
 		select {
 			width: 100%;
 			max-width: none;
 		}
-		.map-stat strong { font-size: clamp(27px, 8vw, 42px); }
+		.map-stat strong {
+			font-size: clamp(27px, 8vw, 42px);
+		}
 		.country-stat {
 			right: 10px;
 			bottom: 10px;
 			max-width: 205px;
 		}
-		.timeline text { font-size: 19px; }
+		.timeline text {
+			font-size: 19px;
+		}
 	}
 </style>

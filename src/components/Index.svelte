@@ -373,13 +373,14 @@
 <footer class="site-footer">
 	<p>
 		Written &amp; developed by <a
-			href="https://www.elhamyali.com/"
+			href="https://www.linkedin.com/in/elhamali"
 			target="_blank"
 			rel="noreferrer">Elham Y. Ali</a
 		>
 	</p>
 	<p>
-		Built with love for the <a
+		Made with <span class="heart" role="img" aria-label="love">♥</span> for the
+		<a
 			href="https://pacificdatavizchallenge.org/"
 			target="_blank"
 			rel="noreferrer">Pacific Dataviz Challenge 2026</a
