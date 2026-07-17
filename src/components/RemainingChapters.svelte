@@ -457,7 +457,7 @@
 					href="https://github.com/ONSvisual/svelte-components/"
 					target="_blank"
 					rel="noreferrer">Svelte components library</a
-				>, which helped bring this interactive story to life.
+				>, which helped me bring this interactive essay to life.
 			</p>
 		</section>
 	</footer>
