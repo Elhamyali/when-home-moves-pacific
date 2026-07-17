@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import practices from "$data/idmc-good-practices-repository.csv";
 
 	let selected = $state(null);
@@ -35,7 +36,7 @@
 				aria-label={`Learn more about ${practice.good_practice_name} in ${practice.country}`}
 			>
 				<img
-					src={`/assets/dataviz/good-practices/${practice.image_file}`}
+					src={`${base}/assets/dataviz/good-practices/${practice.image_file}`}
 					alt={practice.image}
 				/>
 				<span class="card-copy">

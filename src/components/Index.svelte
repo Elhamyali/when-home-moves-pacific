@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import AffectedPopulationGrowingMap from "$components/dataviz/AffectedPopulationGrowingMap.svelte";
 	import InternalDisplacementSmallMultiples from "$components/dataviz/InternalDisplacementSmallMultiples.svelte";
 	import PacificEmissionsNestedSquares from "$components/dataviz/PacificEmissionsNestedSquares.svelte";
@@ -382,7 +383,7 @@
 		rel="noreferrer"
 		aria-label="Visit the Pacific Dataviz Challenge 2026 website"
 	>
-		<img src="/images/logo.ico" alt="Pacific Dataviz Challenge" />
+		<img src={`${base}/images/logo.ico`} alt="Pacific Dataviz Challenge" />
 	</a>
 </div>
 
