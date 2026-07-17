@@ -1,0 +1,40 @@
+country,year,disaster_affected_population,disaster_economic_loss_usd,affected_population_status,point_label,png_label
+Fiji,2010,6644,24623058,Reported,Fiji 2010,Fiji 2010
+Fiji,2011,344,1224504,Reported,Fiji 2011,
+Fiji,2012,37085,141400784,Reported,Fiji 2012,Fiji 2012
+Fiji,2016,633584,374109863,Reported,Fiji 2016,Fiji 2016
+Fiji,2018,155726,50247780,Reported,Fiji 2018,Fiji 2018
+Fiji,2019,78045,1090125,Reported,Fiji 2019,Fiji 2019
+Fiji,2020,235921,24247724,Reported,Fiji 2020,Fiji 2020
+French Polynesia,2016,,30220000,Not reported for this country-year,French Polynesia 2016,
+Kiribati,2014,44,268950,Reported,Kiribati 2014,
+Kiribati,2020,15,30750,Reported,Kiribati 2020,
+Marshall Islands,2007,,4900000,Not reported for this country-year,Marshall Islands 2007,
+Marshall Islands,2014,280,454125,Reported,Marshall Islands 2014,
+Marshall Islands,2016,27452,1781682,Reported,Marshall Islands 2016,
+Micronesia (Federated States of),2016,0,20310000,Reported,Micronesia (Federated States of) 2016,
+Micronesia (Federated States of),2018,1266,196875,Reported,Micronesia (Federated States of) 2018,
+Micronesia (Federated States of),2019,20732,8270325,Reported,Micronesia (Federated States of) 2019,
+New Caledonia,2016,,20310000,Not reported for this country-year,New Caledonia 2016,
+Palau,2012,1528,6190257,Reported,Palau 2012,
+Palau,2016,11009,6000000,Reported,Palau 2016,
+Papua New Guinea,2012,172,1077375,Reported,Papua New Guinea 2012,
+Papua New Guinea,2013,264,1713195,Reported,Papua New Guinea 2013,
+Papua New Guinea,2016,,9570000,Not reported for this country-year,Papua New Guinea 2016,
+Papua New Guinea,2020,3297,1593750,Reported,Papua New Guinea 2020,
+Samoa,2016,0,22048411,Reported,Samoa 2016,
+Solomon Islands,2010,1456,5826567,Reported,Solomon Islands 2010,
+Solomon Islands,2011,36,129938,Reported,Solomon Islands 2011,
+Solomon Islands,2012,216,1091496,Reported,Solomon Islands 2012,
+Solomon Islands,2013,7577,12626951,Reported,Solomon Islands 2013,
+Tonga,2010,0,4676174,Reported,Tonga 2010,
+Tonga,2011,345,1113801,Reported,Tonga 2011,
+Tonga,2014,4520,18560063,Reported,Tonga 2014,
+Tonga,2016,0,3050475,Reported,Tonga 2016,
+Tonga,2018,84311,8579025,Reported,Tonga 2018,Tonga 2018
+Vanuatu,2010,500,3071588,Reported,Vanuatu 2010,
+Vanuatu,2011,248,1470068,Reported,Vanuatu 2011,
+Vanuatu,2012,28,281580,Reported,Vanuatu 2012,
+Vanuatu,2014,152,245100,Reported,Vanuatu 2014,
+Vanuatu,2016,,81700000,Not reported for this country-year,Vanuatu 2016,
+Vanuatu,2018,23286,64500000,Reported,Vanuatu 2018,Vanuatu 2018

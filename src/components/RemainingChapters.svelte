@@ -6,6 +6,10 @@
 	import DisplacementEventDotBars from "$components/dataviz/DisplacementEventDotBars.svelte";
 	import PacificDisplacementBubbleMap from "$components/dataviz/PacificDisplacementBubbleMap.svelte";
 	import GoodPracticesCardGrid from "$components/dataviz/GoodPracticesCardGrid.svelte";
+	import EconomicLossAffectedPopulation from "$components/dataviz/EconomicLossAffectedPopulation.svelte";
+	import TBIncidenceHistory from "$components/dataviz/TBIncidenceHistory.svelte";
+	import DrinkingWaterSlopeChart from "$components/dataviz/DrinkingWaterSlopeChart.svelte";
+	import UndernourishmentSlopeChart from "$components/dataviz/UndernourishmentSlopeChart.svelte";
 </script>
 
 <section class="chapter" aria-labelledby="chapter-two-title">
@@ -184,9 +188,7 @@
 			20% of the country's GDP.
 		</p>
 	</div>
-	<VizPlaceholder
-		title="Direct disaster economic losses across Pacific nations"
-	/>
+	<EconomicLossAffectedPopulation />
 	<div class="copy">
 		<p>
 			During Tropical Cyclone Harold (2020), border closures had already
@@ -205,7 +207,6 @@
 			instant loss of $18,560,063.
 		</p>
 	</div>
-	<VizPlaceholder title="The Pacific climate adaptation debt loop" />
 	<div class="copy">
 		<p>
 			Pacific Island nations are currently forced to expend up to <a
@@ -260,9 +261,7 @@
 			100,000.
 		</p>
 	</div>
-	<VizPlaceholder
-		title="Tuberculosis incidence across Pacific Island nations"
-	/>
+	<TBIncidenceHistory />
 	<div class="copy">
 		<h3>Unsafe drinking water</h3>
 		<p>
@@ -287,7 +286,7 @@
 			> in the Pacific.
 		</p>
 	</div>
-	<VizPlaceholder title="Access to safely managed drinking water" />
+	<DrinkingWaterSlopeChart />
 	<div class="copy">
 		<h3>Undernourishment</h3>
 		<p>
@@ -312,7 +311,7 @@
 			20.0%, as of 2023.
 		</p>
 	</div>
-	<VizPlaceholder title="Undernourishment trends across the Pacific" />
+	<UndernourishmentSlopeChart />
 	<div class="copy">
 		<p>
 			This dietary shift has triggered a metabolic crisis: 82% of Pacific adults

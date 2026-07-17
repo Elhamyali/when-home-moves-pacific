@@ -1,0 +1,505 @@
+country,country_code,year,tb_incidence_per_100k
+American Samoa,AS,2000,6.1
+American Samoa,AS,2001,6
+American Samoa,AS,2002,4
+American Samoa,AS,2003,6.1
+American Samoa,AS,2004,10
+American Samoa,AS,2005,12
+American Samoa,AS,2006,8.2
+American Samoa,AS,2007,6.1
+American Samoa,AS,2008,6.2
+American Samoa,AS,2009,8.3
+American Samoa,AS,2010,8.3
+American Samoa,AS,2011,6.3
+American Samoa,AS,2012,7.2
+American Samoa,AS,2013,7
+American Samoa,AS,2014,6.8
+American Samoa,AS,2015,8.7
+American Samoa,AS,2016,6.4
+American Samoa,AS,2017,11
+American Samoa,AS,2018,0
+American Samoa,AS,2019,2.3
+American Samoa,AS,2020,6.9
+American Samoa,AS,2021,5.1
+American Samoa,AS,2022,4.8
+American Samoa,AS,2023,4.5
+Cook Islands,CK,2000,7.3
+Cook Islands,CK,2001,15
+Cook Islands,CK,2002,7.7
+Cook Islands,CK,2003,0
+Cook Islands,CK,2004,7.6
+Cook Islands,CK,2005,7.6
+Cook Islands,CK,2006,7.6
+Cook Islands,CK,2007,7.6
+Cook Islands,CK,2008,14
+Cook Islands,CK,2009,14
+Cook Islands,CK,2010,0
+Cook Islands,CK,2011,6.6
+Cook Islands,CK,2012,6.5
+Cook Islands,CK,2013,13
+Cook Islands,CK,2014,13
+Cook Islands,CK,2015,0
+Cook Islands,CK,2016,13
+Cook Islands,CK,2017,0
+Cook Islands,CK,2018,0
+Cook Islands,CK,2019,7.1
+Cook Islands,CK,2020,7.4
+Cook Islands,CK,2021,0
+Cook Islands,CK,2022,0
+Cook Islands,CK,2023,32
+Fiji,FJ,2000,22
+Fiji,FJ,2001,28
+Fiji,FJ,2002,23
+Fiji,FJ,2003,28
+Fiji,FJ,2004,20
+Fiji,FJ,2005,20
+Fiji,FJ,2006,17
+Fiji,FJ,2007,14
+Fiji,FJ,2008,16
+Fiji,FJ,2009,21
+Fiji,FJ,2010,27
+Fiji,FJ,2011,31
+Fiji,FJ,2012,30
+Fiji,FJ,2013,37
+Fiji,FJ,2014,55
+Fiji,FJ,2015,52
+Fiji,FJ,2016,45
+Fiji,FJ,2017,51
+Fiji,FJ,2018,54
+Fiji,FJ,2019,66
+Fiji,FJ,2020,66
+Fiji,FJ,2021,66
+Fiji,FJ,2022,66
+Fiji,FJ,2023,66
+French Polynesia,PF,2000,30
+French Polynesia,PF,2001,29
+French Polynesia,PF,2002,31
+French Polynesia,PF,2003,23
+French Polynesia,PF,2004,28
+French Polynesia,PF,2005,28
+French Polynesia,PF,2006,30
+French Polynesia,PF,2007,28
+French Polynesia,PF,2008,21
+French Polynesia,PF,2009,23
+French Polynesia,PF,2010,17
+French Polynesia,PF,2011,27
+French Polynesia,PF,2012,21
+French Polynesia,PF,2013,22
+French Polynesia,PF,2014,23
+French Polynesia,PF,2015,19
+French Polynesia,PF,2016,23
+French Polynesia,PF,2017,21
+French Polynesia,PF,2018,22
+French Polynesia,PF,2019,20
+French Polynesia,PF,2020,26
+French Polynesia,PF,2021,14
+French Polynesia,PF,2022,23
+French Polynesia,PF,2023,14
+Guam,GU,2000,39
+Guam,GU,2001,45
+Guam,GU,2002,36
+Guam,GU,2003,16
+Guam,GU,2004,35
+Guam,GU,2005,44
+Guam,GU,2006,31
+Guam,GU,2007,37
+Guam,GU,2008,62
+Guam,GU,2009,71
+Guam,GU,2010,70
+Guam,GU,2011,57
+Guam,GU,2012,47
+Guam,GU,2013,33
+Guam,GU,2014,39
+Guam,GU,2015,53
+Guam,GU,2016,53
+Guam,GU,2017,59
+Guam,GU,2018,50
+Guam,GU,2019,56
+Guam,GU,2020,40
+Guam,GU,2021,41
+Guam,GU,2022,41
+Guam,GU,2023,31
+Kiribati,KI,2000,355
+Kiribati,KI,2001,262
+Kiribati,KI,2002,266
+Kiribati,KI,2003,377
+Kiribati,KI,2004,403
+Kiribati,KI,2005,423
+Kiribati,KI,2006,472
+Kiribati,KI,2007,409
+Kiribati,KI,2008,402
+Kiribati,KI,2009,326
+Kiribati,KI,2010,329
+Kiribati,KI,2011,387
+Kiribati,KI,2012,385
+Kiribati,KI,2013,447
+Kiribati,KI,2014,449
+Kiribati,KI,2015,531
+Kiribati,KI,2016,547
+Kiribati,KI,2017,400
+Kiribati,KI,2018,331
+Kiribati,KI,2019,414
+Kiribati,KI,2020,382
+Kiribati,KI,2021,321
+Kiribati,KI,2022,345
+Kiribati,KI,2023,533
+Marshall Islands,MH,2000,84
+Marshall Islands,MH,2001,137
+Marshall Islands,MH,2002,124
+Marshall Islands,MH,2003,145
+Marshall Islands,MH,2004,282
+Marshall Islands,MH,2005,267
+Marshall Islands,MH,2006,334
+Marshall Islands,MH,2007,380
+Marshall Islands,MH,2008,300
+Marshall Islands,MH,2009,339
+Marshall Islands,MH,2010,464
+Marshall Islands,MH,2011,335
+Marshall Islands,MH,2012,352
+Marshall Islands,MH,2013,368
+Marshall Islands,MH,2014,356
+Marshall Islands,MH,2015,353
+Marshall Islands,MH,2016,469
+Marshall Islands,MH,2017,548
+Marshall Islands,MH,2018,1180
+Marshall Islands,MH,2019,645
+Marshall Islands,MH,2020,430
+Marshall Islands,MH,2021,357
+Marshall Islands,MH,2022,318
+Marshall Islands,MH,2023,692
+Micronesia (Federated States of),FM,2000,102
+Micronesia (Federated States of),FM,2001,116
+Micronesia (Federated States of),FM,2002,141
+Micronesia (Federated States of),FM,2003,118
+Micronesia (Federated States of),FM,2004,132
+Micronesia (Federated States of),FM,2005,110
+Micronesia (Federated States of),FM,2006,117
+Micronesia (Federated States of),FM,2007,159
+Micronesia (Federated States of),FM,2008,188
+Micronesia (Federated States of),FM,2009,171
+Micronesia (Federated States of),FM,2010,191
+Micronesia (Federated States of),FM,2011,172
+Micronesia (Federated States of),FM,2012,167
+Micronesia (Federated States of),FM,2013,171
+Micronesia (Federated States of),FM,2014,217
+Micronesia (Federated States of),FM,2015,120
+Micronesia (Federated States of),FM,2016,171
+Micronesia (Federated States of),FM,2017,159
+Micronesia (Federated States of),FM,2018,110
+Micronesia (Federated States of),FM,2019,103
+Micronesia (Federated States of),FM,2020,104
+Micronesia (Federated States of),FM,2021,81
+Micronesia (Federated States of),FM,2022,54
+Micronesia (Federated States of),FM,2023,234
+Nauru,NR,2000,45
+Nauru,NR,2001,34
+Nauru,NR,2002,57
+Nauru,NR,2003,34
+Nauru,NR,2004,75
+Nauru,NR,2005,126
+Nauru,NR,2006,138
+Nauru,NR,2007,34
+Nauru,NR,2008,57
+Nauru,NR,2009,46
+Nauru,NR,2010,34
+Nauru,NR,2011,57
+Nauru,NR,2012,69
+Nauru,NR,2013,77
+Nauru,NR,2014,86
+Nauru,NR,2015,105
+Nauru,NR,2016,103
+Nauru,NR,2017,91
+Nauru,NR,2018,50
+Nauru,NR,2019,169
+Nauru,NR,2020,128
+Nauru,NR,2021,206
+Nauru,NR,2022,185
+Nauru,NR,2023,174
+New Caledonia,NC,2000,48
+New Caledonia,NC,2001,31
+New Caledonia,NC,2002,32
+New Caledonia,NC,2003,18
+New Caledonia,NC,2004,29
+New Caledonia,NC,2005,22
+New Caledonia,NC,2006,23
+New Caledonia,NC,2007,22
+New Caledonia,NC,2008,23
+New Caledonia,NC,2009,24
+New Caledonia,NC,2010,22
+New Caledonia,NC,2011,22
+New Caledonia,NC,2012,16
+New Caledonia,NC,2013,18
+New Caledonia,NC,2014,12
+New Caledonia,NC,2015,23
+New Caledonia,NC,2016,15
+New Caledonia,NC,2017,14
+New Caledonia,NC,2018,15
+New Caledonia,NC,2019,9.3
+New Caledonia,NC,2020,17
+New Caledonia,NC,2021,10
+New Caledonia,NC,2022,12
+New Caledonia,NC,2023,13
+Niue,NU,2000,0
+Niue,NU,2001,0
+Niue,NU,2002,256
+Niue,NU,2003,0
+Niue,NU,2004,0
+Niue,NU,2005,0
+Niue,NU,2006,0
+Niue,NU,2007,0
+Niue,NU,2008,0
+Niue,NU,2009,0
+Niue,NU,2010,0
+Niue,NU,2011,71
+Niue,NU,2012,0
+Niue,NU,2013,0
+Niue,NU,2014,0
+Niue,NU,2015,0
+Niue,NU,2016,29
+Niue,NU,2017,0
+Niue,NU,2018,143
+Niue,NU,2019,0
+Niue,NU,2020,48
+Niue,NU,2021,48
+Niue,NU,2022,48
+Niue,NU,2023,48
+Northern Mariana Islands,MP,2000,126
+Northern Mariana Islands,MP,2001,98
+Northern Mariana Islands,MP,2002,91
+Northern Mariana Islands,MP,2003,79
+Northern Mariana Islands,MP,2004,95
+Northern Mariana Islands,MP,2005,105
+Northern Mariana Islands,MP,2006,97
+Northern Mariana Islands,MP,2007,86
+Northern Mariana Islands,MP,2008,56
+Northern Mariana Islands,MP,2009,79
+Northern Mariana Islands,MP,2010,68
+Northern Mariana Islands,MP,2011,71
+Northern Mariana Islands,MP,2012,69
+Northern Mariana Islands,MP,2013,72
+Northern Mariana Islands,MP,2014,57
+Northern Mariana Islands,MP,2015,63
+Northern Mariana Islands,MP,2016,63
+Northern Mariana Islands,MP,2017,94
+Northern Mariana Islands,MP,2018,110
+Northern Mariana Islands,MP,2019,122
+Northern Mariana Islands,MP,2020,99
+Northern Mariana Islands,MP,2021,86
+Northern Mariana Islands,MP,2022,57
+Northern Mariana Islands,MP,2023,56
+Palau,PW,2000,65
+Palau,PW,2001,65
+Palau,PW,2002,65
+Palau,PW,2003,53
+Palau,PW,2004,29
+Palau,PW,2005,58
+Palau,PW,2006,70
+Palau,PW,2007,66
+Palau,PW,2008,91
+Palau,PW,2009,117
+Palau,PW,2010,119
+Palau,PW,2011,76
+Palau,PW,2012,26
+Palau,PW,2013,52
+Palau,PW,2014,91
+Palau,PW,2015,91
+Palau,PW,2016,149
+Palau,PW,2017,129
+Palau,PW,2018,110
+Palau,PW,2019,39
+Palau,PW,2020,65
+Palau,PW,2021,52
+Palau,PW,2022,45
+Palau,PW,2023,97
+Papua New Guinea,PG,2000,432
+Papua New Guinea,PG,2001,432
+Papua New Guinea,PG,2002,432
+Papua New Guinea,PG,2003,432
+Papua New Guinea,PG,2004,432
+Papua New Guinea,PG,2005,432
+Papua New Guinea,PG,2006,432
+Papua New Guinea,PG,2007,432
+Papua New Guinea,PG,2008,432
+Papua New Guinea,PG,2009,432
+Papua New Guinea,PG,2010,432
+Papua New Guinea,PG,2011,432
+Papua New Guinea,PG,2012,432
+Papua New Guinea,PG,2013,432
+Papua New Guinea,PG,2014,432
+Papua New Guinea,PG,2015,432
+Papua New Guinea,PG,2016,432
+Papua New Guinea,PG,2017,432
+Papua New Guinea,PG,2018,432
+Papua New Guinea,PG,2019,432
+Papua New Guinea,PG,2020,432
+Papua New Guinea,PG,2021,432
+Papua New Guinea,PG,2022,432
+Papua New Guinea,PG,2023,432
+Samoa,WS,2000,27
+Samoa,WS,2001,14
+Samoa,WS,2002,19
+Samoa,WS,2003,17
+Samoa,WS,2004,21
+Samoa,WS,2005,15
+Samoa,WS,2006,15
+Samoa,WS,2007,13
+Samoa,WS,2008,7.3
+Samoa,WS,2009,9.6
+Samoa,WS,2010,8.3
+Samoa,WS,2011,12
+Samoa,WS,2012,13
+Samoa,WS,2013,13
+Samoa,WS,2014,13
+Samoa,WS,2015,11
+Samoa,WS,2016,7.3
+Samoa,WS,2017,17
+Samoa,WS,2018,6.1
+Samoa,WS,2019,9.9
+Samoa,WS,2020,7.1
+Samoa,WS,2021,7
+Samoa,WS,2022,4.8
+Samoa,WS,2023,5.2
+Solomon Islands,SB,2000,86
+Solomon Islands,SB,2001,81
+Solomon Islands,SB,2002,70
+Solomon Islands,SB,2003,79
+Solomon Islands,SB,2004,90
+Solomon Islands,SB,2005,103
+Solomon Islands,SB,2006,94
+Solomon Islands,SB,2007,99
+Solomon Islands,SB,2008,95
+Solomon Islands,SB,2009,88
+Solomon Islands,SB,2010,79
+Solomon Islands,SB,2011,90
+Solomon Islands,SB,2012,79
+Solomon Islands,SB,2013,76
+Solomon Islands,SB,2014,70
+Solomon Islands,SB,2015,81
+Solomon Islands,SB,2016,76
+Solomon Islands,SB,2017,68
+Solomon Islands,SB,2018,68
+Solomon Islands,SB,2019,61
+Solomon Islands,SB,2020,54
+Solomon Islands,SB,2021,61
+Solomon Islands,SB,2022,55
+Solomon Islands,SB,2023,55
+Tokelau,TK,2000,0
+Tokelau,TK,2001,0
+Tokelau,TK,2002,5.6
+Tokelau,TK,2003,0
+Tokelau,TK,2004,8.5
+Tokelau,TK,2005,0
+Tokelau,TK,2006,0
+Tokelau,TK,2007,0
+Tokelau,TK,2008,0
+Tokelau,TK,2009,0
+Tokelau,TK,2010,0
+Tokelau,TK,2011,0
+Tokelau,TK,2012,0
+Tokelau,TK,2013,0
+Tokelau,TK,2014,0
+Tokelau,TK,2015,200
+Tokelau,TK,2016,0
+Tokelau,TK,2017,0
+Tokelau,TK,2018,28
+Tokelau,TK,2019,30
+Tokelau,TK,2020,19
+Tokelau,TK,2021,19
+Tokelau,TK,2022,19
+Tokelau,TK,2023,19
+Tonga,TO,2000,27
+Tonga,TO,2001,13
+Tonga,TO,2002,32
+Tonga,TO,2003,18
+Tonga,TO,2004,13
+Tonga,TO,2005,20
+Tonga,TO,2006,19
+Tonga,TO,2007,25
+Tonga,TO,2008,14
+Tonga,TO,2009,8.6
+Tonga,TO,2010,12
+Tonga,TO,2011,9.6
+Tonga,TO,2012,12
+Tonga,TO,2013,11
+Tonga,TO,2014,14
+Tonga,TO,2015,15
+Tonga,TO,2016,8.7
+Tonga,TO,2017,12
+Tonga,TO,2018,9.8
+Tonga,TO,2019,11
+Tonga,TO,2020,8.7
+Tonga,TO,2021,7.6
+Tonga,TO,2022,2.2
+Tonga,TO,2023,8.8
+Tuvalu,TV,2000,196
+Tuvalu,TV,2001,194
+Tuvalu,TV,2002,156
+Tuvalu,TV,2003,367
+Tuvalu,TV,2004,186
+Tuvalu,TV,2005,138
+Tuvalu,TV,2006,102
+Tuvalu,TV,2007,203
+Tuvalu,TV,2008,190
+Tuvalu,TV,2009,199
+Tuvalu,TV,2010,153
+Tuvalu,TV,2011,130
+Tuvalu,TV,2012,203
+Tuvalu,TV,2013,191
+Tuvalu,TV,2014,157
+Tuvalu,TV,2015,207
+Tuvalu,TV,2016,205
+Tuvalu,TV,2017,233
+Tuvalu,TV,2018,270
+Tuvalu,TV,2019,296
+Tuvalu,TV,2020,296
+Tuvalu,TV,2021,296
+Tuvalu,TV,2022,296
+Tuvalu,TV,2023,296
+Vanuatu,VU,2000,110
+Vanuatu,VU,2001,123
+Vanuatu,VU,2002,69
+Vanuatu,VU,2003,69
+Vanuatu,VU,2004,86
+Vanuatu,VU,2005,83
+Vanuatu,VU,2006,80
+Vanuatu,VU,2007,77
+Vanuatu,VU,2008,74
+Vanuatu,VU,2009,72
+Vanuatu,VU,2010,69
+Vanuatu,VU,2011,67
+Vanuatu,VU,2012,65
+Vanuatu,VU,2013,62
+Vanuatu,VU,2014,63
+Vanuatu,VU,2015,63
+Vanuatu,VU,2016,56
+Vanuatu,VU,2017,51
+Vanuatu,VU,2018,46
+Vanuatu,VU,2019,41
+Vanuatu,VU,2020,41
+Vanuatu,VU,2021,41
+Vanuatu,VU,2022,41
+Vanuatu,VU,2023,41
+Wallis and Futuna,WF,2000,14
+Wallis and Futuna,WF,2001,7.7
+Wallis and Futuna,WF,2002,145
+Wallis and Futuna,WF,2003,130
+Wallis and Futuna,WF,2004,88
+Wallis and Futuna,WF,2005,55
+Wallis and Futuna,WF,2006,45
+Wallis and Futuna,WF,2007,16
+Wallis and Futuna,WF,2008,46
+Wallis and Futuna,WF,2009,77
+Wallis and Futuna,WF,2010,43
+Wallis and Futuna,WF,2011,18
+Wallis and Futuna,WF,2012,20
+Wallis and Futuna,WF,2013,18
+Wallis and Futuna,WF,2014,0
+Wallis and Futuna,WF,2015,0
+Wallis and Futuna,WF,2016,0
+Wallis and Futuna,WF,2017,1.1
+Wallis and Futuna,WF,2018,0
+Wallis and Futuna,WF,2019,9.8
+Wallis and Futuna,WF,2020,0
+Wallis and Futuna,WF,2021,1.9
+Wallis and Futuna,WF,2022,1.9
+Wallis and Futuna,WF,2023,1.9

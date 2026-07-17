@@ -1,0 +1,9 @@
+country,country_code,first_year,latest_year,first_undernourishment_prevalence_percent,latest_undernourishment_prevalence_percent,percentage_point_change,observations
+Papua New Guinea,PG,2001,2023,26.7,28.7,2,23
+Solomon Islands,SB,2001,2023,11.2,20,8.8,23
+Vanuatu,VU,2001,2023,9.2,7.2,-1.9999999999999991,23
+Fiji,FJ,2001,2023,3.6,6.8,3.1999999999999997,23
+New Caledonia,NC,2001,2023,8.1,4.9,-3.1999999999999993,23
+Kiribati,KI,2001,2023,4.3,4.1,-0.20000000000000018,23
+French Polynesia,PF,2001,2023,6.3,3.8,-2.5,23
+Samoa,WS,2001,2023,3.8,3.6,-0.19999999999999973,23
