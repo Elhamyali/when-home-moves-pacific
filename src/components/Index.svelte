@@ -232,35 +232,29 @@
 		>
 			<h1 id="story-title"><em>When Home Moves</em></h1>
 			<p class="subtitle">
-				Across the Pacific, climate disasters force people to flee their homes.
-				Some communities rebuild. Others relocate. All redefine what it means to
-				adapt
+				From climate disaster and displacement to resilience: a journey across
+				the Pacific.
 			</p>
 			<p class="byline">By Elham Ali</p>
 
 			<div class="prose">
-				<p>
-					Home is far more than a physical house. It is the papaya tree planted
-					by a grandparent, the cemetery where generations rest, the shoreline
-					where children learn to fish, and the neighbors who know the histories
-					behind every doorway.
-				</p>
+				<p>Stay or leave? Many of us hope we never have to decide.</p>
 
 				<p>
-					Today, climate change dictates where people can live. Pacific Island
-					communities flee inland to escape storm surges, wrestle from the
-					wreckage of repeated extreme weather events, and confront the
-					agonizing choice to stay or abandon ancestral soil.
+					When floods rise or seas breach the shore, families have minutes to
+					decide what to save and what to leave behind. Some return to ruins;
+					others find their homes erased.
 				</p>
 
-				<p>Some move once. Others move again and again.</p>
+				<p>Across the Pacific, this is the new reality.</p>
 
 				<p>
-					This story traces that journey — from climate disasters to
-					displacement, through the cascading health and economic crises that
-					follow, and finally to the Pacific innovators leading locally-led
-					climate adaptation solutions.
+					Climate disasters are redrawing the map of the region, forcing
+					communities inland, through repeat disasters, toward the agonizing
+					choice: cling to ancestral soil or leave it behind.
 				</p>
+
+				<p>When home is no longer safe, where do you go?</p>
 			</div>
 		</section>
 		<section class="chapter-one" aria-labelledby="chapter-one-title">
@@ -336,6 +330,36 @@
 					> (IDMC) recorded 247 distinct disaster events in the Pacific, triggering
 					nearly one million internal displacement movements.
 				</p>
+				<details class="definition-note">
+					<summary>
+						<span
+							>A note about how different organizations define a disaster</span
+						>
+						<span class="definition-note-icon" aria-hidden="true"></span>
+					</summary>
+					<div class="definition-note-content">
+						<p>
+							There is a debate over how to define a “disaster.” The
+							<a
+								href="https://www.internal-displacement.org/database/displacement-data/"
+								target="_blank"
+								rel="noreferrer">Internal Displacement Monitoring Centre</a
+							>
+							(IDMC) does not automatically count people displaced by weather disasters
+							as “climate-displaced,” as they view the link to climate change as scientifically
+							complex. In contrast, the
+							<a
+								href="https://belonging.berkeley.edu/climatedisplacement/climate-displacement-and-resilience-database"
+								target="_blank"
+								rel="noreferrer">Othering &amp; Belonging Institute</a
+							>
+							(OBI) argues that these disasters are deeply tied to climate change
+							and its role in worsening displacement. To better highlight this connection,
+							this essay adopts the OBI’s approach of classifying weather-related
+							disasters as climate-driven events.
+						</p>
+					</div>
+				</details>
 			</div>
 			<InternalDisplacementSmallMultiples />
 
@@ -669,6 +693,64 @@
 	.chapter-copy a {
 		color: #057dbc;
 		text-underline-offset: 3px;
+	}
+	.definition-note {
+		max-width: 760px;
+		margin: -0.25em 0 clamp(44px, 6vw, 72px);
+		border-top: 1px solid #b8b8b8;
+		border-bottom: 1px solid #b8b8b8;
+	}
+	.definition-note summary {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		padding: 20px 0;
+		font:
+			700 clamp(15px, 1.25vw, 17px)/1.35 "Inter",
+			sans-serif;
+		letter-spacing: -0.01em;
+		cursor: pointer;
+		list-style: none;
+	}
+	.definition-note summary::-webkit-details-marker {
+		display: none;
+	}
+	.definition-note summary:focus-visible {
+		outline: 2px solid #135ae1;
+		outline-offset: 5px;
+	}
+	.definition-note-icon {
+		position: relative;
+		flex: 0 0 22px;
+		width: 22px;
+		height: 22px;
+	}
+	.definition-note-icon::before,
+	.definition-note-icon::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 14px;
+		height: 1.5px;
+		content: "";
+		background: currentColor;
+		transform: translate(-50%, -50%);
+		transition: transform 180ms ease;
+	}
+	.definition-note-icon::after {
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+	.definition-note[open] .definition-note-icon::after {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	.definition-note-content {
+		padding: 0 0 24px;
+	}
+	.chapter-copy .definition-note-content p {
+		margin: 0;
+		font-size: clamp(15px, 1.15vw, 17px);
+		line-height: 1.65;
 	}
 
 	.chapter-close {

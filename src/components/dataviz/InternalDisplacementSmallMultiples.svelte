@@ -62,7 +62,8 @@
 	const plotWidth = 230;
 	const plotHeight = 160;
 	const margin = { top: 12, right: 10, bottom: 29, left: 39 };
-	const yMaximum = Math.ceil(max(parsedRows, (row) => row.displacements) / 10000) * 10000;
+	const yMaximum =
+		Math.ceil(max(parsedRows, (row) => row.displacements) / 10000) * 10000;
 	const yTicks = [0, 40000, 80000].filter((tick) => tick <= yMaximum);
 	const xTicks = [2010, 2015, 2020, 2025];
 	const x = scaleLinear()
@@ -79,15 +80,13 @@
 	let selected = $state(null);
 
 	function selectYear(event, datum) {
-		if (
-			selected?.country === datum.country &&
-			selected?.year === datum.year
-		) {
+		if (selected?.country === datum.country && selected?.year === datum.year) {
 			selected = null;
 			return;
 		}
 		const gridBounds = grid.getBoundingClientRect();
-		const plotBounds = event.currentTarget.parentElement.getBoundingClientRect();
+		const plotBounds =
+			event.currentTarget.parentElement.getBoundingClientRect();
 		const rawX =
 			plotBounds.left +
 			(x(datum.year) / plotWidth) * plotBounds.width -
@@ -109,9 +108,14 @@
 	}
 </script>
 
-<figure class="small-multiples" aria-labelledby="idmc-lines-title idmc-lines-subtitle">
+<figure
+	class="small-multiples"
+	aria-labelledby="idmc-lines-title idmc-lines-subtitle"
+>
 	<figcaption>
-		<h5 id="idmc-lines-title">Internal displacement movements by country</h5>
+		<h5 id="idmc-lines-title">
+			Internal displacement movements by country in the Pacific
+		</h5>
 		<p id="idmc-lines-subtitle">
 			Annual disaster-related internal displacement movements varied sharply
 			across 17 Pacific countries and territories from {firstYear} to {lastYear}.
@@ -127,7 +131,10 @@
 	<div class="grid-wrap" bind:this={grid}>
 		<div class="chart-grid">
 			{#each panels as panel}
-				<section class="panel" aria-labelledby={`panel-${panel.country.replaceAll(/[^a-zA-Z0-9]/g, "-")}`}>
+				<section
+					class="panel"
+					aria-labelledby={`panel-${panel.country.replaceAll(/[^a-zA-Z0-9]/g, "-")}`}
+				>
 					<h6 id={`panel-${panel.country.replaceAll(/[^a-zA-Z0-9]/g, "-")}`}>
 						{panel.country}
 					</h6>
@@ -160,13 +167,16 @@
 									y1={plotHeight - margin.bottom}
 									y2={plotHeight - margin.bottom + 5}
 								></line>
-								<text class="x-label" x={x(tick)} y={plotHeight - 7}>{tick}</text>
+								<text class="x-label" x={x(tick)} y={plotHeight - 7}
+									>{tick}</text
+								>
 							{/each}
 
 							{#each panel.values as datum}
 								<circle
 									class:zero={datum.displacements === 0}
-									class:selected={selected?.country === datum.country && selected?.year === datum.year}
+									class:selected={selected?.country === datum.country &&
+										selected?.year === datum.year}
 									cx={x(datum.year)}
 									cy={y(datum.displacements)}
 									r={datum.displacements === 0 ? 1.8 : 3.3}
@@ -178,7 +188,8 @@
 							<button
 								class="year-target"
 								type="button"
-								aria-pressed={selected?.country === datum.country && selected?.year === datum.year}
+								aria-pressed={selected?.country === datum.country &&
+									selected?.year === datum.year}
 								aria-label={`${panel.country}, ${datum.year}: ${numberFormat(datum.displacements)} internal displacement movements, ${numberFormat(datum.reportedEvents)} reported events`}
 								style={`left:${(x(datum.year) / plotWidth) * 100}%`}
 								onclick={(event) => selectYear(event, datum)}
@@ -205,7 +216,11 @@
 						<strong>{selected.country}</strong>
 						<span>{selected.year}</span>
 					</div>
-					<button type="button" onclick={clearSelection} aria-label="Close event details">×</button>
+					<button
+						type="button"
+						onclick={clearSelection}
+						aria-label="Close event details">×</button
+					>
 				</header>
 				<dl>
 					<div>
@@ -241,7 +256,8 @@
 
 	<p class="note">
 		Years without a reported disaster displacement event are shown as zero.
-		Values count displacement movements rather than unique people.
+		Values count displacement movements rather than unique individuals. A single
+		person can be forced to flee their home multiple times.
 	</p>
 	<p class="source">
 		Source: <a href={sourceUrl} target="_blank" rel="noreferrer"
@@ -257,17 +273,23 @@
 		font-family: "Inter", sans-serif;
 	}
 
-	figcaption { max-width: 900px; }
+	figcaption {
+		max-width: 900px;
+	}
 	h5 {
 		margin: 0;
-		font: 700 clamp(18px, 2vw, 24px)/1.2 "Inter", sans-serif;
+		font:
+			700 clamp(18px, 2vw, 24px)/1.2 "Inter",
+			sans-serif;
 		letter-spacing: -0.02em;
 	}
 	figcaption p {
 		max-width: 820px;
 		margin: 8px 0 0;
 		color: #4a4a4a;
-		font: 400 clamp(15px, 1.6vw, 19px)/1.5 "Inter", sans-serif;
+		font:
+			400 clamp(15px, 1.6vw, 19px)/1.5 "Inter",
+			sans-serif;
 	}
 
 	.axis-key {
@@ -276,7 +298,9 @@
 		gap: 10px;
 		margin: 26px 0 22px;
 		color: #4a4a4a;
-		font: 600 11px/1.2 "Inter", sans-serif;
+		font:
+			600 11px/1.2 "Inter",
+			sans-serif;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 	}
@@ -286,17 +310,23 @@
 		background: #135ae1;
 	}
 
-	.grid-wrap { position: relative; }
+	.grid-wrap {
+		position: relative;
+	}
 	.chart-grid {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: clamp(30px, 4vw, 52px) clamp(16px, 2.6vw, 34px);
 	}
-	.panel { min-width: 0; }
+	.panel {
+		min-width: 0;
+	}
 	h6 {
 		min-height: 2.5em;
 		margin: 0 0 7px;
-		font: 700 clamp(14px, 1.45vw, 18px)/1.12 "Inter", sans-serif;
+		font:
+			700 clamp(14px, 1.45vw, 18px)/1.12 "Inter",
+			sans-serif;
 		letter-spacing: -0.015em;
 	}
 	.plot {
@@ -341,14 +371,23 @@
 		stroke: #000;
 		stroke-width: 2.5;
 	}
-	.x-tick { stroke: #808080; stroke-width: 1; }
+	.x-tick {
+		stroke: #808080;
+		stroke-width: 1;
+	}
 	.x-label,
 	.y-label {
 		fill: #4a4a4a;
-		font: 500 10px/1 "Inter", sans-serif;
+		font:
+			500 10px/1 "Inter",
+			sans-serif;
 	}
-	.x-label { text-anchor: middle; }
-	.y-label { text-anchor: end; }
+	.x-label {
+		text-anchor: middle;
+	}
+	.y-label {
+		text-anchor: end;
+	}
 
 	.year-target {
 		position: absolute;
@@ -362,7 +401,9 @@
 		background: transparent;
 		cursor: pointer;
 	}
-	.year-target:hover { background: rgba(19, 90, 225, 0.12); }
+	.year-target:hover {
+		background: rgba(19, 90, 225, 0.12);
+	}
 	.year-target:focus-visible {
 		outline: 2px solid #135ae1;
 		outline-offset: 1px;
@@ -380,9 +421,13 @@
 		background: rgba(255, 255, 255, 0.99);
 		box-shadow: 0 14px 36px rgba(0, 0, 0, 0.2);
 		overflow-y: auto;
-		font: 400 12px/1.45 "Inter", sans-serif;
+		font:
+			400 12px/1.45 "Inter",
+			sans-serif;
 	}
-	.popup.below { transform: translate(-50%, 15px); }
+	.popup.below {
+		transform: translate(-50%, 15px);
+	}
 	.popup header {
 		display: flex;
 		align-items: start;
@@ -394,9 +439,17 @@
 		color: #fff;
 		background: #222;
 	}
-	.popup header div { display: grid; gap: 3px; }
-	.popup header strong { font-size: 14px; }
-	.popup header span { color: #a7abaf; font-weight: 600; }
+	.popup header div {
+		display: grid;
+		gap: 3px;
+	}
+	.popup header strong {
+		font-size: 14px;
+	}
+	.popup header span {
+		color: #a7abaf;
+		font-weight: 600;
+	}
 	.popup header button {
 		display: grid;
 		place-items: center;
@@ -406,7 +459,9 @@
 		border: 0;
 		color: #fff;
 		background: transparent;
-		font: 400 22px/1 "Inter", sans-serif;
+		font:
+			400 22px/1 "Inter",
+			sans-serif;
 		cursor: pointer;
 	}
 	.popup header button:hover,
@@ -415,13 +470,19 @@
 		background: #fff;
 		outline: none;
 	}
-	.popup dl { display: grid; gap: 8px; margin: 0; }
+	.popup dl {
+		display: grid;
+		gap: 8px;
+		margin: 0;
+	}
 	.popup dl div {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) auto;
 		gap: 14px;
 	}
-	.popup dt { font-weight: 600; }
+	.popup dt {
+		font-weight: 600;
+	}
 	.popup dd {
 		max-width: 150px;
 		margin: 0;
@@ -433,42 +494,59 @@
 		padding-top: 12px;
 		border-top: 1px solid #a7abaf;
 	}
-	.events > strong { font-size: 12px; }
+	.events > strong {
+		font-size: 12px;
+	}
 	.events ul {
 		display: grid;
 		gap: 7px;
 		margin: 9px 0 0;
 		padding-left: 17px;
 	}
-	.events p { margin: 8px 0 0; color: #4a4a4a; }
+	.events p {
+		margin: 8px 0 0;
+		color: #4a4a4a;
+	}
 
 	.note,
 	.source {
 		max-width: 840px;
 		margin: 18px 0 0;
 		color: #4a4a4a;
-		font: 400 12px/1.45 "Inter", sans-serif;
+		font:
+			400 12px/1.45 "Inter",
+			sans-serif;
 	}
-	.source { margin-top: 4px; }
+	.source {
+		margin-top: 4px;
+	}
 	.source a {
 		color: #057dbc;
 		text-underline-offset: 3px;
 	}
 
 	@media (max-width: 900px) {
-		.chart-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+		.chart-grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
 	}
 	@media (max-width: 650px) {
 		.chart-grid {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 			gap: 34px 12px;
 		}
-		h6 { font-size: 13px; }
+		h6 {
+			font-size: 13px;
+		}
 		.x-label,
-		.y-label { font-size: 11px; }
+		.y-label {
+			font-size: 11px;
+		}
 	}
 	@media (max-width: 420px) {
-		.chart-grid { grid-template-columns: 1fr; }
+		.chart-grid {
+			grid-template-columns: 1fr;
+		}
 		h6 {
 			min-height: 0;
 			font-size: 16px;
