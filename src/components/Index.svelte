@@ -3,6 +3,7 @@
 	import InternalDisplacementSmallMultiples from "$components/dataviz/InternalDisplacementSmallMultiples.svelte";
 	import PacificEmissionsNestedSquares from "$components/dataviz/PacificEmissionsNestedSquares.svelte";
 	import RemainingChapters from "$components/RemainingChapters.svelte";
+	import ShareStory from "$components/ShareStory.svelte";
 	import { onMount } from "svelte";
 	let introduction;
 	let player;
@@ -198,14 +199,13 @@
 			href="#chapter-three"
 			class:active={activeSection === "chapter-three"}
 			aria-current={activeSection === "chapter-three" ? "location" : undefined}
-			><span>Chapter 3</span><strong>When Disaster Doesn't End</strong></a
+			><span>Chapter 3</span><strong>When Disasters Don’t End</strong></a
 		>
 		<a
 			href="#chapter-four"
 			class:active={activeSection === "chapter-four"}
 			aria-current={activeSection === "chapter-four" ? "location" : undefined}
-			><span>Chapter 4</span><strong>What Happens After People Leave?</strong
-			></a
+			><span>Chapter 4</span><strong>What Happens After Disasters?</strong></a
 		>
 		<a
 			href="#chapter-five"
@@ -235,7 +235,13 @@
 				From climate disaster and displacement to resilience: a journey across
 				the Pacific.
 			</p>
-			<p class="byline">By Elham Ali</p>
+			<p class="byline">
+				By <a
+					href="https://www.linkedin.com/in/elhamali"
+					target="_blank"
+					rel="noreferrer">Elham Ali</a
+				>
+			</p>
 
 			<div class="prose">
 				<p>Stay or leave? Many of us hope we never have to decide.</p>
@@ -265,19 +271,17 @@
 
 			<div class="chapter-copy">
 				<p>
-					The Pacific contributes almost nothing to the climate crisis, yet it
-					experiences some of its most severe consequences.
-				</p>
-				<p>
-					Pacific Island Countries and Territories <a
+					The Pacific contributes <a
 						href="https://www.amnestyusa.org/reports/navigating-injustice-climate-displacement-from-the-pacific-islands-of-tuvalu-and-kiribati-to-aotearoa-new-zealand/"
 						target="_blank"
-						rel="noreferrer">contribute</a
-					> a minuscule 0.02% of global greenhouse gas emissions. Yet they endure
-					the world’s most severe climate penalties: rising sea levels, warming oceans,
-					extreme flooding, and rapid coastal erosion. The inequity is starkest for
-					low-lying atoll nations like Kiribati and Tuvalu, which account for less
-					than 0.003% and 0.0002% of global emissions, respectively.
+						rel="noreferrer">almost nothing</a
+					> to the climate crisis, yet bears its harshest brunt.
+				</p>
+				<p>
+					Low-lying nations like Kiribati and Tuvalu emit less than 0.003% and
+					0.0002% of global greenhouse gases — fractions compared to New
+					Zealand's emissions, which were approximately 777 and 3,498 times
+					higher, respectively.
 				</p>
 			</div>
 
@@ -285,50 +289,34 @@
 
 			<div class="chapter-copy">
 				<p>
-					By comparison, high-income nations like Aotearoa New Zealand emit 43
-					times Tuvalu’s total output, and a staggering 650 times the emissions
-					of Kiribati.
+					As rising seas, extreme flooding, and rapid coastal erosion ravage the
+					region, the human toll is staggering. Between 2008 and 2025, climate
+					and geophysical disasters affected over 2.5 million people across the
+					Pacific.
 				</p>
 				<p>
-					Between 2008 and 2025, climate-driven and geophysical disasters
-					directly affected more than 2.5 million people across 21 Pacific
-					nations, based on data compiled from the <a
+					Fiji endured the region’s highest cumulative impact, with 1,240,734
+					people affected per the <a
 						href="https://pacificdata.org/"
 						target="_blank"
 						rel="noreferrer">Pacific Data Hub</a
-					>.
+					>. In 2016, the historic Category 5 Cyclone Winston — alongside two
+					other storms — impacted roughly 60% of the nation's population.
 				</p>
 			</div>
 
 			<AffectedPopulationGrowingMap />
-			<div class="chapter-copy">
-				<p>
-					Fiji, for example, has suffered the largest cumulative affected
-					population in the region over this period, totaling 1,240,734 people.
-				</p>
-			</div>
 
 			<div class="chapter-copy">
 				<p>
-					The single largest reported country-year disaster impact in regional
-					history occurred in Fiji in 2016, when a catastrophic cyclone season
-					directly affected 633,584 people — striking roughly 60% to 62% of the
-					nation's entire population.
-				</p>
-				<p>
-					Cyclone Winston, a historic Category 5 storm, drove that destruction
-					and permanently scarred the landscape.
-				</p>
-			</div>
-
-			<div class="chapter-copy">
-				<p>
-					Between 2008 and 2025, the <a
+					The crisis is chronic, not a series of isolated disasters. Between
+					2008 and 2025, the <a
 						href="https://www.internal-displacement.org/"
 						target="_blank"
 						rel="noreferrer">Internal Displacement Monitoring Centre</a
-					> (IDMC) recorded 247 distinct disaster events in the Pacific, triggering
-					nearly one million internal displacement movements.
+					> (IDMC) recorded 247 events that triggered nearly one million internal
+					displacements across the Pacific. Internal displacement refers to the forced
+					movement of people within the country they live in.
 				</p>
 				<details class="definition-note">
 					<summary>
@@ -365,27 +353,25 @@
 
 			<div class="chapter-copy chapter-close">
 				<p>
-					These figures count displacement movements rather than unique
-					individuals. A single person can be forced to flee their home multiple
-					times. The vast majority of these individuals remain within national
-					borders as <a
+					The threat is escalating: extreme weather puts at least 50,000 Pacific
+					Islanders <a
+						href="https://www.internal-displacement.org/project-spotlights/pacific-disasters/"
+						target="_blank"
+						rel="noreferrer">at risk</a
+					>
+					of losing their homes annually, with the vast majority remaining
+					within national borders as
+					<a
 						href="https://www.internal-displacement.org/internal-displacement/"
 						target="_blank"
 						rel="noreferrer">internally displaced persons</a
 					>
-					(IDPs). However, the threat is escalating, with extreme weather putting
-					at least 50,000 Pacific Islanders at risk of losing their homes every single
-					year, as tracked by the IDMC
-					<a
-						href="https://www.internal-displacement.org/sites/default/files/brochure_prdd_final_260520_min_v2.pdf"
-						target="_blank"
-						rel="noreferrer"
-						>Pacific Response to Disaster Displacement Project</a
-					>.
+					(IDPs).
 				</p>
 			</div>
 		</section>
 		<RemainingChapters />
+		<ShareStory />
 	</div>
 </div>
 

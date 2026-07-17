@@ -25,12 +25,12 @@
 			target: "Hazard subtype: Typhoon/Hurricane/Cyclone"
 		},
 		{
-			source: "Hazard type: Flood",
-			target: "Hazard subtype: Flood"
+			source: "Hazard type: Storm",
+			target: "Hazard subtype: Typhoon/Hurricane/Cyclone"
 		},
 		{
-			source: "907,531 internal displacement movements",
-			target: "Geophysical disasters"
+			source: "Hazard type: Flood",
+			target: "Hazard subtype: Flood"
 		}
 	];
 
@@ -230,16 +230,16 @@
 					<p>Scroll to explore the pathways</p>
 				</section>
 				<section class="step" class:active={activeStep === 1} aria-label="Step 1 of 4">
-					<div class="step-card"><p>Out of the 907,531 movements recorded in the <a href="https://www.internal-displacement.org/" target="_blank" rel="noreferrer">IDMC Database</a>, storms are the dominant engine of flight, accounting for <strong>502,138 displacement movements</strong> across 99 separate events in 17 countries.</p></div>
+					<div class="step-card"><p>Between 2018 and 2025, storms caused significantly more flight than floods or earthquakes.</p></div>
 				</section>
 				<section class="step" class:active={activeStep === 2} aria-label="Step 2 of 4">
-					<div class="step-card"><p>Within this category, typhoons, hurricanes, and cyclones form the leading hazard subtype, causing <strong>337,516 movements</strong>.</p></div>
+					<div class="step-card"><p>Within this category, typhoons, hurricanes, and cyclones form the leading hazard subtype for displacements. Tropical cyclones dominate the flow through nearly every country in the region.</p></div>
 				</section>
 				<section class="step" class:active={activeStep === 3} aria-label="Step 3 of 4">
-					<div class="step-card"><p>Floods represent the second largest weather-related driver, causing <strong>227,226 movements</strong> across 71 events in 11 countries. They leave a lingering aftermath of contaminated freshwater supplies, destroyed crops, and waterlogged soils.</p></div>
+					<div class="step-card"><p>A few catastrophic cyclones account for a disproportionate share of this total, most notably Cyclone Winston in Fiji in 2016.</p></div>
 				</section>
 				<section class="step" class:active={activeStep === 4} aria-label="Step 4 of 4">
-					<div class="step-card"><p>Geophysical events triggered <strong>150,391 movements</strong>, divided between earthquakes and violent volcanic eruptions.</p></div>
+					<div class="step-card"><p>Floods, the second-leading driver, caused 227,226 movements across 71 events. They leave a lingering aftermath of contaminated freshwater supplies, destroyed crops, and waterlogged soils.</p></div>
 				</section>
 			</Scrolly>
 		</div>

@@ -20,7 +20,10 @@
 			List of good practices to reduce the risk, scale, and impacts of internal
 			displacement in the Pacific Islands
 		</h5>
-		<p>Click on a card to learn more about each good practice.</p>
+		<p>
+			Select a card to turn it over. Select outside the open card or press
+			Escape to return to the grid.
+		</p>
 	</figcaption>
 
 	<div class="practice-grid" aria-label="IDMC good practices in the Pacific">
@@ -43,10 +46,6 @@
 		{/each}
 	</div>
 
-	<p class="note">
-		Select a card to turn it over. Select outside the open card or press Escape
-		to return to the grid.
-	</p>
 	<p class="source">
 		Source: <a
 			href="https://www.internal-displacement.org/good-practices/"
