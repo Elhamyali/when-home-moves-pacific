@@ -1,0 +1,8 @@
+visualization_order,country,iso3,year,emissions_mtco2e,global_share_pct,source_url,data_note
+1,China,CHN,2023,13152.05,25.29,https://www.climatewatchdata.org/countries/CHN?end_year=2022&start_year=1990#ghg-emissions,Emissions and share supplied by user
+2,United States,USA,2023,5434.18,11.16,https://www.climatewatchdata.org/countries/USA?end_year=2022&start_year=1990#ghg-emissions,Emissions and share supplied by user
+3,Australia,AUS,2023,651.66,1.15,https://www.climatewatchdata.org/countries/AUS?end_year=2022&start_year=1990#ghg-emissions,Emissions and share supplied by user
+4,New Zealand,NZL,2023,69.96,0.14,https://www.climatewatchdata.org/countries/NZL?end_year=2022&start_year=1990#ghg-emissions,Emissions and share supplied by user
+5,Fiji,FJI,2023,0.52,0.00,https://www.climatewatchdata.org/countries/FJI?end_year=2022&start_year=1990#ghg-emissions,Emissions value not supplied; share rounds to 0.00%
+6,Kiribati,KIR,2023,0.09,0.00,https://www.climatewatchdata.org/countries/KIR?end_year=2022&start_year=1990#ghg-emissions,Emissions value not supplied; share rounds to 0.00%
+7,Tuvalu,TUV,2023,0.02,0.00,https://www.climatewatchdata.org/countries/TUV?end_year=2022&start_year=1990#ghg-emissions,Emissions value not supplied; share rounds to 0.00%

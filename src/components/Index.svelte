@@ -1,6 +1,7 @@
 <script>
 	import AffectedPopulationGrowingMap from "$components/dataviz/AffectedPopulationGrowingMap.svelte";
 	import InternalDisplacementSmallMultiples from "$components/dataviz/InternalDisplacementSmallMultiples.svelte";
+	import PacificEmissionsNestedSquares from "$components/dataviz/PacificEmissionsNestedSquares.svelte";
 	import RemainingChapters from "$components/RemainingChapters.svelte";
 	import { onMount } from "svelte";
 	let introduction;
@@ -284,6 +285,11 @@
 					low-lying atoll nations like Kiribati and Tuvalu, which account for less
 					than 0.003% and 0.0002% of global emissions, respectively.
 				</p>
+			</div>
+
+			<PacificEmissionsNestedSquares />
+
+			<div class="chapter-copy">
 				<p>
 					By comparison, high-income nations like Aotearoa New Zealand emit 43
 					times Tuvalu’s total output, and a staggering 650 times the emissions
