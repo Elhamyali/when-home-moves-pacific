@@ -19,49 +19,35 @@
 	</header>
 	<div class="copy">
 		<p>
-			Weather disasters, not geophysical ones, drive displacement movements in
-			the Pacific.
+			Weather disasters, not geophysical ones like earthquakes or volcanic
+			eruptions, are what uproot communities in the Pacific.
 		</p>
 		<p>
-			The chart below traces those events from hazard to disaster to
-			displacement. Each ribbon represents recorded movements of displacement
-			following a disaster. Wider ribbons indicate larger numbers of
-			displacements.
+			The chart below traces those climate shocks from hazard to displacement.
+			Each ribbon represents the path of displacement movements following a
+			disaster. Wider ribbons indicate larger numbers of displacements.
 		</p>
 	</div>
 	<ClimateDisplacementSankey />
 	<div class="copy">
 		<p>
-			As the strongest tropical cyclone ever recorded in the Southern
-			Hemisphere, the first-ever Category 5 storm Winston struck Fiji in 2016.
-			It <a
+			In 2016, Winston tore across the South Pacific. It was the first Category
+			5 tropical cyclone ever recorded in the Southern Hemisphere, and the
+			second strongest to make landfall anywhere on Earth. The storm <a
 				href="https://www.ucl.ac.uk/mathematical-physical-sciences/blogs/2026/feb/how-cyclone-winston-affected-people-and-what-we-learnt-it"
 				target="_blank"
-				rel="noreferrer">affected</a
-			> approximately 62% of Fiji's total population, destroyed tens of thousands
-			of homes, triggering 62,000 internal displacement movements, and cost the nation
-			one-third of its annual economic output.
-		</p>
-		<p>
-			As the first Category 5 tropical cyclone ever recorded in the Southern
-			Hemisphere and the second strongest to make landfall anywhere on Earth,
-			Winston <a
-				href="https://www.ucl.ac.uk/mathematical-physical-sciences/blogs/2026/feb/how-cyclone-winston-affected-people-and-what-we-learnt-it"
-				target="_blank"
-				rel="noreferrer">affected</a
-			> 62% of Fiji’s population. It led to 62,000 internal displacement movements
-			and cost the nation one-third of its annual GDP.
+				rel="noreferrer">upended</a
+			> life for 62% of Fiji’s population, triggered 62,000 internal displacement
+			movements, and cost the nation one-third of its annual gross domestic product
+			(GDP).
 		</p>
 	</div>
 	<DisplacementEventDotBars />
 	<div class="copy">
 		<p>
-			Traditional homes in rural and maritime areas, built primarily from wood
-			and corrugated iron, proved no match for its Category 5 winds that
-			exceeded 280 km/h.
-		</p>
-		<p>
-			Compounding this vulnerability, the vast majority of rural residents <a
+			In rural and maritime areas, traditional homes built primarily from wood
+			and corrugated iron stood no chance against Winston’s 280 km/h winds.
+			Making matters worse, the vast majority of rural residents <a
 				href="https://www.ucl.ac.uk/mathematical-physical-sciences/blogs/2026/feb/how-cyclone-winston-affected-people-and-what-we-learnt-it"
 				target="_blank"
 				rel="noreferrer">lacked</a
@@ -69,10 +55,10 @@
 			aid.
 		</p>
 		<p>
-			Four years later, Tropical Cyclone Harold struck Fiji, Vanuatu, and Tonga,
-			causing an additional 10,000 displacements and complicating recovery
-			efforts while communities struggled under the restrictions and economic
-			strains of the COVID-19 pandemic.
+			Four years later, Tropical Cyclone Harold slammed into Fiji, Vanuatu, and
+			Tonga, forcing another 10,000 displacement movements. The storm
+			complicated recovery efforts during the strict lockdowns and severe
+			economic strains of the COVID-19 pandemic.
 		</p>
 	</div>
 	<CycloneHaroldBeforeAfter />
@@ -86,24 +72,23 @@
 	</header>
 	<div class="copy">
 		<p>
-			Displacement from climate disasters in the Pacific is not a single,
-			isolated event but a chronic, recurring cycle that resets national
+			Displacement is not always from a single climate disaster with clear
+			beginning and end. It can be chronic, recurring loop that resets national
 			development.
 		</p>
 		<p>
-			From 2016 to 2021, Pacific nations endured 13 extreme weather events,
-			including three regional record-breakers. Globally, the gap between
-			billion-dollar disasters has <a
+			Between 2016 and 2021, Pacific nations endured 13 extreme weather events,
+			including three that broke regional records. Globally, the average window
+			between disasters has <a
 				href="https://www.wri.org/insights/climate-adaptation-investment-case"
 				target="_blank"
 				rel="noreferrer">shrunk</a
-			> from an average of 82 days (1980s) to 19 days (2020s), per Council Fire and
-			the World Resources Institute. This leaves communities with no time to rebuild
-			before the next strike.
+			> from 82 days in the 1980s to 19 days in the 2020s. This leaves communities
+			with little to no time to rebuild before the next strike.
 		</p>
 		<p>
-			Papua New Guinea leads the region with 81 displacement events over 15
-			years. It <a
+			Papua New Guinea leads the region with 81 separate displacement events
+			over 15 years. It <a
 				href="https://crisisresponse.iom.int/response/papua-new-guinea-crisis-response-plan-2024"
 				target="_blank"
 				rel="noreferrer">ranks</a
@@ -124,8 +109,7 @@
 				target="_blank"
 				rel="noreferrer">ranks</a
 			> 10th globally for severe lack of coping capacity. When disasters hit, neither
-			residents nor the national government has the fiscal reserves to rebuild. Between
-			2008 and 2022, 54 major disasters led to over 282,000 internal displacements.
+			residents nor the national government has the fiscal reserves to rebuild.
 		</p>
 	</div>
 </section>
@@ -136,10 +120,15 @@
 		<h2 id="chapter-four-title"><em>What Happens After Disasters?</em></h2>
 	</header>
 	<div class="copy">
+		<p>
+			Coupled with fragile infrastructure, climate disasters can exacerbate
+			compromised freshwater and contaminated ecosystems. These factors make
+			recovery far more complex than rebuilding homes alone.
+		</p>
 		<h3>Legacy of environmental hazards</h3>
 		<p>
 			Climate disasters not only destroy homes and public infrastructure, but
-			also expose buried toxic legacies, most visibly in the Marshall Islands.
+			also expose buried toxic legacies.
 		</p>
 		<p>
 			Between 1946 and 1958, the U.S. military <a
@@ -147,9 +136,9 @@
 				target="_blank"
 				rel="noreferrer">detonated</a
 			>
-			67 nuclear weapons here, including the 15-megaton "Castle Bravo" blast — 1,000
-			times more powerful than the bomb dropped on Hiroshima and Nagasaki combined.
-			The explosion blanketed
+			67 nuclear weapons in the Marshall Islands. This included the 15-megaton "Castle
+			Bravo" blast — an explosion 1,000 times more powerful than the bombs dropped
+			on Hiroshima and Nagasaki combined. The explosion blanketed
 			<a
 				href="https://nukedivestmentscotland.org/wp-content/uploads/2020/08/nwce-report-final-1.pdf"
 				target="_blank"
@@ -158,56 +147,52 @@
 			populations.
 		</p>
 		<p>
-			Later, the U.S. military <a
+			Years later, the U.S. military <a
 				href="https://marshallislands.llnl.gov/ccc/Hamilton_LLNL-TR-648143_final.pdf"
 				target="_blank"
 				rel="noreferrer">bulldozed</a
 			> 90,000 cubic meters of contaminated soil into the Runit Dome crater, capping
-			it with an 18-inch-thick concrete dome. To save time and expense, the bottom
-			of the crater was never lined with concrete.
+			it with an 18-inch-thick concrete dome. To save time and money, the bottom of
+			the crater was never lined with concrete.
 		</p>
 	</div>
 	<RunitDomeFigure />
 	<div class="copy">
 		<p>
-			As sea levels rise, high tides flush radioactive plutonium through the
-			unlined crater and into the North Equatorial Current, where it has been <a
+			Today, rising seas and high tides flush radioactive plutonium through the
+			unlined crater directly into the North Equatorial Current, where it has
+			been <a
 				href="https://climate.law.columbia.edu/sites/climate.law.columbia.edu/files/content/docs/Michael%20Gerrard/Gerrard-2015-06-Americas-Forgotten-Nuclear-Waste-Dump-in-the-Pacific.pdf"
 				target="_blank"
 				rel="noreferrer">detected</a
 			> over 2,800 miles away.
 		</p>
 		<p>
-			With typhoons threatening to breach the concrete cap, Runit Dome is a
-			ticking nuclear-climate time bomb and an environmental injustice
+			As intensifying storms threaten to breach the concrete cap, Runit Dome
+			remains a ticking nuclear-climate time bomb and an environmental injustice
 			threatening a new wave of displacement.
-		</p>
-		<p>
-			Climate disasters compounding with fragile infrastructure, compromised
-			freshwater, and contaminated ecosystems make recovery far more complex
-			than rebuilding homes alone.
 		</p>
 		<h3>Economic loss</h3>
 		<p>
 			Climate disasters cripple regional economies. For example, Fiji recorded
-			approximately $374M USD in direct losses in 2016 from Cyclones Winston,
-			Xena, and a tropical depression.
+			approximately $374 million USD in direct losses in 2016 from Cyclones
+			Winston, Xena, and a tropical depression.
 		</p>
 		<p>
-			In 2020, Tropical Cyclone Harold hit after border closures had already
+			In 2020, Tropical Cyclone Harold struck after border closures had already
 			devastated the tourism sector — the lifeblood of the Fijian economy —
-			causing a 20% contraction in Fiji's GDP. This represents “<a
+			causing a 20% contraction in Fiji's GDP. This is the reality of “<a
 				href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10171413/"
 				target="_blank"
 				rel="noreferrer">cascading vulnerabilities</a
-			>,” where a subsequent disaster strikes a population with already depleted
+			>,”: a subsequent disaster hits a population with already depleted
 			defenses.
 		</p>
 	</div>
 	<EconomicLossAffectedPopulation />
 	<div class="copy">
 		<p>
-			To rebuild critical infrastructure like roads and hospitals after such
+			To rebuild critical infrastructure, like roads and hospitals, after such
 			shocks, low-lying island nations must borrow massive sums relative to
 			their small economies, trapping them in a debt loop.
 		</p>
@@ -215,18 +200,18 @@
 			As global aid <a
 				href="https://pacificaidmap.lowyinstitute.org/analysis/2025/key-findings/"
 				target="_blank"
-				rel="noreferrer">contracts</a
+				rel="noreferrer">diminishes</a
 			>
 			by 16% due to deep U.S. and U.K. funding cuts, Pacific nations are forced to
 			<a
 				href="https://www.youtube.com/watch?v=zrmQit14c-A"
 				target="_blank"
 				rel="noreferrer">spend</a
-			> 30% of their national budgets on climate adaptation, such as constructing
+			> up to 30% of their national budgets on climate adaptation, such as constructing
 			seawalls, building embankments, and desalinating water.
 		</p>
 		<h3>Tuberculosis incidence</h3>
-		<p>Displacement triggers a dangerous public health feedback loop.</p>
+		<p>Displacement triggers a public health crisis feedback loop.</p>
 		<p>
 			In the Pacific, 90% of people live within five kilometers of a coastline
 			and over a quarter within one kilometer. In South Tarawa, Kiribati, <a
@@ -248,10 +233,10 @@
 			rampant.
 		</p>
 		<p>
-			In 2023, the Marshall Islands recorded the region's highest TB rate (692
-			per 100,000 people), a 723% surge since 2000. Kiribati and Tuvalu follow,
-			exceeding the regional median of 48 per 100,000 people, based on Pacific
-			Data Hub findings.
+			In 2023, the Marshall Islands recorded the region's highest TB rate of 692
+			per 100,000 people — a 723% surge since 2000. Kiribati and Tuvalu follow,
+			both exceeding the regional median of 48 per 100,000 people, based on
+			Pacific Data Hub findings.
 		</p>
 	</div>
 	<TBIncidenceHistory />
@@ -259,20 +244,20 @@
 		<h3>Unsafe drinking water</h3>
 		<p>
 			Floods and droughts leave communities without safe water by contaminating
-			or depleting supplies. Low-lying coral atolls lack rivers. So, they rely
-			on fragile rainwater harvesting and underground freshwater lenses that
-			rising seas and King tides poison via saltwater intrusion.
+			or depleting supplies. Low-lying coral atolls have no rivers. So, they
+			rely on fragile rainwater harvesting and underground freshwater lenses
+			that rising seas and King tides poison via saltwater intrusion.
 		</p>
 		<p>
 			Papua New Guinea has the region's lowest water security, with nearly half
-			the population lacking safe access as of 2022. The Solomon Islands saw
-			safe water access plummet by approximately 12 percentage points, from 79%
-			in 2000 to 67% in 2021. In Kiribati, unsafe water fuels disease,
-			contributing to the region's <a
+			the population lacking safe access as of 2022. In the Solomon Islands,
+			access plummeted by approximately 12 percentage points, from 79% in 2000
+			to 67% in 2021. In Kiribati, unsafe water fuels disease, contributing to
+			the region's <a
 				href="https://childfundalliance.org/"
 				target="_blank"
 				rel="noreferrer">highest</a
-			> infant mortality rate.
+			> infant mortality rate in the region.
 		</p>
 	</div>
 	<DrinkingWaterSlopeChart />
@@ -280,28 +265,28 @@
 		<h3>Undernourishment</h3>
 		<p>
 			Climate disasters and saltwater intrusion destroy traditional crops and
-			ruin agricultural soil, increasing reliance on low-nutrient, imported
-			processed canned goods, like canned spam.
+			ruin agricultural soil. Communities, thus, are forced to rely on
+			low-nutrient, imported processed canned foods, like canned spam.
 		</p>
 		<p>
 			As of 2023, the Food and Agriculture Organization of the United Nations
-			(FAO) estimates 29% of Papua New Guinea’s population is undernourished.
-			During the 2015–2016 El Niño, severe drought triggered famine, impacting
-			1.3 million people and leaving 480,000 in critical shortage. Meanwhile,
-			undernourishment rates in the Solomon Islands nearly doubled to 20% by
-			2023.
+			(FAO) estimated 29% of Papua New Guinea’s population is undernourished.
+			During the 2015–2016 El Niño drought, famine affected 1.3 million people,
+			leaving nearly half a million in critical food shortage. In the Solomon
+			Islands, undernourishment rates nearly doubled to 20% in 2023.
 		</p>
 	</div>
 	<UndernourishmentSlopeChart />
 	<div class="copy">
 		<p>
-			This dietary shift sparked a metabolic crisis: 82% of adults are
-			overweight or obese, 33% have hypertension, and 40% have high cholesterol.
-			Because diabetes and obesity compromise immune systems, they <a
+			This dietary shift sparked a metabolic crisis. As of 2023, 82% of adults
+			in the region are overweight or obese, 33% have hypertension, and 40% have
+			high cholesterol. Because diabetes and obesity compromise the human immune
+			systems, they <a
 				href="https://pubmed.ncbi.nlm.nih.gov/39177079/"
 				target="_blank"
 				rel="noreferrer">increase</a
-			> susceptibility to active Tuberculosis.
+			> a person's susceptibility to active TB.
 		</p>
 	</div>
 </section>
@@ -312,16 +297,15 @@
 		<h2 id="chapter-five-title"><em>Fighting Back</em></h2>
 	</header>
 	<div class="copy">
-		<p>For many, leaving home is a last resort.</p>
 		<p>
-			Yet, communities fight for their needs within a legal vacuum. The 1951
-			Refugee Convention <a
+			For many, leaving home is a last resort. Yet, communities fight for their
+			needs within a legal vacuum. The 1951 Refugee Convention <a
 				href="https://www.elr.info/sites/default/files/article/2020/06/50.10540.pdf"
 				target="_blank"
 				rel="noreferrer">does not recognize</a
 			>
-			climate displacement as grounds for refugee status, while strict immigration
-			barriers like New Zealand’s
+			climate displacement as grounds for refugee status and strict immigration barriers
+			like New Zealand’s
 			<a
 				href="https://www.immigration.govt.nz/opsmanual/"
 				target="_blank"
@@ -333,85 +317,86 @@
 		<p>
 			Across the Pacific, governments, Indigenous leaders, and communities are
 			investing in proactive measures like restoring mangrove forests and coral
-			reefs and upgrading early warning systems to preempt displacement. They
-			are guided by a <a
+			reefs and upgrading early warning systems to preempt displacement. The <a
 				href="https://pacificresiliencepartnership.org/framework-resilient-development-pacific/"
 				target="_blank"
-				rel="noreferrer">principle</a
-			> that climate resilience and adaptation succeed only when it is community-led
-			to protect culture, livelihoods, and vital connection to place.
+				rel="noreferrer">Framework for Resilient Development in the Pacific</a
+			> emphasizes that climate resilience and adaptation succeed only when it is
+			community-led to protect culture, livelihoods, and vital connection to place.
 		</p>
 	</div>
 	<GoodPracticesCardGrid />
 	<div class="copy">
 		<p>
-			Fiji leads in planned climate relocation with its 130-page blueprint, the
+			Fiji has emerged as a global leader in planned climate relocation. Its
+			130-page blueprint — the
 			<a
 				href="https://fijiclimatechangeportal.gov.fj/ppss/standard-operating-procedures-for-planned-relocation-in-the-republic-of-fiji/"
 				target="_blank"
 				rel="noreferrer"
 				>Standard Operating Procedures (SOP) for Planned Relocations</a
-			>. The SOP mandates exhausting all engineering solutions — like river
-			dredging, raising homes, and building seawalls — before approving any
-			move.
+			> — mandates exhausting all engineering solutions like river dredging, raising
+			homes, and building seawalls before approving any move.
 		</p>
 		<p>
-			Foundational rules stemmed from mixed results in early relocations. In
-			2014, Vunidogoloa became Fiji's first climate-relocated village, moving
-			140 residents two kilometers inland. Though safe, they lost proximity to
-			ancestral burial grounds and fishing reefs. Because only male leaders were
-			consulted, the new homes lacked kitchens.
+			These foundational rules stemmed from mixed results in early relocations.
+			In 2014, Vunidogoloa became Fiji's first climate-relocated village, moving
+			140 residents two kilometers inland. Though safe, they community lost
+			proximity to ancestral burial grounds and fishing reefs. Because planners
+			only consulted male leaders, the newly constructed homes lacked kitchens.
 		</p>
 		<p>
-			Tukuraki was devastated by a 2012 landslide that buried half the village
-			and killed four people. Before relocating to a resilient site in 2017,
-			survivors endured makeshift tents and caves as Cyclones Evan (2013) and
-			Winston (2016) destroyed temporary infrastructure. However, a lack of
-			formal financial contracts caused social friction, as Tukuraki's modern
-			amenities surpassed those of the host community.
+			In 2012, a catastrophic landslide buried half of Tukuraki, killing four
+			people. Before the village could be relocated to a resilient site in 2017,
+			survivors were forced to endure years in makeshift tents and caves while
+			Cyclones Evan and Winston tore through their temporary infrastructure.
+			Once moved, a lack of formal financial contracts between the state and the
+			landowners sparked social friction, as Tukuraki's new, modern amenities
+			quickly surpassed those of the host community.
 		</p>
 		<p>
-			These early lessons prompted Fiji to mandate 90% community consent for
-			relocations. Currently, six villages have moved, and nearly <a
+			These early stumbles prompted Fiji to mandate 90% community consent for
+			relocations. Currently, six villages have been moved, and nearly <a
 				href="https://mecc.gov.fj/information-sharing-session-on-climate-relocation-of-communities-croc-trust-fund/"
 				target="_blank"
 				rel="noreferrer">50 Fijian villages</a
 			> face potential relocation.
 		</p>
 		<p>
-			Relocation is expensive. The cost of physically moving Nabavatu village in
-			Fiji alone exceeded $2.5 million USD. Over 460 people have been forced to
-			live in temporary disaster tents for over five years.
+			Relocation is expensive. Moving a single community, like Fiji's Nabavatu
+			village, exceeded $2.5 million USD — a cost so restrictive that over 460
+			residents have been trapped in temporary disaster tents for more than five
+			years.
 		</p>
 		<p>
-			Fiji established the world's first legislated national <a
+			To fund climate relocations, Fiji established the world's first legislated
+			national <a
 				href="https://climate-laws.org/document/climate-relocation-of-communities-trust-fund-act-2019-an-act-to-establish-a-trust-fund-for-the-planned-relocation-of-communities-in-fiji-that-are-adversely-affected-by-climate-change-act-no-21-of-2019_24e5"
 				target="_blank"
 				rel="noreferrer"
 				>Climate Relocation of Communities (CROC) Trust Fund Act</a
 			>
-			dedicated to planned climate relocation in 2019, funded locally through a 3%
-			contribution from Fiji's Environmental and Climate Adaptation Levy (ECAL) on
-			the tourism sector and luxury goods. Likewise, the
+			in 2019. The fund is financed locally through a 3% contribution from Fiji's
+			Environmental and Climate Adaptation Levy (ECAL) on the tourism sector and luxury
+			goods. Regionally, the
 			<a
 				href="https://www.dfat.gov.au/geo/pacific/development-assistance/climate-change-and-resilience"
 				target="_blank"
 				rel="noreferrer">Pacific Resilience Facility</a
 			> (PRF) is a Pacific-owned, grant-based regional fund designed to bypass the
-			rigid, slow, and bureaucratic administrative hurdles of massive global financial
-			institutions.
+			rigid, slow, and bureaucratic hurdles of massive global financial institutions.
 		</p>
 		<p>
 			Investing in climate adaptation solutions is high-yield. The <a
 				href="https://www.wri.org/research/climate-adaptation-investment-case"
 				target="_blank"
 				rel="noreferrer">World Resources Institute</a
-			> (WRI) estimated that for every $1 UDS spent returns $10.50 USD in net economic
+			> (WRI) estimated that for every $1 USD spent returns $10.50 USD in net economic
 			benefits over a 10-year horizon. This proactive model unlocks daily commercial,
 			social, and environmental gains that far exceed the value of avoided losses
-			alone. This includes, but is not limited to, local job creation, agricultural
-			productivity, and ecosystem health. The investment pays off continuously, even
-			if a disaster never strikes.
+			alone. This includes, but is not limited to, stimulating local job creation,
+			boosting agricultural productivity, and restoring ecosystem health. The investment
+			pays off continuously, even if a disaster never strikes.
 		</p>
 	</div>
 	<footer class="notes" id="methodology-credits">

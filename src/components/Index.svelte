@@ -245,10 +245,13 @@
 			</p>
 
 			<div class="prose">
-				<p>Stay or leave? Many of us hope we never have to decide.</p>
+				<p>
+					Stay or leave? It is a question many of us hope hope we never have to
+					answer.
+				</p>
 
 				<p>
-					When floods rise or seas breach the shore, families have minutes to
+					When floods rise or seas breach the shore, families have moments to
 					decide what to save and what to leave behind. Some return to ruins;
 					others find their homes erased.
 				</p>
@@ -279,10 +282,9 @@
 					> to the climate crisis, yet bears its harshest brunt.
 				</p>
 				<p>
-					Low-lying nations like Kiribati and Tuvalu emit less than 0.003% and
-					0.0002% of global greenhouse gases — fractions compared to New
-					Zealand's emissions, which were approximately 777 and 3,498 times
-					higher, respectively.
+					Low-lying nations, like Tuvalu, emit less than 0.0002% of global
+					greenhouse gases — fractions compared to New Zealand's emissions,
+					which were nearly 3,500 times higher than Tuvalu’s in 2023.
 				</p>
 			</div>
 
@@ -296,8 +298,8 @@
 					Pacific.
 				</p>
 				<p>
-					Fiji endured the region’s highest cumulative impact, with 1,240,734
-					people affected per the <a
+					Fiji has endured the region’s highest cumulative impact, with more
+					than 1.2 million people affected per the <a
 						href="https://pacificdata.org/"
 						target="_blank"
 						rel="noreferrer">Pacific Data Hub</a
@@ -354,14 +356,14 @@
 
 			<div class="chapter-copy chapter-close">
 				<p>
-					The threat is escalating: extreme weather puts at least 50,000 Pacific
+					The threat is escalating. Extreme weather puts at least 50,000 Pacific
 					Islanders <a
 						href="https://www.internal-displacement.org/project-spotlights/pacific-disasters/"
 						target="_blank"
 						rel="noreferrer">at risk</a
 					>
-					of losing their homes annually, with the vast majority remaining
-					within national borders as
+					of losing their homes annually, with the vast majority remaining within
+					national borders as
 					<a
 						href="https://www.internal-displacement.org/internal-displacement/"
 						target="_blank"
