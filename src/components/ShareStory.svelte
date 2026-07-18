@@ -5,7 +5,7 @@
 	const storyTitle = "When Home Moves";
 	const storyDescription =
 		"From climate disaster and displacement to resilience: a journey across the Pacific.";
-	const storyUrl = "http://www.elhamyali.com/when-home-moves-pacific/";
+	const storyUrl = "https://www.elhamyali.com/when-home-moves-pacific/";
 	let copied = $state(false);
 	let resetCopyStatus;
 
