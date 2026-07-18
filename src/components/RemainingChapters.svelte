@@ -419,7 +419,7 @@
 			<h3><em>Methodology & Data</em></h3>
 			<p>
 				I built this essay with D3.js and Svelte. The code is available on <a
-					href="https://github.com/Elhamyali/pacific-climate-displacement"
+					href="https://github.com/Elhamyali/when-home-moves-pacific"
 					target="_blank"
 					rel="noreferrer">GitHub</a
 				>.
@@ -430,7 +430,7 @@
 				health, and economic losses from the Pacific Data Hub and the Internal
 				Displacement Monitoring Centre (IDMC). All datasets and analysis code
 				are available on <a
-					href="https://github.com/Elhamyali/pacific-data-viz-challenge-2026-data-analysis"
+					href="https://github.com/Elhamyali/when-home-moves-pacific-data-analysis"
 					target="_blank"
 					rel="noreferrer">GitHub</a
 				>.

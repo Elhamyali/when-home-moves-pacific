@@ -5,7 +5,7 @@
 	const storyTitle = "When Home Moves";
 	const storyDescription =
 		"From climate disaster and displacement to resilience: a journey across the Pacific.";
-	const storyUrl = "http://www.elhamyali.com/pacific-climate-displacement/";
+	const storyUrl = "http://www.elhamyali.com/when-home-moves-pacific/";
 	let copied = $state(false);
 	let resetCopyStatus;
 
@@ -52,7 +52,9 @@
 			aria-label="Share this story on LinkedIn"
 		>
 			<svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true">
-				<path d="M5.4 8.8H2.1V19h3.3V8.8ZM3.75 3.7A1.92 1.92 0 1 0 3.75 7.55a1.92 1.92 0 0 0 0-3.85ZM19.9 13.15c0-3.08-1.64-4.51-3.83-4.51a3.77 3.77 0 0 0-3.4 1.87V8.8H9.36V19h3.31v-5.06c0-1.33.25-2.63 1.91-2.63 1.64 0 1.66 1.53 1.66 2.72V19h3.32l.34-5.85Z" />
+				<path
+					d="M5.4 8.8H2.1V19h3.3V8.8ZM3.75 3.7A1.92 1.92 0 1 0 3.75 7.55a1.92 1.92 0 0 0 0-3.85ZM19.9 13.15c0-3.08-1.64-4.51-3.83-4.51a3.77 3.77 0 0 0-3.4 1.87V8.8H9.36V19h3.31v-5.06c0-1.33.25-2.63 1.91-2.63 1.64 0 1.66 1.53 1.66 2.72V19h3.32l.34-5.85Z"
+				/>
 			</svg>
 			<span>LinkedIn</span>
 		</a>
@@ -63,7 +65,9 @@
 			aria-label="Share this story on Facebook"
 		>
 			<svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true">
-				<path d="M13.7 20v-7h2.35l.35-2.73h-2.7V8.53c0-.79.22-1.33 1.36-1.33h1.45V4.77c-.25-.03-1.11-.11-2.12-.11-2.09 0-3.52 1.28-3.52 3.62v1.99H8.5V13h2.37v7h2.83Z" />
+				<path
+					d="M13.7 20v-7h2.35l.35-2.73h-2.7V8.53c0-.79.22-1.33 1.36-1.33h1.45V4.77c-.25-.03-1.11-.11-2.12-.11-2.09 0-3.52 1.28-3.52 3.62v1.99H8.5V13h2.37v7h2.83Z"
+				/>
 			</svg>
 			<span>Facebook</span>
 		</a>
@@ -98,7 +102,9 @@
 
 	h2 {
 		margin: 0 0 20px;
-		font: 600 clamp(18px, 1.6vw, 22px) / 1.2 "Inter", sans-serif;
+		font:
+			600 clamp(18px, 1.6vw, 22px) / 1.2 "Inter",
+			sans-serif;
 		letter-spacing: -0.02em;
 	}
 
@@ -119,7 +125,9 @@
 		border-radius: 0;
 		color: #000;
 		background: #fff;
-		font: 600 13px/1 "Inter", sans-serif;
+		font:
+			600 13px/1 "Inter",
+			sans-serif;
 		text-decoration: none;
 		cursor: pointer;
 		transition:
@@ -155,13 +163,17 @@
 
 	a:focus-visible,
 	button:focus-visible {
-		box-shadow: 0 0 0 3px #fff, 0 0 0 5px #135ae1;
+		box-shadow:
+			0 0 0 3px #fff,
+			0 0 0 5px #135ae1;
 	}
 
 	.copy-status {
 		min-height: 1.2em;
 		margin: 10px 0 0;
-		font: 500 12px/1.2 "Inter", sans-serif;
+		font:
+			500 12px/1.2 "Inter",
+			sans-serif;
 	}
 
 	@media (max-width: 700px) {
