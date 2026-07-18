@@ -1,4 +1,5 @@
 <script>
+	import ClientOnly from "$components/ClientOnly.svelte";
 	import VizPlaceholder from "$components/VizPlaceholder.svelte";
 	import ClimateDisplacementSankey from "$components/dataviz/ClimateDisplacementSankey.svelte";
 	import CycloneHaroldBeforeAfter from "$components/dataviz/CycloneHaroldBeforeAfter.svelte";
@@ -101,7 +102,9 @@
 			>, vulnerable to floods, droughts, and cyclones.
 		</p>
 	</div>
-	<PacificDisplacementBubbleMap />
+	<ClientOnly label="Loading the Pacific displacement map…" minHeight="720px">
+		<PacificDisplacementBubbleMap />
+	</ClientOnly>
 	<div class="copy">
 		<p>
 			Lacking a systemic cushion, it <a

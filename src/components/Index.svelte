@@ -1,5 +1,6 @@
 <script>
 	import { base } from "$app/paths";
+	import ClientOnly from "$components/ClientOnly.svelte";
 	import AffectedPopulationGrowingMap from "$components/dataviz/AffectedPopulationGrowingMap.svelte";
 	import InternalDisplacementSmallMultiples from "$components/dataviz/InternalDisplacementSmallMultiples.svelte";
 	import PacificEmissionsNestedSquares from "$components/dataviz/PacificEmissionsNestedSquares.svelte";
@@ -308,7 +309,9 @@
 				</p>
 			</div>
 
-			<AffectedPopulationGrowingMap />
+			<ClientOnly label="Loading the affected-population map…" minHeight="720px">
+				<AffectedPopulationGrowingMap />
+			</ClientOnly>
 
 			<div class="chapter-copy">
 				<p>

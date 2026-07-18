@@ -7,11 +7,11 @@
 	const description =
 		"From climate disaster and displacement to resilience: a journey across the Pacific.";
 	const url = "https://www.elhamyali.com/when-home-moves-pacific/";
-	const image = `${url}assets/dataviz/good-practices/fiji-planned-relocation-guidelines.jpg`;
+	const image = `${url}assets/social/when-home-moves.jpg`;
 	const imageAlt =
 		"A woman and child walking through the Wailea settlement in Fiji.";
-	const imageWidth = 1920;
-	const imageHeight = 1080;
+	const imageWidth = 1200;
+	const imageHeight = 627;
 	const keywords = "Pacific, climate change, displacement, Fiji, Vunidogoloa";
 	const preloadFont = [];
 </script>
