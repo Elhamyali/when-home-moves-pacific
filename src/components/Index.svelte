@@ -151,7 +151,7 @@
 			aria-label={isMuted ? "Unmute film" : "Mute film"}
 			title={isMuted ? "Unmute" : "Mute"}
 		>
-			<span aria-hidden="true">{isMuted ? "Muted" : "Sound"}</span>
+			<span aria-hidden="true">{isMuted ? "Unmute" : "Mute"}</span>
 		</button>
 		<button
 			class="skip-control"
@@ -247,7 +247,7 @@
 
 			<div class="prose">
 				<p>
-					Stay or leave? It is a question many of us hope hope we never have to
+					Stay or leave? It is a question many of us hope we never have to
 					answer.
 				</p>
 
@@ -265,7 +265,7 @@
 					choice: cling to ancestral soil or leave it behind.
 				</p>
 
-				<p>When home is no longer safe, where do you go?</p>
+				<p>When home is erased, where do you go?</p>
 			</div>
 		</section>
 		<section class="chapter-one" aria-labelledby="chapter-one-title">
@@ -309,7 +309,10 @@
 				</p>
 			</div>
 
-			<ClientOnly label="Loading the affected-population map…" minHeight="720px">
+			<ClientOnly
+				label="Loading the affected-population map…"
+				minHeight="720px"
+			>
 				<AffectedPopulationGrowingMap />
 			</ClientOnly>
 

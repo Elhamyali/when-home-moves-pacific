@@ -73,9 +73,9 @@
 	</header>
 	<div class="copy">
 		<p>
-			Displacement is not always from a single climate disaster with clear
-			beginning and end. It can be chronic, recurring loop that resets national
-			development.
+			Displacement is not always due to a single climate disaster with a clear
+			beginning and end. It can be a chronic, recurring loop that resets
+			national development.
 		</p>
 		<p>
 			Between 2016 and 2021, Pacific nations endured 13 extreme weather events,
@@ -188,7 +188,7 @@
 				href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10171413/"
 				target="_blank"
 				rel="noreferrer">cascading vulnerabilities</a
-			>,”: a subsequent disaster hits a population with already depleted
+			>”: a subsequent disaster hits a population with already depleted
 			defenses.
 		</p>
 	</div>
@@ -284,7 +284,7 @@
 		<p>
 			This dietary shift sparked a metabolic crisis. As of 2023, 82% of adults
 			in the region are overweight or obese, 33% have hypertension, and 40% have
-			high cholesterol. Because diabetes and obesity compromise the human immune
+			high cholesterol. Because diabetes and obesity compromise the immune
 			systems, they <a
 				href="https://pubmed.ncbi.nlm.nih.gov/39177079/"
 				target="_blank"
@@ -307,7 +307,7 @@
 				target="_blank"
 				rel="noreferrer">does not recognize</a
 			>
-			climate displacement as grounds for refugee status and strict immigration barriers
+			climate displacement as grounds for refugee status, and strict immigration barriers
 			like New Zealand’s
 			<a
 				href="https://www.immigration.govt.nz/opsmanual/"
@@ -344,7 +344,7 @@
 		<p>
 			These foundational rules stemmed from mixed results in early relocations.
 			In 2014, Vunidogoloa became Fiji's first climate-relocated village, moving
-			140 residents two kilometers inland. Though safe, they community lost
+			140 residents two kilometers inland. Though safe, the community lost
 			proximity to ancestral burial grounds and fishing reefs. Because planners
 			only consulted male leaders, the newly constructed homes lacked kitchens.
 		</p>
@@ -406,14 +406,15 @@
 		<section>
 			<h3><em>Methodology & Data</em></h3>
 			<p>
-				I built this essay with D3.js and Svelte. The code is available on <a
+				I built this essay with D3.js and Svelte. The source code is available
+				on <a
 					href="https://github.com/Elhamyali/when-home-moves-pacific"
 					target="_blank"
 					rel="noreferrer">GitHub</a
 				>.
 			</p>
 			<p>
-				I used R (v4.6.1) to analyze historical datasets on climate disasters,
+				I used R to analyze historical datasets on climate disasters,
 				disaster-related internal displacement, population impacts, public
 				health, and economic losses from the Pacific Data Hub and the Internal
 				Displacement Monitoring Centre (IDMC). All datasets and analysis code
