@@ -43,14 +43,14 @@
 			one-third of its annual economic output.
 		</p>
 		<p>
-			As the first-ever Category 5 tropical cyclone ever recorded in the
-			Southern Hemisphere and the second strongest to make landfall anywhere on
-			Earth, Winston <a
+			As the first Category 5 tropical cyclone ever recorded in the Southern
+			Hemisphere and the second strongest to make landfall anywhere on Earth,
+			Winston <a
 				href="https://www.ucl.ac.uk/mathematical-physical-sciences/blogs/2026/feb/how-cyclone-winston-affected-people-and-what-we-learnt-it"
 				target="_blank"
 				rel="noreferrer">affected</a
-			> 62% of Fiji’s population, led to 62,000 internal displacement movements, and
-			cost the nation one-third of its annual GDP.
+			> 62% of Fiji’s population. It led to 62,000 internal displacement movements
+			and cost the nation one-third of its annual GDP.
 		</p>
 	</div>
 	<DisplacementEventDotBars />
