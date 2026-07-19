@@ -53,8 +53,8 @@
 			Climate adaptation solutions pay dividends
 		</h5>
 		<p id="adaptation-return-description">
-			Each 💵 represents US$1 USD; half a banknote represents 50 cents. Benefits
-			include avoided losses, economic, social, and environmental gains.
+			Benefits include avoided losses, economic, social, and environmental
+			gains. Each 💵 represents US$1 USD; half a banknote represents 50 cents.
 		</p>
 	</figcaption>
 

@@ -37,8 +37,8 @@
 	</figcaption>
 
 	<div class="comparison" bind:this={comparison} style={`--position:${position}%`}>
-		<img class="after" src={`${base}/assets/dataviz/cyclone-harold/after.png`} alt="After Severe Tropical Cyclone Harold: eroded coastline, storm-surge extent, debris and a potentially damaged building" />
-		<img class="before" src={`${base}/assets/dataviz/cyclone-harold/before.png`} alt="Before Severe Tropical Cyclone Harold: intact vegetation, buildings and coastline" />
+		<img class="after" src={`${base}/assets/dataviz/cyclone-harold/after.avif`} alt="After Severe Tropical Cyclone Harold: eroded coastline, storm-surge extent, debris and a potentially damaged building" />
+		<img class="before" src={`${base}/assets/dataviz/cyclone-harold/before.avif`} alt="Before Severe Tropical Cyclone Harold: intact vegetation, buildings and coastline" />
 		<div class="divider" aria-hidden="true"></div>
 		<button
 			class="handle"

@@ -7,6 +7,10 @@
 	function closeCard() {
 		selected = null;
 	}
+
+	function avifFilename(filename) {
+		return filename.replace(/\.(?:png|jpe?g)$/i, ".avif");
+	}
 </script>
 
 <svelte:window
@@ -36,7 +40,7 @@
 				aria-label={`Learn more about ${practice.good_practice_name} in ${practice.country}`}
 			>
 				<img
-					src={`${base}/assets/dataviz/good-practices/${practice.image_file}`}
+					src={`${base}/assets/dataviz/good-practices/${avifFilename(practice.image_file)}`}
 					alt={practice.image}
 				/>
 				<span class="card-copy">

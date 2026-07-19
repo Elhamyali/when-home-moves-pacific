@@ -4,7 +4,7 @@
 
 <figure class="runit-dome">
 	<img
-		src={`${base}/assets/dataviz/runit-dome/runit-dome-marshall-islands.png`}
+		src={`${base}/assets/dataviz/runit-dome/runit-dome-marshall-islands.avif`}
 		alt="Aerial view of the circular concrete Runit Dome on Runit Island in the Marshall Islands, surrounded by vegetation and the Pacific Ocean"
 	/>
 	<figcaption>
