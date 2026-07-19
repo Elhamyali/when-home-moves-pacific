@@ -11,6 +11,7 @@
 	import TBIncidenceHistory from "$components/dataviz/TBIncidenceHistory.svelte";
 	import DrinkingWaterSlopeChart from "$components/dataviz/DrinkingWaterSlopeChart.svelte";
 	import UndernourishmentSlopeChart from "$components/dataviz/UndernourishmentSlopeChart.svelte";
+	import ClimateAdaptationReturn from "$components/dataviz/ClimateAdaptationReturn.svelte";
 </script>
 
 <section class="chapter" aria-labelledby="chapter-two-title">
@@ -69,13 +70,12 @@
 	<header id="chapter-three">
 		<p>Chapter 3</p>
 		<h2 id="chapter-three-title"><em>When Disasters Don’t End</em></h2>
-		built
 	</header>
 	<div class="copy">
 		<p>
 			Displacement is not always due to a single climate disaster with a clear
-			beginning and end. It can be a chronic, recurring loop that resets
-			national development.
+			beginning and end. It can be from recurring disasters that reset national
+			development.
 		</p>
 		<p>
 			Between 2016 and 2021, Pacific nations endured 13 extreme weather events,
@@ -120,7 +120,7 @@
 <section class="chapter" aria-labelledby="chapter-four-title">
 	<header id="chapter-four">
 		<p>Chapter 4</p>
-		<h2 id="chapter-four-title"><em>What Happens After Disasters?</em></h2>
+		<h2 id="chapter-four-title"><em>What Happens After Disasters Hit?</em></h2>
 	</header>
 	<div class="copy">
 		<p>
@@ -130,8 +130,8 @@
 		</p>
 		<h3>Legacy of environmental hazards</h3>
 		<p>
-			Climate disasters not only destroy homes and public infrastructure, but
-			also expose buried toxic legacies.
+			Climate disasters not only displace people, but also expose buried toxic
+			legacies.
 		</p>
 		<p>
 			Between 1946 and 1958, the U.S. military <a
@@ -205,7 +205,8 @@
 				target="_blank"
 				rel="noreferrer">diminishes</a
 			>
-			by 16% due to deep U.S. and U.K. funding cuts, Pacific nations are forced to
+			by 16% due to major funding cuts from the U.S. and U.K., Pacific nations are
+			forced to
 			<a
 				href="https://www.youtube.com/watch?v=zrmQit14c-A"
 				target="_blank"
@@ -214,7 +215,7 @@
 			seawalls, building embankments, and desalinating water.
 		</p>
 		<h3>Tuberculosis incidence</h3>
-		<p>Displacement triggers a public health crisis feedback loop.</p>
+		<p>Displacement triggers and worsens existing public health crisises.</p>
 		<p>
 			In the Pacific, 90% of people live within five kilometers of a coastline
 			and over a quarter within one kilometer. In South Tarawa, Kiribati, <a
@@ -256,11 +257,11 @@
 			the population lacking safe access as of 2022. In the Solomon Islands,
 			access plummeted by approximately 12 percentage points, from 79% in 2000
 			to 67% in 2021. In Kiribati, unsafe water fuels disease, contributing to
-			the region's <a
+			the <a
 				href="https://childfundalliance.org/"
 				target="_blank"
 				rel="noreferrer">highest</a
-			> infant mortality rate in the region.
+			> infant mortality rate in the Pacific.
 		</p>
 	</div>
 	<DrinkingWaterSlopeChart />
@@ -301,8 +302,8 @@
 	</header>
 	<div class="copy">
 		<p>
-			For many, leaving home is a last resort. Yet, communities fight for their
-			needs within a legal vacuum. The 1951 Refugee Convention <a
+			For many, leaving home is a last resort, yet, communities navigate a legal
+			vacuum. The 1951 Refugee Convention <a
 				href="https://www.elr.info/sites/default/files/article/2020/06/50.10540.pdf"
 				target="_blank"
 				rel="noreferrer">does not recognize</a
@@ -313,93 +314,95 @@
 				href="https://www.immigration.govt.nz/opsmanual/"
 				target="_blank"
 				rel="noreferrer">Acceptable Standard of Health</a
-			> (ASH) rules offer no sanctuary. Under ASH, applicants are rejected if they
-			place a high demand on health services, with mandatory medical waiver denials
-			for those with certain tuberculosis conditions.
+			> (ASH) rules reject applicants who place high demands on health services, including
+			mandatory waiver denials for certain tuberculosis conditions.
 		</p>
 		<p>
-			Across the Pacific, governments, Indigenous leaders, and communities are
-			investing in proactive measures like restoring mangrove forests and coral
-			reefs and upgrading early warning systems to preempt displacement. The <a
+			To preempt displacement, Pacific governments, Indigenous leaders, and
+			communities are proactively developing measures like restoring mangrove
+			forests and coral reefs and upgrading early warning systems. The <a
 				href="https://pacificresiliencepartnership.org/framework-resilient-development-pacific/"
 				target="_blank"
 				rel="noreferrer">Framework for Resilient Development in the Pacific</a
-			> emphasizes that climate resilience and adaptation succeed only when it is
-			community-led to protect culture, livelihoods, and vital connection to place.
+			> highlights that climate resilience and adaptation must be community-led to
+			protect culture, livelihoods, and vital connections to place.
 		</p>
 	</div>
 	<GoodPracticesCardGrid />
 	<div class="copy">
 		<p>
-			Fiji has emerged as a global leader in planned climate relocation. Its
-			130-page blueprint — the
+			Fiji is a global leader in planned climate relocation. Its 130-page
+			blueprint, the
 			<a
 				href="https://fijiclimatechangeportal.gov.fj/ppss/standard-operating-procedures-for-planned-relocation-in-the-republic-of-fiji/"
 				target="_blank"
 				rel="noreferrer"
 				>Standard Operating Procedures (SOP) for Planned Relocations</a
-			> — mandates exhausting all engineering solutions like river dredging, raising
-			homes, and building seawalls before approving any move.
+			> mandates exhausting all engineering solutions, such as river dredging and
+			raising homes, before moving. These rules emerged from early mixed results in
+			early relocations. In 2014, Vunidogoloa became Fiji's first climate-relocated
+			village, moving 140 residents two kilometers inland. While safe, they lost proximity
+			to ancestral burial grounds and fishing reefs, and newly constructed homes lacked
+			kitchens because planners consulted only male leaders.
 		</p>
 		<p>
-			These foundational rules stemmed from mixed results in early relocations.
-			In 2014, Vunidogoloa became Fiji's first climate-relocated village, moving
-			140 residents two kilometers inland. Though safe, the community lost
-			proximity to ancestral burial grounds and fishing reefs. Because planners
-			only consulted male leaders, the newly constructed homes lacked kitchens.
-		</p>
-		<p>
-			In 2012, a catastrophic landslide buried half of Tukuraki, killing four
-			people. Before the village could be relocated to a resilient site in 2017,
-			survivors were forced to endure years in makeshift tents and caves while
+			A 2012 landslide buried half of Tukuraki, killing four people. Before
+			relocating in 2017, survivors endured years in tents and caves while
 			Cyclones Evan and Winston tore through their temporary infrastructure.
-			Once moved, a lack of formal financial contracts between the state and the
-			landowners sparked social friction, as Tukuraki's new, modern amenities
-			quickly surpassed those of the host community.
-		</p>
-		<p>
-			These early stumbles prompted Fiji to mandate 90% community consent for
-			relocations. Currently, six villages have been moved, and nearly <a
+			Post-move, a lack of formal financial contracts between the state and the
+			landowners caused social friction, as Tukuraki's modern amenities
+			surpassed the host community's. As a result, Fiji now mandates 90%
+			community consent. Currently, six villages have moved, and nearly <a
 				href="https://mecc.gov.fj/information-sharing-session-on-climate-relocation-of-communities-croc-trust-fund/"
 				target="_blank"
 				rel="noreferrer">50 Fijian villages</a
 			> face potential relocation.
 		</p>
 		<p>
-			Relocation is expensive. Moving a single community, like Fiji's Nabavatu
-			village, exceeded $2.5 million USD — a cost so restrictive that over 460
-			residents have been trapped in temporary disaster tents for more than five
-			years.
-		</p>
-		<p>
-			To fund climate relocations, Fiji established the world's first legislated
-			national <a
+			Relocation is expensive. Moving Fiji’s Nabavatu village required an <a
+				href="https://fijisun.com.fj/news/nation/nabavatu-villagers-expected-to-relocate-by-october"
+				target="_blank"
+				rel="noreferrer">investment</a
+			>
+			of NZ$4.6 million (or $5.9 million USD). Weather and supply delays stalled the
+			construction of permanent housing for 37 families living in temporary disaster
+			tents for
+			<a
+				href="https://pmn.co.nz/read/pacific-region/the-trauma-remains-fiji-families-finally-leaving-tent-life-after-nearly-six-years"
+				target="_blank"
+				rel="noreferrer">nearly six years</a
+			>. To fund relocations, Fiji enacted the world's first
+			<a
 				href="https://climate-laws.org/document/climate-relocation-of-communities-trust-fund-act-2019-an-act-to-establish-a-trust-fund-for-the-planned-relocation-of-communities-in-fiji-that-are-adversely-affected-by-climate-change-act-no-21-of-2019_24e5"
 				target="_blank"
 				rel="noreferrer"
 				>Climate Relocation of Communities (CROC) Trust Fund Act</a
 			>
-			in 2019. The fund is financed locally through a 3% contribution from Fiji's
-			Environmental and Climate Adaptation Levy (ECAL) on the tourism sector and luxury
-			goods. Regionally, the
+			in 2019, financed via a 3% tourism and luxury goods
+			<a
+				href="https://fijiclimatechangeportal.gov.fj/wp-content/uploads/2021/12/ECAL-Bulletin_0.pdf"
+				target="_blank"
+				rel="noreferrer">levy</a
+			>. Regionally, the Pacific-owned, grant-based
 			<a
 				href="https://www.dfat.gov.au/geo/pacific/development-assistance/climate-change-and-resilience"
 				target="_blank"
 				rel="noreferrer">Pacific Resilience Facility</a
-			> (PRF) is a Pacific-owned, grant-based regional fund designed to bypass the
-			rigid, slow, and bureaucratic hurdles of massive global financial institutions.
+			> (PRF) helps bypass slow and bureaucratic hurdles of global financial institutions.
 		</p>
+	</div>
+	<ClimateAdaptationReturn />
+	<div class="copy">
 		<p>
-			Investing in climate adaptation solutions is high-yield. The <a
+			Investing in climate adaptation solutions yields high return. The <a
 				href="https://www.wri.org/research/climate-adaptation-investment-case"
 				target="_blank"
 				rel="noreferrer">World Resources Institute</a
-			> (WRI) estimated that for every $1 USD spent returns $10.50 USD in net economic
-			benefits over a 10-year horizon. This proactive model unlocks daily commercial,
-			social, and environmental gains that far exceed the value of avoided losses
-			alone. This includes, but is not limited to, stimulating local job creation,
-			boosting agricultural productivity, and restoring ecosystem health. The investment
-			pays off continuously, even if a disaster never strikes.
+			> (WRI) estimates that every $1 USD spent returns $10.50 USD in net economic
+			benefits over a 10-year horizon. This proactive model delivers continuous commercial,
+			social, and environmental gains — such as local job creation, boosted agricultural
+			productivity, and restored ecosystems — that far exceed avoided losses alone.
+			The investment pays off even if a disaster never strikes.
 		</p>
 	</div>
 	<footer class="notes" id="methodology-credits">

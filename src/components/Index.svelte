@@ -207,7 +207,8 @@
 			href="#chapter-four"
 			class:active={activeSection === "chapter-four"}
 			aria-current={activeSection === "chapter-four" ? "location" : undefined}
-			><span>Chapter 4</span><strong>What Happens After Disasters?</strong></a
+			><span>Chapter 4</span><strong>What Happens After Disasters Hit?</strong
+			></a
 		>
 		<a
 			href="#chapter-five"
@@ -247,8 +248,7 @@
 
 			<div class="prose">
 				<p>
-					Stay or leave? It is a question many of us hope we never have to
-					answer.
+					Stay or leave? Many of us hope we never have to answer this question.
 				</p>
 
 				<p>
@@ -265,7 +265,7 @@
 					choice: cling to ancestral soil or leave it behind.
 				</p>
 
-				<p>When home is erased, where do you go?</p>
+				<p>When home vanishes, where do you go?</p>
 			</div>
 		</section>
 		<section class="chapter-one" aria-labelledby="chapter-one-title">
@@ -296,19 +296,48 @@
 					As rising seas, extreme flooding, and rapid coastal erosion ravage the
 					region, the human toll is staggering. Between 2008 and 2025, climate
 					and geophysical disasters affected over 2.5 million people across the
-					Pacific.
-				</p>
-				<p>
-					Fiji has endured the region’s highest cumulative impact, with more
-					than 1.2 million people affected per the <a
+					Pacific, based on an analysis from the <a
 						href="https://pacificdata.org/"
 						target="_blank"
 						rel="noreferrer">Pacific Data Hub</a
-					>. In 2016, the historic Category 5 Cyclone Winston — alongside two
-					other storms — impacted roughly 60% of the nation's population.
+					>.
+				</p>
+				<p>
+					Fiji has endured the region’s highest cumulative impact, with more
+					than 1.2 million people affected. In 2016, the historic Category 5
+					Cyclone Winston — alongside two other storms — impacted roughly 60% of
+					the nation's population.
 				</p>
 			</div>
-
+			<details class="definition-note">
+				<summary>
+					<span>A note about how different organizations define a disaster</span
+					>
+					<span class="definition-note-icon" aria-hidden="true"></span>
+				</summary>
+				<div class="definition-note-content">
+					<p>
+						There is a debate over how to define a “climate disaster.” The
+						<a
+							href="https://www.internal-displacement.org/database/displacement-data/"
+							target="_blank"
+							rel="noreferrer">Internal Displacement Monitoring Centre</a
+						>
+						(IDMC) does not automatically count people displaced by weather disasters
+						as “climate-displaced,” as they view the link to climate change as scientifically
+						complex. In contrast, the
+						<a
+							href="https://belonging.berkeley.edu/climatedisplacement/climate-displacement-and-resilience-database"
+							target="_blank"
+							rel="noreferrer">Othering &amp; Belonging Institute</a
+						>
+						(OBI) argues that these disasters are deeply tied to climate change and
+						its role in worsening displacement. To better highlight this connection,
+						this essay adopts the OBI’s approach of classifying weather-related disasters
+						as climate-driven events.
+					</p>
+				</div>
+			</details>
 			<ClientOnly
 				label="Loading the affected-population map…"
 				minHeight="720px"
@@ -317,50 +346,6 @@
 			</ClientOnly>
 
 			<div class="chapter-copy">
-				<p>
-					The crisis is chronic, not a series of isolated disasters. Between
-					2008 and 2025, the <a
-						href="https://www.internal-displacement.org/"
-						target="_blank"
-						rel="noreferrer">Internal Displacement Monitoring Centre</a
-					> (IDMC) recorded 247 events that triggered nearly one million internal
-					displacements across the Pacific. Internal displacement refers to the forced
-					movement of people within the country they live in.
-				</p>
-				<details class="definition-note">
-					<summary>
-						<span
-							>A note about how different organizations define a disaster</span
-						>
-						<span class="definition-note-icon" aria-hidden="true"></span>
-					</summary>
-					<div class="definition-note-content">
-						<p>
-							There is a debate over how to define a “disaster.” The
-							<a
-								href="https://www.internal-displacement.org/database/displacement-data/"
-								target="_blank"
-								rel="noreferrer">Internal Displacement Monitoring Centre</a
-							>
-							(IDMC) does not automatically count people displaced by weather disasters
-							as “climate-displaced,” as they view the link to climate change as scientifically
-							complex. In contrast, the
-							<a
-								href="https://belonging.berkeley.edu/climatedisplacement/climate-displacement-and-resilience-database"
-								target="_blank"
-								rel="noreferrer">Othering &amp; Belonging Institute</a
-							>
-							(OBI) argues that these disasters are deeply tied to climate change
-							and its role in worsening displacement. To better highlight this connection,
-							this essay adopts the OBI’s approach of classifying weather-related
-							disasters as climate-driven events.
-						</p>
-					</div>
-				</details>
-			</div>
-			<InternalDisplacementSmallMultiples />
-
-			<div class="chapter-copy chapter-close">
 				<p>
 					The threat is escalating. Extreme weather puts at least 50,000 Pacific
 					Islanders <a
@@ -377,7 +362,17 @@
 					>
 					(IDPs).
 				</p>
+				<p>
+					Between 2008 and 2025, the <a
+						href="https://www.internal-displacement.org/"
+						target="_blank"
+						rel="noreferrer">Internal Displacement Monitoring Centre</a
+					> (IDMC) recorded 247 events that triggered nearly one million internal
+					displacements across the Pacific. Internal displacement refers to the forced
+					movement of people within the country they live in.
+				</p>
 			</div>
+			<InternalDisplacementSmallMultiples />
 		</section>
 		<RemainingChapters />
 		<ShareStory />
@@ -692,21 +687,28 @@
 	.definition-note {
 		max-width: 760px;
 		margin: -0.25em 0 clamp(44px, 6vw, 72px);
-		border-top: 1px solid #b8b8b8;
-		border-bottom: 1px solid #b8b8b8;
+		border: 1px solid #c8c8c3;
+		border-radius: 4px;
+		background: #f7f7f4;
+		font-family: "Inter", sans-serif;
+		overflow: hidden;
 	}
 	.definition-note summary {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 24px;
-		padding: 20px 0;
+		padding: 20px 22px;
 		font:
 			700 clamp(15px, 1.25vw, 17px)/1.35 "Inter",
 			sans-serif;
 		letter-spacing: -0.01em;
 		cursor: pointer;
 		list-style: none;
+		transition: background-color 160ms ease;
+	}
+	.definition-note summary:hover {
+		background: #eeeeea;
 	}
 	.definition-note summary::-webkit-details-marker {
 		display: none;
@@ -717,35 +719,36 @@
 	}
 	.definition-note-icon {
 		position: relative;
-		flex: 0 0 22px;
-		width: 22px;
-		height: 22px;
+		flex: 0 0 12px;
+		width: 12px;
+		height: 12px;
 	}
-	.definition-note-icon::before,
-	.definition-note-icon::after {
+	.definition-note-icon::before {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 14px;
-		height: 1.5px;
+		top: 1px;
+		left: 1px;
+		width: 8px;
+		height: 8px;
 		content: "";
-		background: currentColor;
-		transform: translate(-50%, -50%);
+		border-right: 2px solid currentColor;
+		border-bottom: 2px solid currentColor;
+		transform: rotate(45deg);
 		transition: transform 180ms ease;
 	}
-	.definition-note-icon::after {
-		transform: translate(-50%, -50%) rotate(90deg);
-	}
-	.definition-note[open] .definition-note-icon::after {
-		transform: translate(-50%, -50%) rotate(0deg);
+	.definition-note[open] .definition-note-icon::before {
+		transform: translateY(4px) rotate(225deg);
 	}
 	.definition-note-content {
-		padding: 0 0 24px;
+		padding: 20px 22px 24px;
+		border-top: 1px solid #d8d8d3;
+		background: #fff;
 	}
-	.chapter-copy .definition-note-content p {
+	.definition-note-content p {
 		margin: 0;
-		font-size: clamp(15px, 1.15vw, 17px);
-		line-height: 1.65;
+		font:
+			400 clamp(15px, 1.15vw, 17px)/1.65 "Inter",
+			sans-serif;
+		letter-spacing: -0.012em;
 	}
 
 	.chapter-close {
