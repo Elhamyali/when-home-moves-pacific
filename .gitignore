@@ -5,3 +5,8 @@ node_modules
 build
 functions
 .env
+
+# Local design-system files
+design-system/
+design-style.md
+*.design.md
