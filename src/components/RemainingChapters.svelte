@@ -432,7 +432,7 @@
 			<h3><em>Acknowledgement</em></h3>
 			<p>
 				I'm grateful to Yan Holtz for his excellent <a
-					href="https://www.react-graph-gallery.com/react-d3-dataviz-course"
+					href="https://www.d3-loves-react.com/?via=elhamyali"
 					target="_blank"
 					rel="noreferrer">React + D3.js course</a
 				>, which inspired me to learn D3 and ultimately participate in the 2026
